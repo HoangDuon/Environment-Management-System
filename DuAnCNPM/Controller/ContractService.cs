@@ -334,7 +334,7 @@ namespace DuAnCNPM.Controller
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
                         panel.Name = "grbHDnv1";
-                        panel.Size = new System.Drawing.Size(288, 53);
+                        panel.Size = new System.Drawing.Size(container.Width - 20, 53);
                         panel.TabIndex = 11;
                         panel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     }
@@ -350,11 +350,11 @@ namespace DuAnCNPM.Controller
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
                         panel.Name = "grbHDnv1";
-                        panel.Size = new System.Drawing.Size(288, 53);
+                        panel.Size = new System.Drawing.Size(container.Width - 20, 53);
                         panel.TabIndex = 11;
                         panel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     }
-
+                    int width = panel.Width - 20;
                     var lblNgayHetHan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
                     lblNgayHetHan.BackColor = System.Drawing.Color.Gainsboro;
                     lblNgayHetHan.BorderColor = System.Drawing.Color.Empty;
@@ -375,7 +375,7 @@ namespace DuAnCNPM.Controller
                     lblNgayHetHan.PlaceholderText = "";
                     lblNgayHetHan.ReadOnly = true;
                     lblNgayHetHan.SelectedText = "";
-                    lblNgayHetHan.Size = new System.Drawing.Size(266, 18);
+                    lblNgayHetHan.Size = new System.Drawing.Size(width, 18);
                     lblNgayHetHan.TabIndex = 1;
                     lblNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
@@ -399,7 +399,7 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.PlaceholderText = "";
                     lblTieuDe.ReadOnly = true;
                     lblTieuDe.SelectedText = "";
-                    lblTieuDe.Size = new System.Drawing.Size(266, 18);
+                    lblTieuDe.Size = new System.Drawing.Size(width, 18);
                     lblTieuDe.TabIndex = 0;
                     lblTieuDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
@@ -457,7 +457,7 @@ namespace DuAnCNPM.Controller
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
                         panel.Name = "grbHDnv1";
-                        panel.Size = new System.Drawing.Size(288, 53);
+                        panel.Size = new System.Drawing.Size(container.Width - 20, 53);
                         panel.TabIndex = 11;
                         panel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     }
@@ -473,11 +473,11 @@ namespace DuAnCNPM.Controller
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
                         panel.Name = "grbHDnv1";
-                        panel.Size = new System.Drawing.Size(288, 53);
+                        panel.Size = new System.Drawing.Size(container.Width - 20, 53);
                         panel.TabIndex = 11;
                         panel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     }
-
+                    int width = panel.Width - 20;
                     var lblNgayHetHan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
                     lblNgayHetHan.BackColor = System.Drawing.Color.Gainsboro;
                     lblNgayHetHan.BorderColor = System.Drawing.Color.Empty;
@@ -498,7 +498,7 @@ namespace DuAnCNPM.Controller
                     lblNgayHetHan.PlaceholderText = "";
                     lblNgayHetHan.ReadOnly = true;
                     lblNgayHetHan.SelectedText = "";
-                    lblNgayHetHan.Size = new System.Drawing.Size(266, 18);
+                    lblNgayHetHan.Size = new System.Drawing.Size(width, 18);
                     lblNgayHetHan.TabIndex = 1;
                     lblNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
@@ -522,7 +522,7 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.PlaceholderText = "";
                     lblTieuDe.ReadOnly = true;
                     lblTieuDe.SelectedText = "";
-                    lblTieuDe.Size = new System.Drawing.Size(266, 18);
+                    lblTieuDe.Size = new System.Drawing.Size(width, 18);
                     lblTieuDe.TabIndex = 0;
                     lblTieuDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
@@ -729,11 +729,12 @@ namespace DuAnCNPM.Controller
                         grbox.FillColor = System.Drawing.Color.Gainsboro;
                         grbox.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
                         grbox.ForeColor = System.Drawing.Color.Black;
-                        grbox.Location = new System.Drawing.Point(5, yOffset);
+                        grbox.Location = new System.Drawing.Point(container.Width - 20, yOffset);
                         grbox.Name = hd.MA_HOP_DONG;
                         grbox.Visible = true;
-                        grbox.Size = new System.Drawing.Size(288, 53);
+                        grbox.Size = new System.Drawing.Size(275, 50);
                         grbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+                        int width = grbox.Width - 20;
 
                         txtNgayHetHan.BackColor = System.Drawing.Color.Gainsboro;
                         txtNgayHetHan.BorderColor = System.Drawing.Color.Empty;
@@ -750,7 +751,7 @@ namespace DuAnCNPM.Controller
                         txtNgayHetHan.Name = "txtNgayhethan-" + hd.MA_CONG_TY + "-" + hd.MA_NHAN_VIEN;
                         txtNgayHetHan.ReadOnly = true;
                         txtNgayHetHan.Visible = true;
-                        txtNgayHetHan.Size = new System.Drawing.Size(266, 18);
+                        txtNgayHetHan.Size = new System.Drawing.Size(width, 18);
                         txtNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
                         txtTieuDe.BackColor = System.Drawing.Color.Gainsboro;
@@ -769,7 +770,7 @@ namespace DuAnCNPM.Controller
                         txtTieuDe.Name = hd.MA_HOP_DONG;
                         txtTieuDe.ReadOnly = true;
                         txtTieuDe.Visible = true;
-                        txtTieuDe.Size = new System.Drawing.Size(266, 18);
+                        txtTieuDe.Size = new System.Drawing.Size(width, 18);
                         txtTieuDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                         yOffset += grbox.Height + 5;
 
@@ -829,9 +830,10 @@ namespace DuAnCNPM.Controller
                         grbox.Location = new System.Drawing.Point(5, yOffset);
                         grbox.Name = hd.MA_HOP_DONG;
                         grbox.Visible = true;
-                        grbox.Size = new System.Drawing.Size(288, 53);
+                        grbox.Size = new System.Drawing.Size(container.Width - 20, 53);
                         grbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
+                        int width = grbox.Width - 20;
                         txtNgayHetHan.BackColor = System.Drawing.Color.Gainsboro;
                         txtNgayHetHan.BorderColor = System.Drawing.Color.Empty;
                         txtNgayHetHan.BorderThickness = 0;
@@ -847,7 +849,7 @@ namespace DuAnCNPM.Controller
                         txtNgayHetHan.Name = "txtNgayhethan-" + hd.MA_CONG_TY + "-" + hd.MA_NHAN_VIEN;
                         txtNgayHetHan.ReadOnly = true;
                         txtNgayHetHan.Visible = true;
-                        txtNgayHetHan.Size = new System.Drawing.Size(266, 18);
+                        txtNgayHetHan.Size = new System.Drawing.Size(width, 18);
                         txtNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
                         txtTieuDe.BackColor = System.Drawing.Color.Gainsboro;
@@ -866,7 +868,7 @@ namespace DuAnCNPM.Controller
                         txtTieuDe.Name = hd.MA_HOP_DONG;
                         txtTieuDe.ReadOnly = true;
                         txtTieuDe.Visible = true;
-                        txtTieuDe.Size = new System.Drawing.Size(266, 18);
+                        txtTieuDe.Size = new System.Drawing.Size(width, 18);
                         txtTieuDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                         yOffset += grbox.Height + 5;
 

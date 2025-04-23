@@ -156,7 +156,7 @@ namespace DuAnCNPM.Controller
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
                         panel.Name = "grbHDnv1";
-                        panel.Size = new System.Drawing.Size(288, 53);
+                        panel.Size = new System.Drawing.Size(container.Width - 20, 53);
                         panel.TabIndex = 11;
                         panel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     }
@@ -172,11 +172,11 @@ namespace DuAnCNPM.Controller
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
                         panel.Name = "grbHDnv1";
-                        panel.Size = new System.Drawing.Size(288, 53);
+                        panel.Size = new System.Drawing.Size(container.Width - 20, 53);
                         panel.TabIndex = 11;
                         panel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     }
-
+                    int width = panel.Width - 20;
                     var lblNgayHetHan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
                     lblNgayHetHan.BackColor = System.Drawing.Color.Gainsboro;
                     lblNgayHetHan.BorderColor = System.Drawing.Color.Empty;
@@ -197,7 +197,7 @@ namespace DuAnCNPM.Controller
                     lblNgayHetHan.PlaceholderText = "";
                     lblNgayHetHan.ReadOnly = true;
                     lblNgayHetHan.SelectedText = "";
-                    lblNgayHetHan.Size = new System.Drawing.Size(266, 18);
+                    lblNgayHetHan.Size = new System.Drawing.Size(width, 18);
                     lblNgayHetHan.TabIndex = 1;
                     lblNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
@@ -221,7 +221,7 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.PlaceholderText = "";
                     lblTieuDe.ReadOnly = true;
                     lblTieuDe.SelectedText = "";
-                    lblTieuDe.Size = new System.Drawing.Size(266, 18);
+                    lblTieuDe.Size = new System.Drawing.Size(width, 18);
                     lblTieuDe.TabIndex = 0;
                     lblTieuDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
@@ -278,7 +278,7 @@ namespace DuAnCNPM.Controller
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
                         panel.Name = "grbHDnv1";
-                        panel.Size = new System.Drawing.Size(288, 53);
+                        panel.Size = new System.Drawing.Size(container.Width - 20, 53);
                         panel.TabIndex = 11;
                         panel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     }
@@ -294,12 +294,12 @@ namespace DuAnCNPM.Controller
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
                         panel.Name = "grbHDnv1";
-                        panel.Size = new System.Drawing.Size(288, 53);
+                        panel.Size = new System.Drawing.Size(container.Width - 20, 53);
                         panel.TabIndex = 11;
                         panel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     }
-
-                    var lblNgayHetHan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+                int width = panel.Width - 20;
+                var lblNgayHetHan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
                     lblNgayHetHan.BackColor = System.Drawing.Color.Gainsboro;
                     lblNgayHetHan.BorderColor = System.Drawing.Color.Empty;
                     lblNgayHetHan.BorderThickness = 0;
@@ -319,7 +319,7 @@ namespace DuAnCNPM.Controller
                     lblNgayHetHan.PlaceholderText = "";
                     lblNgayHetHan.ReadOnly = true;
                     lblNgayHetHan.SelectedText = "";
-                    lblNgayHetHan.Size = new System.Drawing.Size(266, 18);
+                    lblNgayHetHan.Size = new System.Drawing.Size(width, 18);
                     lblNgayHetHan.TabIndex = 1;
                     lblNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
@@ -343,7 +343,7 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.PlaceholderText = "";
                     lblTieuDe.ReadOnly = true;
                     lblTieuDe.SelectedText = "";
-                    lblTieuDe.Size = new System.Drawing.Size(266, 18);
+                    lblTieuDe.Size = new System.Drawing.Size(width, 18);
                     lblTieuDe.TabIndex = 0;
                     lblTieuDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
