@@ -75,7 +75,7 @@ namespace DuAnCNPM.Controller
                     SO_TIEN = SoTien,
                     TRANG_THAI = true,
                     HOAN_THANH = false,
-                    QUY = (NgayKy.Month - 1) / 3 + 1
+                    QUY = ((NgayKy.Month - 1) / 3 + 1).ToString() + "/" + NgayKy.Year.ToString()
                 };
                 context.HopDongs.Add(hopdong);
                 context.SaveChanges();
@@ -912,6 +912,121 @@ namespace DuAnCNPM.Controller
             //((((main.Parent.Parent) as System.Windows.Forms.SplitContainer)
             //    .Panel1).Controls["btnBackNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Visible = true;
         }
+
+        public HashSet<String> timeData()
+        {
+            HashSet<String> data = new HashSet<string>();
+            using (var context = new CTQLMTContext())
+            {
+                var listHD = context.HopDongs.ToList();
+                foreach (HopDong hd in listHD)
+                {
+                    data.Add(hd.QUY);
+                    data.Add(hd.NGAY_KY.Value.Year.ToString());
+                }
+            }
+            return data;
+        }
+
+        public int sumHDYear(String year)
+        {
+            int nam = int.Parse(year);
+            var listData = new List<HopDong>();
+            using (var context = new CTQLMTContext())
+            {
+                var listHD = context.HopDongs.ToList();
+                foreach (HopDong hd in listHD)
+                {
+                    if (hd.NGAY_KY.Value.Year == nam)
+                    {
+                        listData.Add(hd);
+                    }
+                }
+            }
+            return listData.Count();
+        }
+
+        public int sumHDQuarter(String quarter)
+        {
+            List<HopDong> listHDQuy = new List<HopDong>();
+            using (var context = new CTQLMTContext())
+            {
+                var listHD = context.HopDongs.ToList();
+                foreach (HopDong hd in listHD)
+                {
+                    if (hd.QUY == quarter)
+                    {
+                        listHDQuy.Add(hd);
+                    }
+                }
+            }
+            return listHDQuy.Count();
+        }
+
+        public Dictionary<String, int> dataForYearChart(String year)
+        {
+            int nam = int.Parse(year);
+            Dictionary<String, int> dicData = new Dictionary<String, int>();
+            dicData.Add("1/" + year, 0);
+            dicData.Add("2/" + year, 0);
+            dicData.Add("3/" + year, 0);
+            dicData.Add("4/" + year, 0);
+
+            var listData = new List<HopDong>();
+            using (var context = new CTQLMTContext())
+            {
+                var listHD = context.HopDongs.ToList();
+                foreach (HopDong hd in listHD)
+                {
+                    if (hd.NGAY_KY.Value.Year == nam)
+                    {
+                        listData.Add(hd);
+                    }
+                }
+            }
+
+            foreach (HopDong hd in listData)
+            {
+                String temp = hd.QUY;
+                if (dicData.ContainsKey(temp))
+                {
+                    dicData[temp]++;
+                }
+            }
+            return dicData;
+        }
+
+        public Dictionary<String, int> dataForQuarter(String quy)
+        {
+            Dictionary<String, int> dic = new Dictionary<String, int>();
+            List<HopDong> listHDQuy = new List<HopDong>();
+            using (var context = new CTQLMTContext())
+            {
+                var listHD = context.HopDongs.ToList();
+                foreach (HopDong hd in listHD)
+                {
+                    if (hd.QUY == quy)
+                    {
+                        listHDQuy.Add(hd);
+                    }
+                }
+            }
+
+            foreach (HopDong hd in listHDQuy)
+            {
+                String month = hd.NGAY_KY.Value.Month.ToString();
+                if (dic.ContainsKey(month))
+                {
+                    dic[month]++;
+                }
+                else
+                {
+                    dic.Add(month, 1);
+                }
+            }
+            return dic;
+        }
+
 
     }
 }

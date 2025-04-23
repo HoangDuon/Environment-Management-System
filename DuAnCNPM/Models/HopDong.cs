@@ -25,6 +25,6 @@ namespace DuAnCNPM
         //update 
         public bool TRANG_THAI { get; set; }
         public bool HOAN_THANH { get; set; }
-        public int QUY { get; set; }
+        public String QUY { get; set; }
     }
 }

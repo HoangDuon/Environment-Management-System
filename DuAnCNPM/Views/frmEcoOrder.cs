@@ -24,6 +24,8 @@ using AxWMPLib;
 using WMPLib;
 using static System.Net.WebRequestMethods;
 using Microsoft.Reporting.WinForms;
+using System.Windows.Forms.DataVisualization.Charting;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using DuAnCNPM.Models;
 
 namespace DuAnCNPM
@@ -428,6 +430,9 @@ namespace DuAnCNPM
             ShowPanel(panAdmin);
             EmployeeService employeeService = new EmployeeService();
             employeeService.ShowEmployeeAdmin(panDanhsachNV,panTTNVchitiet);
+            btnSuaDSNV.Enabled = true;
+            btnTaiDSNV.Enabled = false;
+            btnXoaDSNV.Enabled = false;
         }
         // In PDF
         //nút In trong report
@@ -685,193 +690,179 @@ namespace DuAnCNPM
         {
             lblTTNV.Visible = false;
             ShowPanel(panTTNVchitiet);
+            lblTTNV.Visible = false;
+            ShowPanel(panTTNVchitiet);
+            panTTNVchitiet.Enabled = true;
+            foreach (Control ctrl in panTTNVchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Clear();
+                }
+            }
+            foreach (Control ctrl in panTTNVchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Enabled = true;
+                }
+            }
+            txtMachiso.Enabled = false;
+
+            btnXoaDSNV.Enabled = false;
+            btnSuaDSNV.Enabled = false;
+            btnTaiDSNV.Enabled = true;
+
+            cboSexTTNV.Enabled = true;
+            dtpNgaycap.Enabled = true;
+            checkTruongPhong.Enabled = true;
         }
-
-        //        private void btnAddNV_Click(object sender, EventArgs e)
-        //        {
-        //            panTTNVchitiet.Enabled = true;
-        //            foreach (Control ctrl in panTTNVchitiet.Controls)
-        //            {
-        //                if (ctrl is SiticoneTextBox)
-        //                {
-        //                    ((SiticoneTextBox)ctrl).Clear();
-        //                }
-        //            }
-        //            foreach (Control ctrl in panTTNVchitiet.Controls)
-        //            {
-        //                if (ctrl is SiticoneTextBox)
-        //                {
-        //                    ((SiticoneTextBox)ctrl).Enabled = true;
-        //                }
-        //            }
-        //            txtMachiso.Enabled = false;
-
-        //            btnXoaDSNV.Enabled = false;
-        //            btnSuaDSNV.Enabled = false;
-        //            btnTaiDSNV.Enabled = true;
-
-        //            cboSexnv.Enabled = true;
-        //            dtpNgaycap.Enabled = true;
-        //            checkTruongPhong.Enabled = true;
-        //        }
 
 
         // Tải ds Nhân viên panAdmin
         private void btnTaiDSNV_Click(object sender, EventArgs e)
         {
+            String manhanvien = txtMachiso.Text;
+            String hoten = txtChiso.Text;               // Khác null, không có số
+            String chucvu = txtChucvuTTNV.Text;              // nằm trong danh sách cho trước
+            String ngaysinh = dtpNgaycap.Text;   // theo format dd-mm-yyyy
+            String gioitinh = cboSexTTNV.Text;    // nam or nu
+            String sodienthoai = txtSDTTTNV.Text; // 10 chữ số, chỉ là số
+            String gmail = txtGmail.Text;      // có đuôi là @gmail.com
+            Boolean truongphong = checkTruongPhong.Checked;
 
+            Validating validate = new Validating();
+            if (!validate.nameValidate(hoten))
+            {
+                MessageBox.Show("Tên vừa nhập chưa phù hợp");
+                return;
+            }
+            else if (!validate.position().Contains(chucvu))
+            {
+                MessageBox.Show("Chức vụ chưa đúng. Chức vụ phải là 1 trong các chức vụ sau (\"PTN\", \"PKH\", \"PQT\", \"PKQ\", \"PKD, ADMIN\")");
+                return;
+            }
+            else if (!validate.ageValidate(DateTime.Parse(ngaysinh)))
+            {
+                MessageBox.Show("Phải lớn hơn 18 tuổi");
+                return;
+            }
+            else if (!validate.genderValidate(gioitinh))
+            {
+                MessageBox.Show("Giới tính phải là nam hoặc nữ");
+                return;
+            }
+            else if (!validate.validatePhoneNumber(sodienthoai))
+            {
+                MessageBox.Show("Số điện thoại chưa hợp lệ");
+                return;
+            }
+            else if (!validate.validateGmail(gmail))
+            {
+                MessageBox.Show("Gmail không hợp lệ");
+                return;
+            }
+
+
+
+            EmployeeService edit = new EmployeeService();
+            if (!btnSuaDSNV.Enabled)
+            {
+                if (edit.AddEmployee(hoten, chucvu, DateTime.Parse(ngaysinh /*, new CultureInfo("vi-VN")*/), "123456", gioitinh, sodienthoai, gmail, truongphong))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    foreach (Control ctrl in panTTNVchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Clear();
+                        }
+                    }
+                    edit.ShowEmployeeAdmin(panDSNV, panTTNVchitiet);
+                    panTTNVchitiet.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công");
+                }
+            }
+            else
+            {
+                bool[] flag = new bool[6] {
+                edit.editEmployeeName(manhanvien, hoten),
+                edit.editEmployeePosition(manhanvien, chucvu),
+                edit.editDateOfBirth(manhanvien, DateTime.Parse(ngaysinh /*, new CultureInfo("vi-VN")*/ )),
+                edit.editEmployeeGender(manhanvien, gioitinh),
+                edit.editPhoneNumber(manhanvien, sodienthoai),
+                edit.editGmail(manhanvien, gmail) };
+                edit.editHeadOfRoom(manhanvien, truongphong);
+                for (int i = 0; i < 6; i++)
+                {
+                    if (!flag[i])
+                    {
+                        MessageBox.Show("Chỉnh sửa không thành công, hãy nhập lại");
+                        return;
+                    }
+                }
+                MessageBox.Show("Chỉnh sửa thành công");
+                foreach (Control ctrl in panTTNVchitiet.Controls)
+                {
+                    if (ctrl is SiticoneTextBox)
+                    {
+                        ((SiticoneTextBox)ctrl).Clear();
+                    }
+                }
+                edit.ShowEmployeeAdmin(panDSNV, panTTNVchitiet);
+                panTTNVchitiet.Enabled = false;
+                btnXoaDSNV.Enabled = false;
+                btnTaiDSNV.Enabled = false;
+            }
         }
-        //        private void btnTaiDSNV_Click(object sender, EventArgs e)
-        //        {
-        //            String manhanvien = txtMachiso.Text;
-        //            String hoten = txtChiso.Text;               // Khác null, không có số
-        //            String chucvu = txtChucvu.Text;              // nằm trong danh sách cho trước
-        //            String ngaysinh = dtpNgaycap.Text;   // theo format dd-mm-yyyy
-        //            String gioitinh = cboSexnv.Text;    // nam or nu
-        //            String sodienthoai = txtSDT.Text; // 10 chữ số, chỉ là số
-        //            String gmail = txtGmail.Text;      // có đuôi là @gmail.com
-        //            Boolean truongphong = checkTruongPhong.Checked;
-
-        //            Validating validate = new Validating();
-        //            if (!validate.nameValidate(hoten))
-        //            {
-        //                MessageBox.Show("Tên vừa nhập chưa phù hợp");
-        //                return;
-        //            }
-        //            else if (!validate.position().Contains(chucvu))
-        //            {
-        //                MessageBox.Show("Chức vụ chưa đúng. Chức vụ phải là 1 trong các chức vụ sau (\"PTN\", \"PKH\", \"PQT\", \"PKQ\", \"PKD, ADMIN\")");
-        //                return;
-        //            }
-        //            else if (!validate.ageValidate(DateTime.Parse(ngaysinh)))
-        //            {
-        //                MessageBox.Show("Phải lớn hơn 18 tuổi");
-        //                return;
-        //            }
-        //            else if (!validate.genderValidate(gioitinh))
-        //            {
-        //                MessageBox.Show("Giới tính phải là nam hoặc nữ");
-        //                return;
-        //            }
-        //            else if (!validate.validatePhoneNumber(sodienthoai))
-        //            {
-        //                MessageBox.Show("Số điện thoại chưa hợp lệ");
-        //                return;
-        //            }
-        //            else if (!validate.validateGmail(gmail))
-        //            {
-        //                MessageBox.Show("Gmail không hợp lệ");
-        //                return;
-        //            }
-
-
-
-        //            EmployeeService edit = new EmployeeService();
-        //            if (!btnSuaDSNV.Enabled)
-        //            {
-        //                if (edit.AddEmployee(hoten, chucvu, DateTime.Parse(ngaysinh /*, new CultureInfo("vi-VN")*/), "123456", gioitinh, sodienthoai, gmail, truongphong))
-        //                {
-        //                    MessageBox.Show("Thêm thành công");
-        //                    foreach (Control ctrl in panTTNVchitiet.Controls)
-        //                    {
-        //                        if (ctrl is SiticoneTextBox)
-        //                        {
-        //                            ((SiticoneTextBox)ctrl).Clear();
-        //                        }
-        //                    }
-        //                    edit.ShowEmployee(panDSNV, panTTNVchitiet);
-        //                    panTTNVchitiet.Enabled = false;
-        //                }
-        //                else
-        //                {
-        //                    MessageBox.Show("Thêm không thành công");
-        //                }
-        //            }
-        //            else
-        //            {
-        //                bool[] flag = new bool[6] {
-        //                edit.editEmployeeName(manhanvien, hoten),
-        //                edit.editEmployeePosition(manhanvien, chucvu),
-        //                edit.editDateOfBirth(manhanvien, DateTime.Parse(ngaysinh /*, new CultureInfo("vi-VN")*/ )),
-        //                edit.editEmployeeGender(manhanvien, gioitinh),
-        //                edit.editPhoneNumber(manhanvien, sodienthoai),
-        //                edit.editGmail(manhanvien, gmail) };
-        //                edit.editHeadOfRoom(manhanvien, truongphong);
-        //                for (int i = 0; i < 6; i++)
-        //                {
-        //                    if (!flag[i])
-        //                    {
-        //                        MessageBox.Show("Chỉnh sửa không thành công, hãy nhập lại");
-        //                        return;
-        //                    }
-        //                }
-        //                MessageBox.Show("Chỉnh sửa thành công");
-        //                foreach (Control ctrl in panTTNVchitiet.Controls)
-        //                {
-        //                    if (ctrl is SiticoneTextBox)
-        //                    {
-        //                        ((SiticoneTextBox)ctrl).Clear();
-        //                    }
-        //                }
-        //                edit.ShowEmployee(panDSNV, panTTNVchitiet);
-        //                panTTNVchitiet.Enabled = false;
-        //                btnXoaDSNV.Enabled = false;
-        //                btnTaiDSNV.Enabled = false;
-        //            }
-        //        }
 
         // xoa ds nhân viên panAdmin
         private void btnXoaDSNV_Click(object sender, EventArgs e)
         {
+            String manhanvien = txtMachiso.Text;
 
+
+            EmployeeService remove = new EmployeeService();
+            if (remove.deleteEmployee(manhanvien))
+            {
+                MessageBox.Show("Xóa thành công");
+                foreach (Control ctrl in panTTNVchitiet.Controls)
+                {
+                    if (ctrl is SiticoneTextBox)
+                    {
+                        ((SiticoneTextBox)ctrl).Clear();
+                    }
+                }
+                remove.ShowEmployeeAdmin(panDSNV, panTTNVchitiet);
+                panTTNVchitiet.Enabled = false;
+                btnXoaDSNV.Enabled = false;
+                btnTaiDSNV.Enabled = false;
+            }
+            else MessageBox.Show("Xóa không thành công");
         }
-        //        private void btnXoaDSNV_Click(object sender, EventArgs e)
-        //        {
-        //            String manhanvien = txtMachiso.Text;
-
-
-        //            EmployeeService remove = new EmployeeService();
-        //            if (remove.deleteEmployee(manhanvien))
-        //            {
-        //                MessageBox.Show("Xóa thành công");
-        //                foreach (Control ctrl in panTTNVchitiet.Controls)
-        //                {
-        //                    if (ctrl is SiticoneTextBox)
-        //                    {
-        //                        ((SiticoneTextBox)ctrl).Clear();
-        //                    }
-        //                }
-        //                remove.ShowEmployee(panDSNV, panTTNVchitiet);
-        //                panTTNVchitiet.Enabled = false;
-        //                btnXoaDSNV.Enabled = false;
-        //                btnTaiDSNV.Enabled = false;
-        //            }
-        //            else MessageBox.Show("Xóa không thành công");
-        //        }
-
+        
         // Sửa ds NV panAdmin
         private void btnSuaDSNV_Click(object sender, EventArgs e)
         {
-
+            btnXoaDSNV.Enabled = true;
+            btnTaiDSNV.Enabled = true;
+            panTTNVchitiet.Enabled = true;
+            //txtMachiso.Enabled = false;
+            foreach (Control ctrl in panTTNVchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Enabled = true;
+                }
+            }
+            txtMachiso.Enabled = false;
+            cboSexTTNV.Enabled = true;
+            dtpNgaycap.Enabled = true;
+            checkTruongPhong.Enabled = true;
         }
-        //        private void btnSuaDSNV_Click(object sender, EventArgs e)
-        //        {
-        //            btnXoaDSNV.Enabled = true;
-        //            btnTaiDSNV.Enabled = true;
-        //            panTTNVchitiet.Enabled = true;
-        //            //txtMachiso.Enabled = false;
-        //            foreach (Control ctrl in panTTNVchitiet.Controls)
-        //            {
-        //                if (ctrl is SiticoneTextBox)
-        //                {
-        //                    ((SiticoneTextBox)ctrl).Enabled = true;
-        //                }
-        //            }
-        //            txtMachiso.Enabled = false;
-        //            cboSexnv.Enabled = true;
-        //            dtpNgaycap.Enabled = true;
-        //            checkTruongPhong.Enabled = true;
-        //        }
 
         //Sort NV
         private void btnSortNV_Click(object sender, EventArgs e)
@@ -895,22 +886,197 @@ namespace DuAnCNPM
         //Add KH trong admin
         private void btnAddKH_Click(object sender, EventArgs e)
         {
-            lblThongtinKH.Visible = false;
-            ShowPanel(panTTKHchitiet);
+            panTTKHchitiet.Enabled = true;
+            btnLuuDSKH.Enabled = true;
+            btnSuaDSKH.Enabled = false;
+            foreach (Control ctrl in panTTKHchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Clear();
+                }
+            }
+            foreach (Control ctrl in panTTKHchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Enabled = true;
+                }
+            }
+            txtMaCty.Enabled = false;
+
         }
         //Luu KH
         private void btnLuuDSKH_Click(object sender, EventArgs e)
         {
+            String makhachhang = txtMaCty.Text;
+            String tenkhachhang = txtTenCty.Text;
+            String diachi = txtDiachiCty.Text;
+            String sodienthoai = txtSDTCty.Text;
+            String gmail = txtGmailCty.Text;
+            String masothue = txtMST.Text;
+
+
+            Validating validate = new Validating();
+            if (!validate.nameValidate(tenkhachhang))
+            {
+                MessageBox.Show("Tên khách hàng chưa hợp lí");
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(diachi))
+            {
+                MessageBox.Show("Địa chỉ không được trống");
+                return;
+            }
+            if (!validate.validatePhoneNumber(sodienthoai))
+            {
+                MessageBox.Show("Số điện thoai chưa hợp lệ");
+                return;
+            }
+            else if (!validate.validateGmail(gmail))
+            {
+                MessageBox.Show("Gmail chưa hợp lệ");
+                return;
+            }
+
+            CustomerService edit = new CustomerService();
+            if (!btnSuaDSKH.Enabled)
+            {
+                if (validate.listMST().ContainsKey(masothue))
+                {
+                    MessageBox.Show("Khách hàng đã tồn tại, hay tìm kiếm");
+                    return;
+                }
+
+                if (edit.addCustomer(tenkhachhang, sodienthoai, gmail, diachi, masothue))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    foreach (Control ctrl in panTTKHchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Clear();
+                        }
+                    }
+                    edit.ShowCustomers(panDSKH, panTTKHchitiet);
+                    panTTNVchitiet.Enabled = false;
+                    foreach (Control ctrl in panTTKHchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Enabled = false;
+                        }
+                    }
+                    btnLuuDSKH.Enabled = false;
+
+                }
+                else MessageBox.Show("Thêm không thành công");
+            }
+            else
+            {
+                bool[] flag = new bool[4]
+                {
+                    edit.editCustomerName(makhachhang, tenkhachhang),
+                    edit.editCustomerPhoneNumber(makhachhang, sodienthoai),
+                    edit.editCustomerGmail(makhachhang, gmail),
+                    edit.editCustomerAddress(makhachhang, diachi)
+                };
+                for (int i = 0; i < 4; i++)
+                {
+                    if (!flag[i])
+                    {
+                        MessageBox.Show("Chỉnh sửa không thành công, hãy làm lại");
+                        return;
+                    }
+                }
+                MessageBox.Show("Chỉnh sửa thành công");
+                foreach (Control ctrl in panTTKHchitiet.Controls)
+                {
+                    if (ctrl is SiticoneTextBox)
+                    {
+                        ((SiticoneTextBox)ctrl).Clear();
+                    }
+                }
+                edit.ShowCustomers(panDSKH, panTTKHchitiet);
+                panTTNVchitiet.Enabled = false;
+                foreach (Control ctrl in panTTKHchitiet.Controls)
+                {
+                    if (ctrl is SiticoneTextBox)
+                    {
+                        ((SiticoneTextBox)ctrl).Enabled = false;
+                    }
+                }
+                btnXoaDSKH.Enabled = false;
+                btnLuuDSKH.Enabled = false;
+            }
 
         }
         //Xoa KH
         private void btnXoaDSKH_Click(object sender, EventArgs e)
         {
 
+            DialogResult result = MessageBox.Show(
+            "Bạn có chắc chắn muốn xóa không?",
+            "Xác nhận xóa",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+);
+
+
+            if (result == DialogResult.Yes)
+            {
+                String makhachhang = txtMaCty.Text;
+                CustomerService remove = new CustomerService();
+                if (remove.deleteCustomer(makhachhang))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    foreach (Control ctrl in panTTKHchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Clear();
+                        }
+                    }
+                    remove.ShowCustomers(panDSKH, panTTKHchitiet);
+                    panTTNVchitiet.Enabled = false;
+                    foreach (Control ctrl in panTTKHchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Enabled = false;
+                        }
+                    }
+                    btnXoaDSKH.Enabled = false;
+                    btnLuuDSKH.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                    return;
+                }
+
+
+            }
+            else
+            {
+                return;
+            }
+
         }
         //Sua KH
         private void btnSuaDSKH_Click(object sender, EventArgs e)
         {
+            btnXoaDSKH.Enabled = true;
+            btnLuuDSKH.Enabled = true;
+            panTTKHchitiet.Enabled = true;
+            foreach (Control ctrl in panTTKHchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Enabled = true;
+                }
+            }
+            txtMaCty.Enabled = false;
 
         }
         //Sort KH
@@ -931,9 +1097,46 @@ namespace DuAnCNPM
         {
             lblTTHD.Visible = false;
             ShowPanel(panTTHDchitiet);
+
+            //.Enabled = false;
+            foreach (Control ctrl in panTTHDchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Clear();
+                    ((SiticoneTextBox)ctrl).Enabled = true; ;
+
+                }
+            }
+            panTTHDchitiet.Enabled = true;
+            panCSchitiet.Visible = false;
+            txtMaHDQLHD.Enabled = false;
+            btnSuaHD.Enabled = false;
+            btnXoaHD.Enabled = false;
+            btnLuuHD.Enabled = true;
+            dtpNgaykyQLHD.Enabled = true;
+            dtpNgaytraKQQLHD.Enabled = true;
         }
         private void btnXoaHD_Click(object sender, EventArgs e)
         {
+            string mahopdong = txtMaHDQLHD.Text;
+            ContractService remove = new ContractService();
+            if (remove.deleteContract(mahopdong))
+            {
+                MessageBox.Show("Xóa hợp đồng thành công");
+                foreach (Control ctrl in panTTHDchitiet.Controls)
+                {
+                    if (ctrl is SiticoneTextBox)
+                    {
+                        ((SiticoneTextBox)ctrl).Clear();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Xoá không thành công");
+                return;
+            }
 
         }
 
@@ -944,6 +1147,84 @@ namespace DuAnCNPM
 
         private void btnLuuHD_Click(object sender, EventArgs e)
         {
+            String mahopdong = txtMaHDQLHD.Text;
+            String macongty = txtMaCtyQLHD.Text;
+            String manhanvien = UserInform.manhanvien;
+            String ngayky = dtpNgaykyQLHD.Text;
+            String ngaygiao = dtpNgaytraKQQLHD.Text;
+            String sotien = txtSotien.Text;
+            //String masothue = "..."; // tạo text để nhập mã số thuế của khách hàng
+
+
+            Validating validate = new Validating();
+            if (!validate.IdCustomerValidate(macongty))
+            {
+                MessageBox.Show("Khách hàng không tồn tại, hãy kiếm tra lại hoặc thêm khách hàng mới ");
+                return;
+            }
+            else if (!validate.timeValid(ngayky, ngaygiao))
+            {
+                MessageBox.Show("Ngày giao và ngày kí chưa hợp lí");
+                return;
+            }
+            else if (!validate.moneyValidate(sotien))
+            {
+                MessageBox.Show("Số tiền chưa hợp lí");
+                return;
+            }
+            //else if (validate.listMST().ContainsKey(masothue))
+            //{
+            //    MessageBox.Show("Khách hàng đã tồn tại hãy tìm khách hàng dựa vào mã số thuế");
+            //    return;
+            //}
+
+
+            ContractService edit = new ContractService();
+            if (!btnSuaHD.Enabled)
+            {
+                if (edit.addContract(manhanvien, macongty, DateTime.Parse(ngayky), DateTime.Parse(ngaygiao), long.Parse(sotien)))
+                {
+                    MessageBox.Show("Thêm hợp đồng mới thành công");
+                    foreach (Control ctrl in panTTHDchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Clear();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Thêm hợp đồng không thành công");
+                    return;
+                }
+            }
+            else
+            {
+                bool[] flag = new bool[4]
+                {
+                    edit.editNgayKy(mahopdong, DateTime.Parse(ngayky)),
+                    edit.editNgayTra(mahopdong, DateTime.Parse(ngaygiao)),
+                    edit.editSoTien(mahopdong, long.Parse(sotien)),
+                    edit.editMacongty(mahopdong, macongty)
+                };
+                for (int i = 0; i < 4; i++)
+                {
+                    if (!flag[i])
+                    {
+                        MessageBox.Show("Chỉnh sửa không thanh công");
+                        return;
+                    }
+                }
+                MessageBox.Show("Chỉnh sửa thành công");
+                foreach (Control ctrl in panTTHDchitiet.Controls)
+                {
+                    if (ctrl is SiticoneTextBox)
+                    {
+                        ((SiticoneTextBox)ctrl).Clear();
+                    }
+                }
+            }
 
         }
 
@@ -980,16 +1261,21 @@ namespace DuAnCNPM
 
         private void btnSuaHD_Click(object sender, EventArgs e)
         {
+            panTTHDchitiet.Enabled = true;
+            txtMaHDQLHD.Enabled = false;
+            txtMaNVQLHD.Enabled = false;
+            btnSuaHD.Enabled = true;
+            btnXoaHD.Enabled = true;
 
         }
-        
+
 
         //        //chọn CS
-        //        public void Work_OnselectDSCSClicked()
-        //        {
-        //            lblTTCS.Visible = true;
-        //            ShowPanel(panTTCSchitiet);
-        //        }
+        //public void Work_OnselectDSCSClicked()
+        //{
+        //    lblTTCS.Visible = true;
+        //    ShowPanel(panTTCSchitiet);
+        //}
         //        
 
         //Add Thông Số trong admin
@@ -997,6 +1283,27 @@ namespace DuAnCNPM
         {
             lblTTTS.Visible = false;
             ShowPanel(panTTTSchitiet);
+            panTTTSchitiet.Enabled = true;
+            foreach (Control ctrl in panTTTSchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Clear();
+                }
+            }
+            foreach (Control ctrl in panTTTSchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Enabled = true;
+                }
+            }
+            txtMaCS.Enabled = false;
+            txtViTriCS.Enabled = false;
+            btnXoaTS.Enabled = false;
+            btnSuaTS.Enabled = false;
+            btnLuuTS.Enabled = true;
+
         }
         private void btnSortTS_Click(object sender, EventArgs e)
         {
@@ -1006,16 +1313,168 @@ namespace DuAnCNPM
 
         private void btnLuuTS_Click(object sender, EventArgs e)
         {
+            String machiso = txtMaCS.Text;
+            String tenchiso = txtTenChiSo.Text;
+            String loaichiso = txtLoaiChiSo.Text.ToUpper();
+            String tieuchuan = txtTieuChuan.Text;
+            String noinhap = txtNoiNhap.Text;
+
+
+            Validating validate = new Validating();
+
+
+            if (string.IsNullOrWhiteSpace(tenchiso))
+            {
+                MessageBox.Show("Tên không được rỗng");
+                return;
+            }
+            else if (!validate.enviromentTypeValidate(loaichiso))
+            {
+                MessageBox.Show("Loại chỉ số chưa phù hợp");
+                return;
+            }
+            else if (!validate.standardValidate(tieuchuan))
+            {
+                MessageBox.Show("Tiêu chuẩn chưa phù hợp");
+                return;
+            }
+            else if (!validate.enterPlacevalidate().Contains(noinhap))
+            {
+                MessageBox.Show("Nơi nhập chưa phù hợp");
+                return;
+            }
+
+            EnviromentIndexService edit = new EnviromentIndexService();
+            if (!btnSuaTS.Enabled)
+            {
+                if (edit.addEnviromentIndex(tenchiso, loaichiso, tieuchuan, noinhap))
+                {
+                    MessageBox.Show("Thêm chỉ số mới thành công");
+                    foreach (Control ctrl in panTTTSchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Clear();
+                        }
+                    }
+                    edit.ShowStats(panDSTS, panTTTSchitiet);
+                    panCSchitiet.Enabled = false;
+                    foreach (Control ctrl in panTTTSchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Enabled = false;
+                        }
+                    }
+                    btnLuuTS.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Thêm chỉ số không thành công");
+                    return;
+                }
+            }
+            else
+            {
+                bool[] flag = new bool[3]
+                {
+                    edit.editName(machiso, tenchiso),
+                    edit.editEnviromentType(machiso, loaichiso),
+                    edit.editStandardIndex(machiso, tieuchuan)
+                };
+                for (int i = 0; i < 3; i++)
+                {
+                    if (!flag[i])
+                    {
+                        MessageBox.Show("Chỉnh sửa không thành công, hãy nhập lại");
+                        return;
+                    }
+                }
+                MessageBox.Show("Chỉnh sửa thành công");
+                foreach (Control ctrl in panTTTSchitiet.Controls)
+                {
+                    if (ctrl is SiticoneTextBox)
+                    {
+                        ((SiticoneTextBox)ctrl).Clear();
+                    }
+                }
+                foreach (Control ctrl in panTTTSchitiet.Controls)
+                {
+                    if (ctrl is SiticoneTextBox)
+                    {
+                        ((SiticoneTextBox)ctrl).Enabled = false;
+                    }
+                }
+                btnLuuTS.Enabled = false;
+                btnSuaTS.Enabled = false;
+                btnXoaTS.Enabled = false;
+            }
 
         }
 
         private void btnXoaTS_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show(
+            "Bạn có chắc chắn muốn xóa không?",
+            "Xác nhận xóa",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+        );
+
+
+            if (result == DialogResult.Yes)
+            {
+                String machiso = txtMaCS.Text;
+                EnviromentIndexService remove = new EnviromentIndexService();
+                if (remove.deleteEnviromentIndex(machiso))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    foreach (Control ctrl in panTTTSchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Clear();
+                        }
+                    }
+                    remove.ShowStats(panDSTS, panTTTSchitiet);
+                    foreach (Control ctrl in panTTTSchitiet.Controls)
+                    {
+                        if (ctrl is SiticoneTextBox)
+                        {
+                            ((SiticoneTextBox)ctrl).Enabled = false;
+                        }
+                    }
+                    btnLuuTS.Enabled = false;
+                    btnSuaTS.Enabled = false;
+                    btnXoaTS.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
 
         }
 
         private void btnSuaTS_Click(object sender, EventArgs e)
         {
+            btnLuuTS.Enabled = true;
+            btnXoaTS.Enabled = true;
+            panTTTSchitiet.Enabled = true;
+            foreach (Control ctrl in panTTTSchitiet.Controls)
+            {
+                if (ctrl is SiticoneTextBox)
+                {
+                    ((SiticoneTextBox)ctrl).Enabled = true;
+                }
+            }
+            txtMaCS.Enabled = false;
+            txtViTriCS.Enabled = false;
 
         }
 
@@ -1256,21 +1715,6 @@ namespace DuAnCNPM
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         //form admin
 
@@ -1934,6 +2378,62 @@ namespace DuAnCNPM
         //            EnviromentIndexService enviromentIndexService = new EnviromentIndexService();
         //            enviromentIndexService.ShowStats(panDSCS, panTTCSchitiet);
         //        }
+
+        private int checkTime(String time)
+        {
+            for (int i = 0; i < time.Length; i++)
+            {
+                if (time[i] == '/')
+                {
+                    return 1;    // quy
+                }
+            }
+            return 0;            // nam
+        }
+
+        private void loadChart(Dictionary<String, int> data)
+        {
+            chart1.Series.Clear();
+            Series columnSeries = new Series
+            {
+                ChartType = SeriesChartType.Column,
+                IsValueShownAsLabel = true
+            };
+
+            foreach (var s in data)
+            {
+                columnSeries.Points.AddXY(s.Key, s.Value);
+            }
+
+            chart1.Series.Add(columnSeries);
+
+            chart1.ChartAreas[0].AxisX.Title = "Tháng";
+            chart1.ChartAreas[0].AxisY.Title = "Số lượng";
+            ContractService cs = new ContractService();
+            chart1.DataSource = cs.dataForYearChart("2024");
+        }
+
+        //private void cbxDataFilter_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    String time = cbxDataFilter.Text;
+        //    ContractService cv = new ContractService();
+        //    Dictionary<String, int> dic = new Dictionary<string, int>();
+
+        //    if (checkTime(time) == 1)
+        //    {
+        //        dic = cv.dataForQuarter(time);
+        //        txtSumDH.Text = cv.sumHDQuarter(time).ToString();
+        //    }
+        //    else
+        //    {
+        //        dic = cv.dataForYearChart(time);
+        //        txtSumDH.Text = cv.sumHDYear(time).ToString();
+
+        //    }
+        //    loadChart(dic);
+        //}
+
+
 
 
     }
