@@ -1615,11 +1615,12 @@ namespace DuAnCNPM
             {
                 btnSua.Enabled = true;
                 var selectedItem = lvDulieudonhang.SelectedItems[0];
-
+                string mts = selectedItem.SubItems[9].Text;
                 string tcs = selectedItem.SubItems[0].Text;
                 string cs = selectedItem.SubItems[2].Text;
                 string gc = selectedItem.SubItems[6].Text;
 
+                txtMaThongSo.Text = mts;
                 txtTenthongso.Text = tcs;
                 txtGhichu.Text = gc;
                 txtKetqua.Text = cs;

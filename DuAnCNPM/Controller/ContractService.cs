@@ -688,6 +688,7 @@ namespace DuAnCNPM.Controller
             lvDulieuTS.Columns.Add("Ghi chú", 150);
             lvDulieuTS.Columns.Add("Kết luận SVTC", 150);
             lvDulieuTS.Columns.Add("Kết luận LT", 150);
+            lvDulieuTS.Columns.Add("Mã thông số", 0);
             lvDulieuTS.Items.Clear();
             List<ChiSoMoiTruongDTO> danhSachChiSo = Contract.GetDanhSachChiSo(MADH);
             foreach (var chiso in danhSachChiSo)
@@ -701,6 +702,7 @@ namespace DuAnCNPM.Controller
                 item.SubItems.Add(chiso.GHI_CHU);
                 item.SubItems.Add(chiso.KET_LUAN_SV_TC);
                 item.SubItems.Add(chiso.KET_LUAN_LT);
+                item.SubItems.Add(chiso.MA_CHI_SO);
                 lvDulieuTS.Items.Add(item);
             }
         }
