@@ -33,17 +33,43 @@ namespace DuAnCNPM.Datas
                     //    Console.WriteLine(i + ": " + dic[i]);
                     //}
 
-                    EnviromentIndexService eid = new EnviromentIndexService();
-                    Dictionary<String, HashSet<String>> dic = eid.dataName();
-                    foreach (String i in dic.Keys)
-                    {
-                        Console.Write(i + ": ");
-                        foreach(String j in dic[i])
-                        {
-                            Console.Write(j + " ");
-                        }
-                        Console.WriteLine();
-                    }
+                    //EnviromentIndexService eid = new EnviromentIndexService();
+                    //Dictionary<String, HashSet<String>> dic = eid.dataName();
+                    //foreach (String i in dic.Keys)
+                    //{
+                    //    Console.Write(i + ": ");
+                    //    foreach(String j in dic[i])
+                    //    {
+                    //        Console.Write(j + " ");
+                    //    }
+                    //    Console.WriteLine();
+                    //}
+
+                    //EmployeeService cs = new EmployeeService();
+                    //String[] testCase = new string[11] { "Nguyễn Thanh Tú", "Nguyễn Văn 123", "Phan", "Phan C ao H",
+                    //    "Nguyen Thi Diem M", "NgUYễN ThỊ DiễM M", "Lê Văn Đạt", "han", "@Phan Cao H", "", " Nguyễn Thanh Tú" };
+                    //for (int i = 0; i < testCase.Length; i++)
+                    //{
+                    //    Console.WriteLine("Test case: "+testCase[i] + "----------------------------------");
+                    //    List<NhanVien> listnv = cs.searchEmployee(testCase[i]);
+                    //    foreach (NhanVien nv in listnv)
+                    //    {
+                    //        Console.WriteLine("      " + nv.MA_NHAN_VIEN + " " + nv.HO_TEN);
+                    //    }                        
+                    //}
+
+                    //ContractService cs = new ContractService();
+                    //for (int i = 0; i < testCase.Length; i++)
+                    //{
+                    //    Console.WriteLine("Test case: " + testCase[i] + "----------------------------------");
+                    //    List<HopDong> listnv = cs.searchContract(testCase[i]);
+                    //    foreach (HopDong nv in listnv)
+                    //    {
+                    //        Console.WriteLine("      " + nv.MA_HOP_DONG + " " + nv.MA_CONG_TY + " " + context.KhachHangs.Find(nv.MA_CONG_TY).TEN_CONG_TY);
+                    //    }
+                    //}
+
+
 
 
                     return;

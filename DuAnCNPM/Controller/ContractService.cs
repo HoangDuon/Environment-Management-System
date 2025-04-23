@@ -217,7 +217,10 @@ namespace DuAnCNPM.Controller
                 List<String> listMaKH = new List<string>();
                 foreach (KhachHang kh in listKH)
                 {
-                    listMaKH.Add(kh.MA_CONG_TY);
+                    if (kh != null)
+                    {
+                        listMaKH.Add(kh.MA_CONG_TY);
+                    }
                 }
                 using (var context = new CTQLMTContext())
                 {

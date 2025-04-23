@@ -613,16 +613,7 @@ namespace DuAnCNPM
             else if (TabcontrolAdmin.SelectedIndex == 2 && txtFindAdmin.Text != "")
             {
                 ContractService contractService = new ContractService();
-                //
-                //Tu sua cho nay, tim kiem hop dong
-                //
-                ///
-                //
-                //
-                //
-                //
-                //
-                //contractService.ShowContractsAdminSearch(contractService.searchContractAdmin(txtFindAdmin.Text), panDSHD, panTTHDchitiet);
+                contractService.ShowContractsAdminSearch(contractService.searchContract(txtFindAdmin.Text), panDSHD, panTTHDchitiet);
             }
             else if (TabcontrolAdmin.SelectedIndex == 3 && txtFindAdmin.Text != "")
             {
@@ -1178,38 +1169,16 @@ namespace DuAnCNPM
 
         private void btnFindma_Click(object sender, EventArgs e)
         {
-            ///
-            /// 
-            /// 
-            /// 
-            /// 
-            /// 
-            /// 
-            /// 
-            /// 
-            /// 
-            ///Nut tim kiem hop dong nvien ( Thanh tu)
-            List<HopDong> hd;
             ContractService contractService = new ContractService();
-            contractService.ShowContractsSearch(null, panDSHDnv, splitDSHDnvchitiet);
+            List<HopDong> hd = contractService.searchContractForEmployee(txtFindma.Text);
+            contractService.ShowContractsSearch(hd, panDSHDnv, splitDSHDnvchitiet);
         }
 
         private void btnFindNV_Click(object sender, EventArgs e)
         {
-            ///Nut tim kiem nvien cho nvien
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            List<NhanVien> nv;
             EmployeeService em = new EmployeeService();
-            em.ShowEmployeeSearch(null, panFindNV);
+            List<NhanVien> nv = em.searchEmployeeForEmployee(txtFindNV.Text);
+            em.ShowEmployeeSearch(nv, panFindNV);
         }
 
         private void lvDulieuTS_SelectedIndexChanged(object sender, EventArgs e)
