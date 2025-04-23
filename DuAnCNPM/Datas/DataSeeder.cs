@@ -1,6 +1,8 @@
 ﻿using DuAnCNPM.Controller;
+using DuAnCNPM.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 
 namespace DuAnCNPM.Datas
@@ -9,6 +11,13 @@ namespace DuAnCNPM.Datas
     {
         public DataSeeder()
         {
+        }
+
+        private static int[] analysisQuarter(String quarter)
+        {
+            String[] quy = quarter.Split('/');
+            int[] result = new int[2] { int.Parse(quy[0]), int.Parse(quy[1]) };
+            return result;
         }
 
         public static void SeedData()
@@ -68,8 +77,67 @@ namespace DuAnCNPM.Datas
                     //        Console.WriteLine("      " + nv.MA_HOP_DONG + " " + nv.MA_CONG_TY + " " + context.KhachHangs.Find(nv.MA_CONG_TY).TEN_CONG_TY);
                     //    }
                     //}
+                    //var list = new List<ChiTietChiSo>();
+                    //var listCTTS = context.ChiTietChiSos.ToList();
+                    //foreach (var ctcs in listCTTS)
+                    //{
+                    //    if (ctcs.MA_HOP_DONG == "HD1")
+                    //    {
+                    //        list.Add(ctcs);
+                    //    }
+                    //}
+                    //int i = 0;
+                    //foreach (var cs in list)
+                    //{
+                    //    i++;
+                    //    Console.WriteLine(i + " " + cs.FLAG);
+                    //}
+                    //ContractService cs = new ContractService();
+                    //Console.WriteLine(cs.checkPrintCondition("HD1"));
 
 
+                    //var hopDong = context.HopDongs.Find("HD1");
+                    //var listHD = context.HopDongs.ToList();
+                    //var listHDOld = new List<HopDong>();
+                    //foreach (HopDong hd in listHD)
+                    //{
+                    //    if (hd.MA_CONG_TY == hopDong.MA_CONG_TY && hd.MA_HOP_DONG != hopDong.MA_HOP_DONG)
+                    //    {
+                    //        listHDOld.Add(hd);
+                    //    }
+                    //}
+                    //int[] now = analysisQuarter(hopDong.QUY);
+                    //int[] previous = new int[2];
+                    //if (now[0] == 1)
+                    //{
+                    //    previous[0] = 4;
+                    //    previous[1] = now[1] - 1;
+                    //}
+                    //else
+                    //{
+                    //    previous[0] = now[0] - 1;
+                    //    previous[1] = now[1];
+                    //}
+                    //HopDong hd1 = new HopDong();
+                    //foreach (HopDong hd in listHDOld)
+                    //{
+                    //    int[] data = analysisQuarter(hd.QUY);
+                    //    if (previous[0] == data[0] && previous[1] == data[1])
+                    //    {
+                    //        hd1 = hd;
+                    //        break;
+                    //    }
+                    //}
+
+                    //Console.WriteLine(previous[0] + " " + previous[1]);
+                    //Console.WriteLine(hd1.MA_HOP_DONG + " " + hd1.MA_CONG_TY);
+
+                    ContractService cs = new ContractService();
+                    Dictionary<String, int> dic = cs.dataForPieChart("2/2025");
+                    foreach(var item in dic)
+                    {
+                        Console.WriteLine(item.Key + " " + item.Value);
+                    }
 
 
                     return;

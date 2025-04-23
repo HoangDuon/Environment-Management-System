@@ -179,10 +179,8 @@ namespace DuAnCNPM.Controlers
         // kiểm tra thời gian ký và giao hợp đồng có hợp lí không
         public Boolean timeValid(String NgayKy, String NgayTraKQ)
         {
-            DateTime ngayky = new DateTime();
-            DateTime ngaygiao = new DateTime();
-            if (!DateTime.TryParseExact(NgayKy, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngayky)) return false;
-            if (!DateTime.TryParseExact(NgayTraKQ, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngaygiao)) return false;
+            DateTime ngayky = DateTime.Parse(NgayKy);
+            DateTime ngaygiao = DateTime.Parse(NgayTraKQ);
             return ngayky < ngaygiao;
         }
 

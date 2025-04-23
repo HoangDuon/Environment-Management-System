@@ -3,6 +3,7 @@ using DuAnCNPM.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -63,10 +64,16 @@ namespace DuAnCNPM.Controller
                 chitietchiso.NGAY_NHAP = DateTime.Today;
                 chitietchiso.FLAG = true;
                 updateConclusionWithStandard(context.ChiSoMoiTruongs.Find(MaChiSo).TIEU_CHUAN, ChiSo, MaChiSo, MaHopDong);
+                chitietchiso.KET_LUAN_LT = updateConclusionWithLastedContract(MaChiSo, ChiSo, MaHopDong);
                 context.SaveChanges();
             }
             return true;
         }
+
+        //private async Task updateConclusion(float chiso,string machiso, string mahopdong)
+        //{
+        //    await updateConclusionWithLastedContract(machiso, chiso, mahopdong);
+        //}
 
 
         public Boolean editNgayNhap(String MaHopDong, String MaChiSo, String MaNhanVien, DateTime NgayNhap)
@@ -141,12 +148,82 @@ namespace DuAnCNPM.Controller
         }
 
 
+        private HopDong getPreviousContract(String mahopdong)
+        {
+            using (var context = new CTQLMTContext())
+            {
+                var hopDong = context.HopDongs.Find(mahopdong);
+                var listHD = context.HopDongs.ToList();
+                var listHDOld = new List<HopDong>();
+                foreach (HopDong hd in listHD)
+                {
+                    if (hd.MA_CONG_TY == hopDong.MA_CONG_TY && hd.MA_HOP_DONG != hopDong.MA_HOP_DONG)
+                    {
+                        listHDOld.Add(hd);
+                    }
+                }
+                int[] now = analysisQuarter(hopDong.QUY);
+                int[] previous = new int[2];
+                if (now[0] == 1)
+                {
+                    previous[0] = 4;
+                    previous[1] = now[1] - 1;
+                }
+                else
+                {
+                    previous[0] = now[0] - 1;
+                    previous[1] = now[1];
+                }
+                foreach (HopDong hd in listHDOld)
+                {
+                    int[] data = analysisQuarter(hd.QUY);
+                    if (previous[0] == data[0] && previous[1] == data[1])
+                    {
+                        return hd;
+                    }
+                }
+                return null;
+            }
+        }
+
+        private int[] analysisQuarter(String quarter)
+        {
+            String[] quy = quarter.Split('/');
+            int[] result = new int[2] { int.Parse(quy[0]), int.Parse(quy[1]) };
+            return result;
+        }
+
         // update kết luận so với hợp đồng trước
         // hàm này được gọi tại nút save khi lưu việc edit 1 chỉ số
-        //public void updateConclusionWithLastedContract(String machiso, float cs, String makhachhang)
-        //{
+        public String updateConclusionWithLastedContract(String machiso, float cs, String mahopdong) 
+        {
+            HopDong preContract = getPreviousContract(mahopdong);
+            using(var context = new CTQLMTContext())
+            {
+                var preIndex = context.ChiTietChiSos.FindAsync(preContract.MA_HOP_DONG, machiso).Result;
 
-        //}
+                if (preContract == null)
+                {
+                    return "";
+                }
+                if (preIndex != null)
+                {
+                    if (preIndex.CHI_SO > cs)
+                    {
+                        return  "Thấp hơn quý trước";
+                    }
+                    else if (preIndex.CHI_SO < cs)
+                    {
+                        return"Cao hơn quý trước";
+                    }
+                    else
+                    {
+                        return "Không thay đổi";
+                    }
+                }
+                else return "";
+            }
+        }
 
         // kiểm tra tiêu chuẩn nếu là nằm trong khoảng thì trả về 1 còn là 1 chỉ số thì trả về 0
         private int checkStandard(String standard)

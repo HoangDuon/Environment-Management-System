@@ -411,6 +411,10 @@ namespace DuAnCNPM
             lblThongke.BackColor = Color.White;
             lblThongke.ForeColor = Color.DarkSlateGray;
             CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panDMK, panAdmin, panLogOut);
+            ContractService cs = new ContractService();
+            cboMoctgian.DataSource = cs.timeData().ToList();
+            loadChart(cs.dataForYearChart("2025"));
+            loadPieChart(cs.dataForPieChart("2/2025"));
             ShowPanel(panTK);
         }
         //Mở Đổi MK
@@ -467,8 +471,14 @@ namespace DuAnCNPM
         // Click nút in đơn hàng
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            ContractService Contract = new ContractService();
-            LoadData(Contract.GetDanhSachChiSoReport(txtMadonhang.Text));
+            ContractService contract = new ContractService();
+            String maDonHang = txtMadonhang.Text;
+            if (!contract.checkPrintCondition(maDonHang))
+            {
+                MessageBox.Show("Hãy nhập tất cả các chỉ số trong đơn hàng");
+                return;
+            }
+            LoadData(contract.GetDanhSachChiSoReport(txtMadonhang.Text));
             ShowPanel(panReport);
         }
         // Click tiếp tục panForgetChange
@@ -1515,22 +1525,48 @@ namespace DuAnCNPM
         //Sửa đơn hàng 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            txtKetqua.Enabled = true;
+            txtGhichu.Enabled = true;
+            txtMaThongSo.Enabled = false;
+            txtMadonhang.Enabled = false;
+            txtTenthongso.Enabled = false;
+            btnLuu.Enabled = true;
+            btnSua.Enabled = false;
         }
-        //private void btnSua_Click(object sender, EventArgs e)
-        //{
-        //    //txtMahopdong.Enabled = true;
-        //    //txtMachiso.Enabled = true;
-        //    txtChiso.Enabled = true;
-        //    txtGhichu.Enabled = true;
-        //    btnLuu.Enabled = true;
-        //    btnSua.Enabled = false;
-        //}
 
         //Lưu đơn hàng
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
+            ContractService contractService = new ContractService();
+            String mahopdong = txtMadonhang.Text;
+            String machiso = txtMaThongSo.Text;
+            String manhanvien = UserInform.manhanvien;
+            String chiso = txtKetqua.Text;
+            String ghichu = txtGhichu.Text;
+            if (!float.TryParse(chiso, out float result))
+            {
+                MessageBox.Show("Hãy nhập chỉ số");
+                return;
+            }
+            DetailedIndexService edit = new DetailedIndexService();
+            bool flagCS = edit.editChiSo(mahopdong, machiso, float.Parse(chiso), manhanvien);
+            bool flagGC = edit.editGhiChu(mahopdong, machiso, manhanvien, ghichu);
+            if (flagCS && flagGC)
+            {
+                txtMaThongSo.Clear();
+                txtKetqua.Clear();
+                txtTenthongso.Clear();
+                txtGhichu.Clear();
+                txtKetqua.Enabled = false;
+                txtGhichu.Enabled = false;
+                btnLuu.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Sửa không thành công");
+            }
+            ContractService contractViewing = new ContractService();
+            contractViewing.ShowContracts(panDSHDnv, splitDSHDnvchitiet);
         }
         //private void btnLuu_Click_1(object sender, EventArgs e)
         //{
@@ -2410,29 +2446,46 @@ namespace DuAnCNPM
 
             chart1.ChartAreas[0].AxisX.Title = "Tháng";
             chart1.ChartAreas[0].AxisY.Title = "Số lượng";
-            ContractService cs = new ContractService();
-            chart1.DataSource = cs.dataForYearChart("2024");
+
         }
 
-        //private void cbxDataFilter_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    String time = cbxDataFilter.Text;
-        //    ContractService cv = new ContractService();
-        //    Dictionary<String, int> dic = new Dictionary<string, int>();
+        private void loadPieChart(Dictionary<String, int> data)
+        {
+            chart2.Series.Clear();
+            Series series = new Series();
 
-        //    if (checkTime(time) == 1)
-        //    {
-        //        dic = cv.dataForQuarter(time);
-        //        txtSumDH.Text = cv.sumHDQuarter(time).ToString();
-        //    }
-        //    else
-        //    {
-        //        dic = cv.dataForYearChart(time);
-        //        txtSumDH.Text = cv.sumHDYear(time).ToString();
+            foreach (var s in data)
+            {
+                series.Points.AddXY(s.Key, s.Value);
+            }
 
-        //    }
-        //    loadChart(dic);
-        //}
+            chart2.Series.Add(series);
+
+        }
+
+        private void cbxDataFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String time = cboMoctgian.Text;
+            ContractService cv = new ContractService();
+            Dictionary<String, int> dic = new Dictionary<string, int>();
+            Dictionary<String, int> dic2 = new Dictionary<string, int>();
+
+
+            if (checkTime(time) == 1)
+            {
+                dic = cv.dataForQuarter(time);
+                dic2 = cv.dataForPieChart(time);
+                loadPieChart(dic2);
+                //txtSumDH.Text = cv.sumHDQuarter(time).ToString();
+            }
+            else
+            {
+                dic = cv.dataForYearChart(time);
+                //txtSumDH.Text = cv.sumHDYear(time).ToString();
+
+            }
+            loadChart(dic);
+        }
 
 
 

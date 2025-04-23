@@ -1029,6 +1029,59 @@ namespace DuAnCNPM.Controller
             return dic;
         }
 
+        public Boolean checkPrintCondition(String maDonHang)
+        {
+            var list = new List<ChiTietChiSo>();
+            using(var context = new CTQLMTContext())
+            {
+                var listCTTS = context.ChiTietChiSos.ToList();
+                foreach(var ctcs in listCTTS)
+                {
+                    if (ctcs.MA_HOP_DONG == maDonHang)
+                    {
+                        list.Add(ctcs);
+                    }
+                }
+            }
+            foreach (ChiTietChiSo cs in list)
+            {
+                if (!cs.FLAG)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
+        public Dictionary<String, int> dataForPieChart(String quarter)
+        {
+            Dictionary<String, int> dic = new Dictionary<string, int>();
+            dic.Add("Hoàn thành", 0);
+            dic.Add("Chưa hoàn thành", 0);
+            List<HopDong> list = new List<HopDong>();
+            using (var context = new CTQLMTContext())
+            {
+                var listHD = context.HopDongs.ToList();
+                foreach(HopDong hd in listHD)
+                {
+                    if (hd.QUY == quarter)
+                    {
+                        list.Add(hd);
+                    }
+                }
+            }
+            foreach (HopDong hd in list)
+            {
+                if (hd.HOAN_THANH)
+                {
+                    dic["Hoàn thành"]++;
+                }
+                else
+                {
+                    dic["Chưa hoàn thành"]++;
+                }
+            }
+            return dic;
+        }
     }
 }
