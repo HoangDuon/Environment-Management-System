@@ -1122,8 +1122,8 @@ namespace DuAnCNPM
             this.panWork.BackColor = System.Drawing.Color.Transparent;
             this.panWork.BackgroundImage = global::DuAnCNPM.Properties.Resources.Design__1_;
             this.panWork.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panWork.Controls.Add(this.panDSDH);
             this.panWork.Controls.Add(this.panTK);
+            this.panWork.Controls.Add(this.panDSDH);
             this.panWork.Controls.Add(this.panTTNV);
             this.panWork.Controls.Add(this.panAdmin);
             this.panWork.Controls.Add(this.panTB);
@@ -1653,10 +1653,10 @@ namespace DuAnCNPM
             this.lblYear.Location = new System.Drawing.Point(38, 77);
             this.lblYear.Margin = new System.Windows.Forms.Padding(4);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(122, 33);
+            this.lblYear.Size = new System.Drawing.Size(169, 33);
             this.lblYear.TabIndex = 48;
             this.lblYear.Text = "Chọn mốc thời gian";
-            this.lblYear.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblYear.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cboMoctgian
             // 
@@ -1676,11 +1676,12 @@ namespace DuAnCNPM
             this.cboMoctgian.Items.AddRange(new object[] {
             "nam",
             "nữ"});
-            this.cboMoctgian.Location = new System.Drawing.Point(143, 76);
+            this.cboMoctgian.Location = new System.Drawing.Point(216, 70);
             this.cboMoctgian.Name = "cboMoctgian";
             this.cboMoctgian.Size = new System.Drawing.Size(163, 36);
             this.cboMoctgian.TabIndex = 63;
             this.cboMoctgian.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboMoctgian.SelectedIndexChanged += new System.EventHandler(this.cboMoctgian_SelectedIndexChanged);
             // 
             // chart2
             // 

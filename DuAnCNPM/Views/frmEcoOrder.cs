@@ -2463,7 +2463,7 @@ namespace DuAnCNPM
 
         }
 
-        private void cbxDataFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)
         {
             String time = cboMoctgian.Text;
             ContractService cv = new ContractService();
@@ -2486,7 +2486,6 @@ namespace DuAnCNPM
             }
             loadChart(dic);
         }
-
 
 
 
