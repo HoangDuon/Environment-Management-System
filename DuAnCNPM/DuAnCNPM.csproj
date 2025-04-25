@@ -106,6 +106,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\EmailService.cs" />
     <Compile Include="Controller\UserInform.cs" />
     <Compile Include="Controller\ContractService.cs" />
     <Compile Include="Controller\CustomerService.cs" />
