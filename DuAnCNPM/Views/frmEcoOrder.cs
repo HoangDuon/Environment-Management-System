@@ -27,6 +27,8 @@ using Microsoft.Reporting.WinForms;
 using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using DuAnCNPM.Models;
+using Vosk;
+using NAudio.Wave;
 
 namespace DuAnCNPM
 {
@@ -1663,11 +1665,26 @@ namespace DuAnCNPM
             }
         }
 
+        bool isRecording = false; // Biến trạng thái để theo dõi việc thu âm
+        VoiceSearch voiceSearch = new VoiceSearch();
+
         private void btnFindma_Click(object sender, EventArgs e)
         {
-            ContractService contractService = new ContractService();
-            List<HopDong> hd = contractService.searchContractForEmployee(txtFindma.Text);
-            contractService.ShowContractsSearch(hd, panDSHDnv, splitDSHDnvchitiet);
+            //ContractService contractService = new ContractService();
+            //List<HopDong> hd = contractService.searchContractForEmployee(txtFindma.Text);
+            //contractService.ShowContractsSearch(hd, panDSHDnv, splitDSHDnvchitiet);
+            if (isRecording)
+            {
+                // Nếu đang thu âm, dừng thu âm
+                voiceSearch.StopVoiceSearch();
+                isRecording = false; // Cập nhật trạng thái
+            }
+            else
+            {
+                // Nếu chưa thu âm, bắt đầu thu âm
+                voiceSearch.StartVoiceSearch();
+                isRecording = true; // Cập nhật trạng thái
+            }
         }
 
         private void btnFindNV_Click(object sender, EventArgs e)
@@ -2488,6 +2505,9 @@ namespace DuAnCNPM
         }
 
 
+
+        ///AI VOICE RECOGNIZER
+        ///
 
     }
 }
