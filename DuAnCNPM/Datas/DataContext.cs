@@ -21,6 +21,8 @@ namespace DuAnCNPM.Datas
         public DbSet<HopDong> HopDongs { get; set; }
         public DbSet<ChiTietChiSo> ChiTietChiSos { get; set; }
         public DbSet<ChiSoMoiTruong> ChiSoMoiTruongs { get; set; }
+        public DbSet<ThongBao> ThongBaos { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

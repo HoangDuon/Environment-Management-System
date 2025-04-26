@@ -140,6 +140,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\NotificationService.cs" />
     <Compile Include="Controller\VoiceSearch.cs" />
     <Compile Include="Controller\EmailService.cs" />
     <Compile Include="Controller\UserInform.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Models\ChiSoMoiTruongDTOR.cs" />
     <Compile Include="Models\ChiTietChiSo.cs" />
     <Compile Include="Models\ChiSoMoiTruongDTO.cs" />
+    <Compile Include="Models\ThongBao.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Views\DoubleBufferedPanel.cs">
       <SubType>Component</SubType>

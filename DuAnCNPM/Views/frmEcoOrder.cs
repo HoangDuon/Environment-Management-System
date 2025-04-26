@@ -379,7 +379,9 @@ namespace DuAnCNPM
             CheckPanel(panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin, panLogOut);
             ContractService contractViewing = new ContractService();
             contractViewing.ShowContracts(panDSHDnv, splitDSHDnvchitiet);
+            //panCSchitiet.Visible = true ;
             ShowPanel(panDSDH);
+
         }
         // Mở TTNV
         private void lblThongtinNV_Click(object sender, EventArgs e)
@@ -415,8 +417,17 @@ namespace DuAnCNPM
             CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panDMK, panAdmin, panLogOut);
             ContractService cs = new ContractService();
             cboMoctgian.DataSource = cs.timeData().ToList();
-            loadChart(cs.dataForYearChart("2025"));
-            loadPieChart(cs.dataForPieChart("2/2025"));
+            if (checkTime(cboMoctgian.Items[0].ToString()) == 1)
+            {
+                chart2.Visible = true;
+                loadPieChart(cs.dataForPieChart(cboMoctgian.Items[0].ToString()));
+                loadChart(cs.dataForQuarter(cboMoctgian.Items[0].ToString()));
+            }
+            else
+            {
+                loadChart(cs.dataForYearChart(cboMoctgian.Items[0].ToString()));
+                loadPieChart(cs.dataForPieChart(cboMoctgian.Items[0].ToString()));
+            }
             ShowPanel(panTK);
         }
         //Mở Đổi MK
@@ -1494,17 +1505,85 @@ namespace DuAnCNPM
         //Luu thông báo panAdmin
         private void btnLuuTB_Click(object sender, EventArgs e)
         {
+            String maThongBao = txtMaThongBao.Text;
+            String tieuDe = txtTieuDe.Text;
+            String ngayPhatHanh = dtpNgayphathanh.Text;
+            String noiDung = txtNoidung.Text;
 
+
+
+            NotificationService noti = new NotificationService();
+
+            if (btnSuaTB.Enabled == false)
+            {
+                if (noti.addNoti(tieuDe, DateTime.Parse(ngayPhatHanh), noiDung))
+                {
+                    MessageBox.Show("Thêm thành công");
+
+                    txtMaThongBao.Clear();
+                    txtTieuDe.Clear();
+                    txtNoidung.Clear();
+
+                    txtTieuDe.Enabled = false;
+                    txtNoidung.Enabled = false;
+
+                    btnXoaTB.Enabled = false;
+                    btnLuuTB.Enabled = false;
+                }
+                else MessageBox.Show("Thêm không thành công");
+            }
+            else
+            {
+                bool flag = noti.editNoti(maThongBao, tieuDe, DateTime.Today, noiDung);
+                if (flag)
+                {
+                    MessageBox.Show("Sửa thành công");
+
+                    txtMaThongBao.Clear();
+                    txtTieuDe.Clear();
+                    txtNoidung.Clear();
+
+                    txtTieuDe.Enabled = false;
+                    txtNoidung.Enabled = false;
+
+                    btnXoaTB.Enabled = false;
+                    btnLuuTB.Enabled = false;
+
+                }
+                else MessageBox.Show("Sửa không thành công");
+            }
         }
 
         private void btnXoaTB_Click(object sender, EventArgs e)
         {
+            String maThongBao = txtMaThongBao.Text;
 
+            NotificationService noti = new NotificationService();
+            if (noti.removeNoti(maThongBao))
+            {
+                MessageBox.Show("Xóa thành công");
+                txtMaThongBao.Clear();
+                txtTieuDe.Clear();
+                txtNoidung.Clear();
+
+                btnXoaTB.Enabled = false;
+                btnLuuTB.Enabled = false;
+
+                txtTieuDe.Enabled = false;
+                txtNoidung.Enabled = false;
+            }
+            else MessageBox.Show("Xóa không thành công");
         }
 
         private void btnSuaTB_Click(object sender, EventArgs e)
         {
+            btnSuaTB.Enabled = true;
+            btnXoaTB.Enabled = true;
+            btnLuuTB.Enabled = true;
 
+            txtTieuDe.Enabled = true;
+            dtpNgayphathanh.Enabled = true;
+            txtNoidung.Enabled = true;
         }
 
         private void btnSortThongbao_Click(object sender, EventArgs e)
@@ -1514,7 +1593,18 @@ namespace DuAnCNPM
 
         private void btnAddTB_Click(object sender, EventArgs e)
         {
+            txtMaThongBao.Enabled = false;
+            txtTieuDe.Enabled = true;
+            dtpNgayphathanh.Enabled = true;
+            txtNoidung.Enabled = true;
 
+            txtMaThongBao.Clear();
+            txtTieuDe.Clear();
+            txtNoidung.Clear();
+
+            btnSuaTB.Enabled = false;
+            btnXoaTB.Enabled = false;
+            btnLuuTB.Enabled = true;
         }
 
 
@@ -2469,7 +2559,10 @@ namespace DuAnCNPM
         private void loadPieChart(Dictionary<String, int> data)
         {
             chart2.Series.Clear();
-            Series series = new Series();
+            Series series = new Series()
+            {
+                ChartType = SeriesChartType.Pie
+            };
 
             foreach (var s in data)
             {
@@ -2480,19 +2573,70 @@ namespace DuAnCNPM
 
         }
 
+        private void btnSuaChiSoChiTiet_Click(object sender, EventArgs e)
+        {
+            btnXoaChiSoChiTiet.Enabled = true;
+            btnLuuCSchitiet.Enabled = true;
+            panCSchitiet.Visible = false;
+            txtGhiChuQLHD.Enabled = true;
+            dtpNgaynhapQLHD.Enabled = true;
+            txtTenCS.Enabled = false;
+            txtMaNVnhap.Enabled = false;
+            txtMaCSQLHD.Enabled = false;
+        }
+
+        private void btnXoaChiSoChiTiet_Click(object sender, EventArgs e)
+        {
+            String maChiSo = txtMaCSQLHD.Text;
+            String maHopDong = txtMaHDQLHD.Text;
+            DetailedIndexService del = new DetailedIndexService();
+            if (del.deleteDetailedIndex(maHopDong, maChiSo))
+            {
+                MessageBox.Show("Xóa thành công");
+            }
+            else MessageBox.Show("Xóa không thành công");
+
+        }
+
+        private void btnLuuCSchitiet_Click(object sender, EventArgs e)
+        {
+            String maChiSo = txtMaCSQLHD.Text;
+            String maHopDong = txtMaHDQLHD.Text;
+            String ghiChu = txtGhiChuQLHD.Text;
+            String ngayNhap = dtpNgaynhapQLHD.Text;
+            String thongSo = txtTenCS.Text;
+            String maNhanVien = UserInform.manhanvien;
+
+            Validating validate = new Validating();
+            if (!validate.indexValidate(thongSo))
+            {
+                MessageBox.Show("Thông số chưa chính xác");
+                return;
+            }
+
+            DetailedIndexService del = new DetailedIndexService();
+            bool flag1 = del.editChiSo(maHopDong, maChiSo, float.Parse(thongSo), maNhanVien);
+            bool flag2 = del.editGhiChu(maHopDong, maChiSo, maNhanVien, ghiChu);
+            if (flag1 && flag2)
+            {
+                MessageBox.Show("Chỉnh sửa thành công");
+                return;
+            }
+            MessageBox.Show("Chỉnh sửa không thành công");
+        }
+
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)
         {
             String time = cboMoctgian.Text;
             ContractService cv = new ContractService();
             Dictionary<String, int> dic = new Dictionary<string, int>();
             Dictionary<String, int> dic2 = new Dictionary<string, int>();
+            dic2 = cv.dataForPieChart(time);
 
 
             if (checkTime(time) == 1)
             {
                 dic = cv.dataForQuarter(time);
-                dic2 = cv.dataForPieChart(time);
-                loadPieChart(dic2);
                 //txtSumDH.Text = cv.sumHDQuarter(time).ToString();
             }
             else
@@ -2501,7 +2645,11 @@ namespace DuAnCNPM
                 //txtSumDH.Text = cv.sumHDYear(time).ToString();
 
             }
+            loadPieChart(dic2);
             loadChart(dic);
+            txtFinish.Text = cv.getPerfectContract(time).ToString();
+            txtInProgress.Text = cv.getProgressingContract(time).ToString();
+            txtQuahan.Text = cv.getDelayContract(time).ToString();
         }
 
 

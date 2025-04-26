@@ -1056,32 +1056,129 @@ namespace DuAnCNPM.Controller
         public Dictionary<String, int> dataForPieChart(String quarter)
         {
             Dictionary<String, int> dic = new Dictionary<string, int>();
-            dic.Add("Hoàn thành", 0);
-            dic.Add("Chưa hoàn thành", 0);
-            List<HopDong> list = new List<HopDong>();
-            using (var context = new CTQLMTContext())
+            dic.Add("Hoàn thành", getPerfectContract(quarter));
+            dic.Add("Đang xữ lý", getProgressingContract(quarter));
+            dic.Add("Trễ", getDelayContract(quarter));
+
+            return dic;
+        }
+
+        private int checkTime(String time)
+        {
+            for (int i = 0; i < time.Length; i++)
             {
-                var listHD = context.HopDongs.ToList();
-                foreach(HopDong hd in listHD)
+                if (time[i] == '/')
                 {
-                    if (hd.QUY == quarter)
+                    return 1;    // quy
+                }
+            }
+            return 0;            // nam
+        }
+
+        public int getPerfectContract(String time)
+        {
+            int check = checkTime(time);
+            int count = 0;
+            if (check == 1)
+            {
+                using (var context = new CTQLMTContext())
+                {
+                    var hopDong = context.HopDongs.ToList();
+                    foreach(HopDong hd in hopDong)
                     {
-                        list.Add(hd);
+                        if (hd.HOAN_THANH == true && hd.QUY == time)
+                        {
+                            count++;
+                        }
+                    }
+                }
+                return count;
+            }
+            else
+            {
+                using(var context = new CTQLMTContext())
+                {
+                    var hopDong = context.HopDongs.ToList();
+                    foreach(HopDong hd in hopDong)
+                    {
+                        if (hd.HOAN_THANH == true && hd.NGAY_KY.Value.Year.ToString() == time)
+                        {
+                            count++;
+                        }
                     }
                 }
             }
-            foreach (HopDong hd in list)
+            return count;
+        }
+
+        public int getProgressingContract(String time)
+        {
+            int check = checkTime(time);
+            int count = 0;
+            if (check == 1)
             {
-                if (hd.HOAN_THANH)
+                using (var context = new CTQLMTContext())
                 {
-                    dic["Hoàn thành"]++;
-                }
-                else
-                {
-                    dic["Chưa hoàn thành"]++;
+                    var hopDong = context.HopDongs.ToList();
+                    foreach (HopDong hd in hopDong)
+                    {
+                        if (hd.HOAN_THANH == false && hd.QUY == time && DateTime.Today <= hd.NGAY_TRA_KQ)
+                        {
+                            count++;
+                        }
+                    }
                 }
             }
-            return dic;
+            else
+            {
+                using (var context = new CTQLMTContext())
+                {
+                    var hopDong = context.HopDongs.ToList();
+                    foreach (HopDong hd in hopDong)
+                    {
+                        if (hd.HOAN_THANH == false && hd.NGAY_KY.Value.Year.ToString() == time && DateTime.Today <= hd.NGAY_TRA_KQ)
+                        {
+                            count++;
+                        }
+                    }
+                }
+            }
+            return count;
+        }
+
+        public int getDelayContract(String time)
+        {
+            int check = checkTime(time);
+            int count = 0;
+            if (check == 1)
+            {
+                using (var context = new CTQLMTContext())
+                {
+                    var hopDong = context.HopDongs.ToList();
+                    foreach (HopDong hd in hopDong)
+                    {
+                        if (hd.HOAN_THANH == false && hd.QUY == time && DateTime.Today >= hd.NGAY_TRA_KQ)
+                        {
+                            count++;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                using (var context = new CTQLMTContext())
+                {
+                    var hopDong = context.HopDongs.ToList();
+                    foreach (HopDong hd in hopDong)
+                    {
+                        if (hd.HOAN_THANH == false && hd.NGAY_KY.Value.Year.ToString() == time && DateTime.Today >= hd.NGAY_TRA_KQ)
+                        {
+                            count++;
+                        }
+                    }
+                }
+            }
+            return count;
         }
     }
 }
