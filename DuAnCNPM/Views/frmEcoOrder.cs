@@ -2625,6 +2625,11 @@ namespace DuAnCNPM
             MessageBox.Show("Chỉnh sửa không thành công");
         }
 
+        private void lblTitleChange_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)
         {
             String time = cboMoctgian.Text;
