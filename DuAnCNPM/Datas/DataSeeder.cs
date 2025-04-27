@@ -132,12 +132,12 @@ namespace DuAnCNPM.Datas
                     //Console.WriteLine(previous[0] + " " + previous[1]);
                     //Console.WriteLine(hd1.MA_HOP_DONG + " " + hd1.MA_CONG_TY);
 
-                    ContractService cs = new ContractService();
-                    Dictionary<String, int> dic = cs.dataForPieChart("2/2025");
-                    foreach(var item in dic)
-                    {
-                        Console.WriteLine(item.Key + " " + item.Value);
-                    }
+                    //ContractService cs = new ContractService();
+                    //Dictionary<String, int> dic = cs.dataForPieChart("2/2025");
+                    //foreach(var item in dic)
+                    //{
+                    //    Console.WriteLine(item.Key + " " + item.Value);
+                    //}
 
 
                     return;
@@ -307,6 +307,29 @@ namespace DuAnCNPM.Datas
                 contractService.addContract("NVPTN4", "KH18", DateTime.Today, new DateTime(2025, 5, 6), 50000000);
                 contractService.addContract("NVPTN4", "KH19", DateTime.Today, new DateTime(2025, 5, 8), 50000000);
                 contractService.addContract("NVPTN4", "KH20", DateTime.Today, new DateTime(2025, 5, 4), 50000000);
+
+                NotificationService noti = new NotificationService();
+                noti.addNoti("Thông báo hệ thống", new DateTime(2025, 4, 26), "Hệ thống sẽ bảo trì vào lúc 23:00 hôm nay.");
+                noti.addNoti("Cập nhật dịch vụ", new DateTime(2025, 4, 25), "Dịch vụ đo chất lượng nước đã được nâng cấp.");
+                noti.addNoti("Nhắc nhở thanh toán", new DateTime(2025, 4, 24), "Vui lòng thanh toán hóa đơn tháng 4 trước ngày 30/4.");
+                noti.addNoti("Khuyến mãi đặc biệt", new DateTime(2025, 4, 23), "Giảm 20% phí dịch vụ quan trắc môi trường tuần này.");
+                noti.addNoti("Thông tin tuyển dụng", new DateTime(2025, 4, 22), "Công ty đang tuyển nhân viên môi trường, ứng tuyển ngay!");
+                noti.addNoti("Thông báo nghỉ lễ", new DateTime(2025, 4, 21), "Công ty sẽ nghỉ lễ Giỗ tổ Hùng Vương từ ngày 29/4.");
+                noti.addNoti("Chính sách mới", new DateTime(2025, 4, 20), "Áp dụng chính sách bảo mật dữ liệu khách hàng mới từ tháng 5.");
+                noti.addNoti("Cập nhật giao diện", new DateTime(2025, 4, 19), "Giao diện phần mềm quản lý môi trường đã được cập nhật.");
+                noti.addNoti("Sự kiện hội thảo", new DateTime(2025, 4, 18), "Mời tham dự hội thảo 'Công nghệ mới trong xử lý nước thải'.");
+                noti.addNoti("Kết quả khảo sát", new DateTime(2025, 4, 17), "Kết quả khảo sát độ hài lòng khách hàng tháng 4 đã có.");
+                noti.addNoti("Thông báo hệ thống", new DateTime(2025, 4, 16), "Có bản cập nhật hệ thống mới, vui lòng tải về.");
+                noti.addNoti("Thông tin đối tác", new DateTime(2025, 4, 15), "Chúng tôi đã ký hợp tác với Công ty TNHH Môi Trường Xanh.");
+                noti.addNoti("Cảnh báo ô nhiễm", new DateTime(2025, 4, 14), "Mức độ ô nhiễm không khí khu vực TP.HCM tăng cao hôm nay.");
+                noti.addNoti("Tin tức môi trường", new DateTime(2025, 4, 13), "Chính phủ công bố kế hoạch giảm phát thải khí nhà kính 2030.");
+                noti.addNoti("Đổi mật khẩu", new DateTime(2025, 4, 12), "Hệ thống yêu cầu đổi mật khẩu định kỳ mỗi 90 ngày.");
+                noti.addNoti("Thông báo bảo trì", new DateTime(2025, 4, 11), "Máy chủ sẽ bảo trì từ 00:00 đến 04:00 sáng ngày 13/4.");
+                noti.addNoti("Hướng dẫn sử dụng", new DateTime(2025, 4, 10), "Tài liệu hướng dẫn sử dụng phần mềm mới đã sẵn sàng.");
+                noti.addNoti("Cập nhật giá dịch vụ", new DateTime(2025, 4, 9), "Một số dịch vụ sẽ điều chỉnh giá từ tháng 5.");
+                noti.addNoti("Thông báo hệ thống", new DateTime(2025, 4, 8), "Ứng dụng di động đã có phiên bản mới trên App Store.");
+                noti.addNoti("Tin nội bộ", new DateTime(2025, 4, 7), "Chúc mừng sinh nhật các thành viên có ngày sinh trong tháng 4.");
+
                 Console.WriteLine(" Sample data generate successful!");
             }
         }

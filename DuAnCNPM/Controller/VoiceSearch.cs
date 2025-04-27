@@ -1,8 +1,6 @@
 ﻿using NAudio.Wave;
 using System;
 using System.IO;
-using System.Reflection;
-using System.Windows;
 using Vosk;
 
 namespace DuAnCNPM.Controller
@@ -12,26 +10,23 @@ namespace DuAnCNPM.Controller
         private Model _model;
         private VoskRecognizer recognizer;
         private WaveInEvent waveIn;
-        private MemoryStream audioStream;
+
+        // Tạo sự kiện
+        public event Action<string> OnRecognized;
+
         public VoiceSearch()
         {
             try
             {
-                // Lấy đường dẫn gốc của thư mục đang chạy
                 string basePath = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.FullName;
-
-                // Nối với thư mục model
                 string modelPath = Path.Combine(basePath, "Models", "vosk-model-vn-0.4");
-                //Console.WriteLine(modelPath);
-                // Kiểm tra xem modelPath có tồn tại hay không
+
                 if (!Directory.Exists(modelPath))
                 {
                     throw new Exception("Đường dẫn mô hình không hợp lệ hoặc không tìm thấy thư mục.");
                 }
 
                 _model = new Model(modelPath);
-
-                // Khởi tạo recognizer
                 recognizer = new VoskRecognizer(_model, 16000);
             }
             catch (Exception ex)
@@ -42,31 +37,32 @@ namespace DuAnCNPM.Controller
 
         public void StartVoiceSearch()
         {
-            // Kiểm tra nếu waveIn đã được khởi tạo
             if (waveIn != null)
             {
-                StopVoiceSearch(); // Dừng ghi âm nếu đang hoạt động
+                StopVoiceSearch();
             }
 
             waveIn = new WaveInEvent
             {
-                DeviceNumber = 0, // Chọn thiết bị thu âm mặc định
-                WaveFormat = new WaveFormat(16000, 1) // Đặt tần số mẫu 16kHz và 1 kênh (mono)
+                DeviceNumber = 0,
+                WaveFormat = new WaveFormat(16000, 1)
             };
 
             waveIn.DataAvailable += WaveIn_DataAvailable;
             waveIn.StartRecording();
         }
-        string result = "";
+
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
             try
             {
-                // Gửi dữ liệu âm thanh vào VoskRecognizer
                 if (recognizer.AcceptWaveform(e.Buffer, e.BytesRecorded))
                 {
-                    result = recognizer.Result();
-                    MessageBox.Show("Nhận diện: " + result);
+                    string resultJson = recognizer.Result();
+                    string recognizedText = ExtractTextFromResult(resultJson);
+
+                    // Gọi sự kiện trả kết quả ra ngoài
+                    OnRecognized?.Invoke(recognizedText);
                 }
             }
             catch (Exception ex)
@@ -75,11 +71,32 @@ namespace DuAnCNPM.Controller
             }
         }
 
+        private string ExtractTextFromResult(string json)
+        {
+            int firstQuote = json.IndexOf(':');  // Tìm dấu ":" trong chuỗi JSON
+            int secondQuote = json.IndexOf('"', firstQuote + 1);  // Tìm dấu ngoặc kép thứ hai sau dấu ":"
+
+            if (firstQuote >= 0 && secondQuote >= 0)
+            {
+                // Trích xuất phần chuỗi giữa dấu ngoặc kép sau dấu ":" và dấu ngoặc kép cuối
+                string result = json.Substring(secondQuote + 1, json.IndexOf('"', secondQuote + 1) - secondQuote - 1).Trim();
+
+                // Loại bỏ dấu ngoặc kép ở đầu và cuối chuỗi nếu có
+                if (result.StartsWith("\"") && result.EndsWith("\""))
+                {
+                    result = result.Substring(1, result.Length - 2);  // Cắt bỏ dấu ngoặc kép
+                }
+
+                return result;
+            }
+
+            return "";
+        }
+
         public void StopVoiceSearch()
         {
             try
             {
-                // Dừng ghi âm và giải phóng tài nguyên
                 if (waveIn != null)
                 {
                     waveIn.StopRecording();

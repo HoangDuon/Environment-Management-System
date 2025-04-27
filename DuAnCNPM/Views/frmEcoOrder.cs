@@ -34,6 +34,8 @@ namespace DuAnCNPM
 {
     public partial class frmEcoOrder : Form
     {
+        private VoiceSearch voiceSearch;
+        private bool isRecording = false;
         private static ResourceManager rm;
         public bool isVN = true;
         private string OldPanel="",idEm = "";
@@ -42,6 +44,8 @@ namespace DuAnCNPM
             InitializeComponent();
             HieuUngChu(lblForget, lblHuongdan, lblVechungtoi, lblSentAgainOTP);
             this.reportBaocao.ShowToolBar = false;
+            voiceSearch = new VoiceSearch();
+            voiceSearch.OnRecognized += VoiceSearch_OnRecognized;
         }
         //check pan nào mở thì đóng
         private void CheckPanel(params Panel[] pans)
@@ -234,27 +238,27 @@ namespace DuAnCNPM
                     HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDanhsachDH, lblChucnangQL, lblTrangchu);
                     ShowColor(lblDoimatkhau);
                 }
+                if (panl == panTrangchu)
+                {
+                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblDanhsachDH, lblChucnangQL);
+                    ShowColor(lblTrangchu);
+                }
+                if (panl == panLogOut)
+                {
+                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblDanhsachDH, lblChucnangQL, lblTrangchu);
+                }
+                panl.Visible = true;
                 if (panl==panAdmin)
                 {
                     HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblDanhsachDH, lblTrangchu);
                     ShowColor(lblChucnangQL);
                     CheckPanel(panTTNVchitiet, panTTKHchitiet, panTTHDchitiet, panTTTSchitiet,panDSTBchitiet);
                 }
-                if (panl == panTrangchu)
-                {
-                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblDanhsachDH, lblChucnangQL);
-                    ShowColor(lblTrangchu);
-                }
-                if (panl ==panLogOut)
-                {
-                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblDanhsachDH, lblChucnangQL,lblTrangchu);
-                }
                 if (panl ==panWork)
                 {
                     ShowColor(lblTrangchu);
                     CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin, panLogOut,panTrangchu);
                 }
-                panl.Visible = true; 
             }
         }
         // forget quay lại
@@ -1813,26 +1817,12 @@ namespace DuAnCNPM
             }
         }
 
-        bool isRecording = false; // Biến trạng thái để theo dõi việc thu âm
-        VoiceSearch voiceSearch = new VoiceSearch();
 
         private void btnFindma_Click(object sender, EventArgs e)
         {
-            //ContractService contractService = new ContractService();
-            //List<HopDong> hd = contractService.searchContractForEmployee(txtFindma.Text);
-            //contractService.ShowContractsSearch(hd, panDSHDnv, splitDSHDnvchitiet);
-            if (isRecording)
-            {
-                // Nếu đang thu âm, dừng thu âm
-                voiceSearch.StopVoiceSearch();
-                isRecording = false; // Cập nhật trạng thái
-            }
-            else
-            {
-                // Nếu chưa thu âm, bắt đầu thu âm
-                voiceSearch.StartVoiceSearch();
-                isRecording = true; // Cập nhật trạng thái
-            }
+            ContractService contractService = new ContractService();
+            List<HopDong> hd = contractService.searchContractForEmployee(txtFindma.Text);
+            contractService.ShowContractsSearch(hd, panDSHDnv, splitDSHDnvchitiet);
         }
 
         private void btnFindNV_Click(object sender, EventArgs e)
@@ -2686,6 +2676,65 @@ namespace DuAnCNPM
         private void lblTitleChange_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMic_ClientSizeChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoiceSearch_OnRecognized(string recognizedText)
+        {
+            if (!string.IsNullOrWhiteSpace(recognizedText))
+            {
+                Action updateAction = () =>
+                {
+                    // In để xác nhận xem recognizedText có giá trị hợp lệ
+                    MessageBox.Show("Recognized Text: " + recognizedText);
+
+                    // Cập nhật trực tiếp vào TextBox
+                    txtFindma.Text = recognizedText;
+                    txtFindma.Refresh(); // Refresh lại TextBox để cập nhật UI
+
+
+                    btnMic.FillColor = Color.MintCream;
+                    voiceSearch.StopVoiceSearch();
+                    isRecording = false; // Cập nhật trạng thái
+                };
+
+                if (this.InvokeRequired)
+                {
+                    this.BeginInvoke(updateAction);  // Sử dụng BeginInvoke thay vì Invoke
+                }
+                else
+                {
+                    updateAction();  // Trực tiếp nếu đang ở UI thread
+                }
+            }
+        }
+
+
+        private void btnMic_Click(object sender, EventArgs e)
+        {
+            if (isRecording)
+            {
+                btnMic.FillColor = Color.MintCream;
+                // Nếu đang thu âm, dừng thu âm
+                voiceSearch.StopVoiceSearch();
+                isRecording = false; // Cập nhật trạng thái
+            }
+            else
+            {
+                btnMic.FillColor = Color.Tomato;
+                // Nếu chưa thu âm, bắt đầu thu âm
+                voiceSearch.StartVoiceSearch();
+                isRecording = true; // Cập nhật trạng thái
+            }
+        }
+
+        private void frmEcoOrder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            voiceSearch?.StopVoiceSearch();
         }
 
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)
