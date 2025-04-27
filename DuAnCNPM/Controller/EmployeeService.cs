@@ -43,11 +43,12 @@ namespace DuAnCNPM.Controller
         {
             container.Controls.Clear();
 
-            int yOffset = 10;
+            int yOffset = 15;
                 foreach (var nv in nhanViens)
                 {
                 if (nv.TRANG_THAI == true)
                 {
+                    Console.WriteLine(nv.MA_NHAN_VIEN);
                     Siticone.Desktop.UI.WinForms.SiticoneGroupBox grbTimthay = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
                     grbTimthay.BorderColor = System.Drawing.Color.Transparent;
                     grbTimthay.BorderRadius = 15;
@@ -55,9 +56,9 @@ namespace DuAnCNPM.Controller
                     grbTimthay.FillColor = System.Drawing.Color.Transparent;
                     grbTimthay.Font = new System.Drawing.Font("Segoe UI", 9F);
                     grbTimthay.ForeColor = System.Drawing.Color.Transparent;
-                    grbTimthay.Location = new System.Drawing.Point(0, yOffset);
+                    grbTimthay.Location = new System.Drawing.Point(13, yOffset);
                     grbTimthay.Name = "grbTimthay";
-                    grbTimthay.Size = new System.Drawing.Size(949, yOffset);
+                    grbTimthay.Size = new System.Drawing.Size(935, 36);
                     grbTimthay.TabIndex = 111;
 
                     SiticoneHtmlLabel txtEmail = new SiticoneHtmlLabel();
@@ -125,6 +126,7 @@ namespace DuAnCNPM.Controller
                     grbTimthay.Controls.Add(lblPhongbanFind);
                     grbTimthay.Controls.Add(txtTenNV);
                     grbTimthay.Controls.Add(lblManhanvien);
+                    container.Controls.Add(grbTimthay);
 
                     yOffset += grbTimthay.Height + 10;
                 }

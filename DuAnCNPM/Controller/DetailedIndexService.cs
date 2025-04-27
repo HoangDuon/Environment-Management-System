@@ -198,14 +198,12 @@ namespace DuAnCNPM.Controller
         public String updateConclusionWithLastedContract(String machiso, float cs, String mahopdong) 
         {
             HopDong preContract = getPreviousContract(mahopdong);
+            if (preContract == null) return " ";
+
             using(var context = new CTQLMTContext())
             {
                 var preIndex = context.ChiTietChiSos.FindAsync(preContract.MA_HOP_DONG, machiso).Result;
 
-                if (preContract == null)
-                {
-                    return "";
-                }
                 if (preIndex != null)
                 {
                     if (preIndex.CHI_SO > cs)
@@ -221,7 +219,7 @@ namespace DuAnCNPM.Controller
                         return "Không thay đổi";
                     }
                 }
-                else return "";
+                else return " ";
             }
         }
 

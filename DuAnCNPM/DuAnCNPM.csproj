@@ -140,6 +140,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\AnnouncementService .cs" />
     <Compile Include="Controller\NotificationService.cs" />
     <Compile Include="Controller\VoiceSearch.cs" />
     <Compile Include="Controller\EmailService.cs" />

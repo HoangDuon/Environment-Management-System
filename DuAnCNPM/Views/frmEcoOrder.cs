@@ -37,7 +37,6 @@ namespace DuAnCNPM
         private static ResourceManager rm;
         public bool isVN = true;
         private string OldPanel="",idEm = "";
-        private SiticoneGroupBox currentSelectedGrb = null;
         public frmEcoOrder()
         {
             InitializeComponent();
@@ -156,6 +155,22 @@ namespace DuAnCNPM
                 };
             }
         }
+        private void ShowColor(params SiticoneHtmlLabel[] lbls)
+        {
+            foreach (SiticoneHtmlLabel lbl in lbls)
+            {
+                lbl.BackColor = Color.White;
+                lbl.ForeColor = Color.DarkSlateGray;
+            }
+        }
+        private void HideColor(params SiticoneHtmlLabel[] lbls)
+        {
+            foreach (SiticoneHtmlLabel lbl in lbls)
+            {
+                lbl.BackColor = Color.Transparent;
+                lbl.ForeColor = Color.White;
+            }
+        }
         //Mở panel
         private void ShowPanel(params Panel[] pan)
         {
@@ -189,15 +204,57 @@ namespace DuAnCNPM
                     txtPassnewagain.FillColor = Color.White;
                     txtPassnewagain.Text = "";
                 }
-                panl.Visible=true;
+                if (panl==panDSDH)
+                {
+                    HideColor(lblThongtinNV,lblDanhsachNV,lblThongbao,lblThongke,lblDoimatkhau,lblChucnangQL,lblTrangchu);
+                    ShowColor(lblDanhsachDH);
+                }
+                if (panl==panTTNV)
+                {
+                    HideColor(lblDanhsachDH, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblChucnangQL, lblTrangchu);
+                    ShowColor(lblThongtinNV);
+                }
+                if (panl==panDSNV)
+                {
+                    HideColor(lblThongtinNV, lblDanhsachDH, lblThongbao, lblThongke, lblDoimatkhau, lblChucnangQL, lblTrangchu);
+                    ShowColor(lblDanhsachNV);
+                }
+                if (panl==panTB)
+                {
+                    HideColor(lblThongtinNV, lblDanhsachNV, lblDanhsachDH, lblThongke, lblDoimatkhau, lblChucnangQL, lblTrangchu);
+                    ShowColor(lblThongbao);
+                }
+                if (panl==panTK)
+                {
+                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblDanhsachDH, lblDoimatkhau, lblChucnangQL, lblTrangchu);
+                    ShowColor(lblThongke);
+                }
+                if (panl==panDMK)
+                {
+                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDanhsachDH, lblChucnangQL, lblTrangchu);
+                    ShowColor(lblDoimatkhau);
+                }
                 if (panl==panAdmin)
                 {
+                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblDanhsachDH, lblTrangchu);
+                    ShowColor(lblChucnangQL);
                     CheckPanel(panTTNVchitiet, panTTKHchitiet, panTTHDchitiet, panTTTSchitiet,panDSTBchitiet);
                 }
-                if (panl == panWork)
+                if (panl == panTrangchu)
                 {
-                    CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin, panLogOut);
+                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblDanhsachDH, lblChucnangQL);
+                    ShowColor(lblTrangchu);
                 }
+                if (panl ==panLogOut)
+                {
+                    HideColor(lblThongtinNV, lblDanhsachNV, lblThongbao, lblThongke, lblDoimatkhau, lblDanhsachDH, lblChucnangQL,lblTrangchu);
+                }
+                if (panl ==panWork)
+                {
+                    ShowColor(lblTrangchu);
+                    CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin, panLogOut,panTrangchu);
+                }
+                panl.Visible = true; 
             }
         }
         // forget quay lại
@@ -272,7 +329,7 @@ namespace DuAnCNPM
                             {
                                 lblChucnangQL.Visible = true;
                             }
-                            CheckPanel(panHome);
+                            CheckPanel(panHome,panSignIn);
                             ShowPanel(panWork);
                         }
                         else
@@ -339,7 +396,7 @@ namespace DuAnCNPM
         // Đăng xuất
         private void lblLogOut_Click(object sender, EventArgs e)
         {
-            CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin);
+            CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin,panTrangchu);
             ShowPanel(panLogOut);
             this.AcceptButton = btnContinueLogout;
         }
@@ -350,33 +407,41 @@ namespace DuAnCNPM
         // Yes khi đăng xuất
         private void btnContinueLogout_Click(object sender, EventArgs e)
         {
-            CheckPanel(panVeUs, panWork);
-            ShowPanel(panHome);
+            CheckPanel(panVeUs, panLogOut, panWork);
+            ShowPanel(panSignIn,panHome);
             this.AcceptButton = btnSignIn;
         }
         //No khi đăng xuất
         private void btnCancelLogout_Click(object sender, EventArgs e)
         {
-            string[] pans = { "panDSDH", "panTTNV", "panDSNV", "panTB", "panTK", "panDMK", "panAdmin"}; 
-            if (pans.Contains(OldPanel))
+            Dictionary<string, string> pans = new Dictionary<string, string>()
+            {
+                { "panDSDH", "lblDanhsachDH" },
+                { "panTTNV", "lblThongtinNV" },
+                { "panDSNV", "lblDanhsachNV" },
+                { "panTB", "lblThongbao" },
+                { "panTK", "lblThongke" },
+                { "panDMK", "lblDoimatkhau" }, 
+                { "panAdmin", "lblChucnangQL" },
+                { "panTrangchu", "lblTrangchu" },
+            };
+            if (pans.ContainsKey(OldPanel))
             {
                 (panWork.Controls[OldPanel] as Panel).Visible = true;
+                ShowColor(panWork.Controls[pans[OldPanel]] as SiticoneHtmlLabel);
             }
             CheckPanel(panLogOut);
         }
         // trang chủ
         private void lblTrangchu_Click(object sender, EventArgs e)
         {
-            lblTrangchu.BackColor = Color.White;
-            lblTrangchu.ForeColor = Color.DarkSlateGray;
             CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin,panLogOut);
+            ShowPanel(panTrangchu);
         }
         // Mở DSDH
         private void lblDanhsachDH_Click(object sender, EventArgs e)
         {
-            lblDanhsachDH.BackColor = Color.White;
-            lblDanhsachDH.ForeColor = Color.DarkSlateGray;
-            CheckPanel(panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin, panLogOut);
+            CheckPanel(panTTNV, panDSNV, panTB, panTK, panDMK, panAdmin, panLogOut,panTrangchu);
             ContractService contractViewing = new ContractService();
             contractViewing.ShowContracts(panDSHDnv, splitDSHDnvchitiet);
             //panCSchitiet.Visible = true ;
@@ -386,9 +451,7 @@ namespace DuAnCNPM
         // Mở TTNV
         private void lblThongtinNV_Click(object sender, EventArgs e)
         {
-            lblThongtinNV.BackColor = Color.White;
-            lblThongtinNV.ForeColor = Color.DarkSlateGray;
-            CheckPanel(panDSDH, panDSNV, panTB, panTK, panDMK, panAdmin, panLogOut);
+            CheckPanel(panDSDH, panDSNV, panTB, panTK, panDMK, panAdmin, panLogOut, panTrangchu);
             ShowPanel(panTTNV);
             EmployeeService em = new EmployeeService();
             em.ShowEmployeeInformation(idEm, panTTNV);
@@ -396,25 +459,19 @@ namespace DuAnCNPM
         //Mở DSNV
         private void lblDanhsachNV_Click(object sender, EventArgs e)
         {
-            lblDanhsachNV.BackColor = Color.White;
-            lblDanhsachNV.ForeColor = Color.DarkSlateGray;
-            CheckPanel(panDSDH, panTTNV, panTB, panTK, panDMK, panAdmin, panLogOut);
+            CheckPanel(panDSDH, panTTNV, panTB, panTK, panDMK, panAdmin, panLogOut, panTrangchu);
             ShowPanel(panDSNV);
         }
         //Mở TB
         private void lblThongbao_Click(object sender, EventArgs e)
         {
-            lblThongbao.BackColor = Color.White;
-            lblThongbao.ForeColor = Color.DarkSlateGray;
-            CheckPanel(panDSDH, panTTNV, panDSNV, panTK, panDMK, panAdmin, panLogOut);
+            CheckPanel(panDSDH, panTTNV, panDSNV, panTK, panDMK, panAdmin, panLogOut, panTrangchu);
             ShowPanel(panTB);
         }
         //Mở Thống kê
         private void lblThongke_Click(object sender, EventArgs e)
         {
-            lblThongke.BackColor = Color.White;
-            lblThongke.ForeColor = Color.DarkSlateGray;
-            CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panDMK, panAdmin, panLogOut);
+            CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panDMK, panAdmin, panLogOut, panTrangchu);
             ContractService cs = new ContractService();
             cboMoctgian.DataSource = cs.timeData().ToList();
             if (checkTime(cboMoctgian.Items[0].ToString()) == 1)
@@ -433,17 +490,13 @@ namespace DuAnCNPM
         //Mở Đổi MK
         private void lblDoimatkhau_Click(object sender, EventArgs e)
         {
-            lblDoimatkhau.BackColor = Color.White;
-            lblDoimatkhau.ForeColor = Color.DarkSlateGray;
-            CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panAdmin, panLogOut);
+            CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panAdmin, panLogOut, panTrangchu);
             ShowPanel(panDMK);
         }
         // Mở Quản lý(Admin)
         private void lblChucnangQL_Click(object sender, EventArgs e)
         {
-            lblChucnangQL.BackColor = Color.White;
-            lblChucnangQL.ForeColor = Color.DarkSlateGray;
-            CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panDMK, panLogOut);
+            CheckPanel(panDSDH, panTTNV, panDSNV, panTB, panTK, panDMK, panLogOut, panTrangchu);
             ShowPanel(panAdmin);
             EmployeeService employeeService = new EmployeeService();
             employeeService.ShowEmployeeAdmin(panDanhsachNV,panTTNVchitiet);
@@ -451,6 +504,7 @@ namespace DuAnCNPM
             btnTaiDSNV.Enabled = false;
             btnXoaDSNV.Enabled = false;
         }
+        
         // In PDF
         //nút In trong report
         private void btnIn_Click(object sender, EventArgs e)
@@ -650,7 +704,8 @@ namespace DuAnCNPM
             }
             else
             {
-
+                AnnouncementService announcementService = new AnnouncementService();
+                announcementService.ShowAnnouncementAdminSearch(null,panDSTBAdmin,panDSTBchitiet);
             }
         }
         //public void Workbtn_OnFindClicked()
@@ -1265,6 +1320,8 @@ namespace DuAnCNPM
             }
             else if (TabcontrolAdmin.SelectedTab == tabQLTB)
             {
+                AnnouncementService announcementService = new AnnouncementService();
+                announcementService.ShowAnnouncementAdmin(panDSTBAdmin, panDSTBchitiet);
             }
             else if (TabcontrolAdmin.SelectedTab == tabQLHD)
             {
@@ -1652,13 +1709,14 @@ namespace DuAnCNPM
                 txtKetqua.Enabled = false;
                 txtGhichu.Enabled = false;
                 btnLuu.Enabled = false;
+
             }
             else
             {
                 MessageBox.Show("Sửa không thành công");
             }
-            ContractService contractViewing = new ContractService();
-            contractViewing.ShowContracts(panDSHDnv, splitDSHDnvchitiet);
+          
+
         }
         //private void btnLuu_Click_1(object sender, EventArgs e)
         //{
