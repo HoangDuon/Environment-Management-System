@@ -470,6 +470,8 @@ namespace DuAnCNPM
         private void lblThongbao_Click(object sender, EventArgs e)
         {
             CheckPanel(panDSDH, panTTNV, panDSNV, panTK, panDMK, panAdmin, panLogOut, panTrangchu);
+            AnnouncementService announcementService = new AnnouncementService();
+            announcementService.ShowAnnouncement(panDSTB, panNoidungTB);
             ShowPanel(panTB);
         }
         //Mở Thống kê
@@ -862,6 +864,8 @@ namespace DuAnCNPM
                     }
                     edit.ShowEmployeeAdmin(panDSNV, panTTNVchitiet);
                     panTTNVchitiet.Enabled = false;
+                    EmailService emailService = new EmailService();
+                    emailService.sentEmailLeader();
                 }
                 else
                 {
@@ -2735,6 +2739,13 @@ namespace DuAnCNPM
         private void frmEcoOrder_FormClosing(object sender, FormClosingEventArgs e)
         {
             voiceSearch?.StopVoiceSearch();
+        }
+
+        private void btnsentEmail_Click(object sender, EventArgs e)
+        {
+            EmailService emailService = new EmailService();
+            emailService.sentEmailEmployees();
+            emailService.sentEmailCustomers();
         }
 
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)

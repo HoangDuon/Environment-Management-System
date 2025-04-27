@@ -114,7 +114,7 @@ namespace DuAnCNPM.Controller
             using (var context = new CTQLMTContext())
             {
                 DateTime today = DateTime.Today;
-                DateTime ngayCanhBao = today.AddDays(-3);
+                DateTime ngayCanhBao = today.AddDays(-1);
                 List<HopDong> hopdongs = context.HopDongs
                     .Where(hd => hd.NGAY_TRA_KQ >= today && hd.NGAY_TRA_KQ <= ngayCanhBao)
                     .ToList();
