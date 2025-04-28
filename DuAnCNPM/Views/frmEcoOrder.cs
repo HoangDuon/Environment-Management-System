@@ -710,8 +710,35 @@ namespace DuAnCNPM
             }
             else
             {
+                //Tim thong bao
+                ///
+                ///
+                ///
+                ///
+                ///            ///
+                ///
+                ///
+                ///
+                ///            ///
+                ///
+                ///
+                ///
+                ///            ///
+                ///
+                ///
+                ///
+                ///            ///
+                ///
+                ///
+                ///
+                ///            ///
+                ///
+                ///
+                ///
+                ///
+                NotificationService notificationService = new NotificationService();
                 AnnouncementService announcementService = new AnnouncementService();
-                announcementService.ShowAnnouncementAdminSearch(null,panDSTBAdmin,panDSTBchitiet);
+                announcementService.ShowAnnouncementAdminSearch(notificationService.searchNoti(txtFindAdmin.Text),panDSTBAdmin,panDSTBchitiet);
             }
         }
         //public void Workbtn_OnFindClicked()
@@ -862,10 +889,11 @@ namespace DuAnCNPM
                             ((SiticoneTextBox)ctrl).Clear();
                         }
                     }
-                    edit.ShowEmployeeAdmin(panDSNV, panTTNVchitiet);
+                    edit.ShowEmployeeAdmin(panDanhsachNV, panTTNVchitiet);
                     panTTNVchitiet.Enabled = false;
-                    EmailService emailService = new EmailService();
-                    emailService.sentEmailLeader();
+                    //EmailService emailService = new EmailService();
+                    //emailService.sentEmailLeader();
+                    
                 }
                 else
                 {
@@ -898,7 +926,7 @@ namespace DuAnCNPM
                         ((SiticoneTextBox)ctrl).Clear();
                     }
                 }
-                edit.ShowEmployeeAdmin(panDSNV, panTTNVchitiet);
+                edit.ShowEmployeeAdmin(panDanhsachNV, panTTNVchitiet);
                 panTTNVchitiet.Enabled = false;
                 btnXoaDSNV.Enabled = false;
                 btnTaiDSNV.Enabled = false;
@@ -922,7 +950,7 @@ namespace DuAnCNPM
                         ((SiticoneTextBox)ctrl).Clear();
                     }
                 }
-                remove.ShowEmployeeAdmin(panDSNV, panTTNVchitiet);
+                remove.ShowEmployeeAdmin(panDanhsachNV, panTTNVchitiet);
                 panTTNVchitiet.Enabled = false;
                 btnXoaDSNV.Enabled = false;
                 btnTaiDSNV.Enabled = false;
@@ -1210,6 +1238,7 @@ namespace DuAnCNPM
             if (remove.deleteContract(mahopdong))
             {
                 MessageBox.Show("Xóa hợp đồng thành công");
+                remove.ShowContractsAdmin(panDSHD, panTTHDchitiet);
                 foreach (Control ctrl in panTTHDchitiet.Controls)
                 {
                     if (ctrl is SiticoneTextBox)
@@ -1271,6 +1300,7 @@ namespace DuAnCNPM
                 if (edit.addContract(manhanvien, macongty, DateTime.Parse(ngayky), DateTime.Parse(ngaygiao), long.Parse(sotien)))
                 {
                     MessageBox.Show("Thêm hợp đồng mới thành công");
+                    edit.ShowContractsAdmin(panDSHD, panTTHDchitiet);
                     foreach (Control ctrl in panTTHDchitiet.Controls)
                     {
                         if (ctrl is SiticoneTextBox)
@@ -1298,18 +1328,24 @@ namespace DuAnCNPM
                 {
                     if (!flag[i])
                     {
-                        MessageBox.Show("Chỉnh sửa không thanh công");
+                        MessageBox.Show("Chỉnh sửa không thành công");
                         return;
                     }
                 }
                 MessageBox.Show("Chỉnh sửa thành công");
-                foreach (Control ctrl in panTTHDchitiet.Controls)
-                {
-                    if (ctrl is SiticoneTextBox)
-                    {
-                        ((SiticoneTextBox)ctrl).Clear();
-                    }
-                }
+
+                txtMaHDQLHD.Enabled = true;
+                txtMaCtyQLHD.Enabled = true;
+
+                txtMaHDQLHD.Clear();
+                txtMaCtyQLHD.Clear();
+                txtSotien.Clear();
+
+                txtMaHDQLHD.Enabled = false;
+                txtMaCtyQLHD.Enabled = false;
+
+                edit.ShowContractsAdmin(panDSHD, panTTHDchitiet);
+                
             }
 
         }
@@ -1354,6 +1390,11 @@ namespace DuAnCNPM
             txtMaNVQLHD.Enabled = false;
             btnSuaHD.Enabled = true;
             btnXoaHD.Enabled = true;
+            btnLuuHD.Enabled = true;
+            btnSuaChiSoChiTiet.Enabled = true;
+            dtpNgaykyQLHD.Enabled = true;
+            dtpNgaytraKQQLHD.Enabled = true;
+            txtSotien.Enabled = true;
 
         }
 
@@ -1584,6 +1625,8 @@ namespace DuAnCNPM
                 if (noti.addNoti(tieuDe, DateTime.Parse(ngayPhatHanh), noiDung))
                 {
                     MessageBox.Show("Thêm thành công");
+                    AnnouncementService announ = new AnnouncementService();
+                    announ.ShowAnnouncementAdmin(panDSTBAdmin, panDSTBchitiet);
 
                     txtMaThongBao.Clear();
                     txtTieuDe.Clear();
@@ -1603,6 +1646,8 @@ namespace DuAnCNPM
                 if (flag)
                 {
                     MessageBox.Show("Sửa thành công");
+                    AnnouncementService announ = new AnnouncementService();
+                    announ.ShowAnnouncementAdmin(panDSTBAdmin, panDSTBchitiet);
 
                     txtMaThongBao.Clear();
                     txtTieuDe.Clear();
@@ -1627,6 +1672,8 @@ namespace DuAnCNPM
             if (noti.removeNoti(maThongBao))
             {
                 MessageBox.Show("Xóa thành công");
+                AnnouncementService announ = new AnnouncementService();
+                announ.ShowAnnouncementAdmin(panDSTBAdmin, panDSTBchitiet);
                 txtMaThongBao.Clear();
                 txtTieuDe.Clear();
                 txtNoidung.Clear();
@@ -1717,6 +1764,10 @@ namespace DuAnCNPM
                 txtKetqua.Enabled = false;
                 txtGhichu.Enabled = false;
                 btnLuu.Enabled = false;
+
+                ContractService contractViewing = new ContractService();
+                contractViewing.ShowContracts(panDSHDnv, splitDSHDnvchitiet);
+                contractService.LoadProductData(mahopdong, splitDSHDnvchitiet);
 
             }
             else
@@ -2629,10 +2680,9 @@ namespace DuAnCNPM
         {
             btnXoaChiSoChiTiet.Enabled = true;
             btnLuuCSchitiet.Enabled = true;
-            panCSchitiet.Visible = false;
             txtGhiChuQLHD.Enabled = true;
             dtpNgaynhapQLHD.Enabled = true;
-            txtTenCS.Enabled = false;
+            txtTenCS.Enabled = true;
             txtMaNVnhap.Enabled = false;
             txtMaCSQLHD.Enabled = false;
         }
@@ -2645,6 +2695,10 @@ namespace DuAnCNPM
             if (del.deleteDetailedIndex(maHopDong, maChiSo))
             {
                 MessageBox.Show("Xóa thành công");
+                ContractService cs = new ContractService();
+                cs.ShowContractsAdmin(panDSHD, panTTHDchitiet);
+                cs.LoadProductDataAdmin(maHopDong, panCSchitiet);
+
             }
             else MessageBox.Show("Xóa không thành công");
 
@@ -2672,6 +2726,9 @@ namespace DuAnCNPM
             if (flag1 && flag2)
             {
                 MessageBox.Show("Chỉnh sửa thành công");
+                ContractService cs = new ContractService();
+                cs.ShowContractsAdmin(panDSHD, panTTHDchitiet);
+                cs.LoadProductDataAdmin(maHopDong, panCSchitiet);
                 return;
             }
             MessageBox.Show("Chỉnh sửa không thành công");
@@ -2694,7 +2751,7 @@ namespace DuAnCNPM
                 Action updateAction = () =>
                 {
                     // In để xác nhận xem recognizedText có giá trị hợp lệ
-                    MessageBox.Show("Recognized Text: " + recognizedText);
+                    //MessageBox.Show("Recognized Text: " + recognizedText);
 
                     // Cập nhật trực tiếp vào TextBox
                     txtFindma.Text = recognizedText;
@@ -2746,6 +2803,42 @@ namespace DuAnCNPM
             EmailService emailService = new EmailService();
             emailService.sentEmailEmployees();
             emailService.sentEmailCustomers();
+        }
+
+        private void grpDulieuDH_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFindTB_Click(object sender, EventArgs e)
+        {
+            //Tim kiem thong bao
+            ///
+            ///
+            ///
+            ///
+            //
+            ///
+            ///
+            ///
+            ///
+            ///
+            ///
+            ///
+            ///
+            ///
+            ///            ///
+            ///
+            ///
+            ///
+            ///            ///
+            ///
+            ///
+            ///
+            ///
+            NotificationService notificationService = new NotificationService();
+            AnnouncementService announcementService = new AnnouncementService();
+            announcementService.ShowAnnouncementSearch(notificationService.searchNoti(txtFindTB.Text),panDSTB, panNoidungTB);
         }
 
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)

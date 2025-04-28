@@ -149,16 +149,18 @@ namespace DuAnCNPM.Datas
                 cusService.addCustomer("Ngũ Long Công Túa Company", "0123456789", "ngulongcongtua@gmail.com", "Cobi tower, q7", "MST1");
                 cusService.addCustomer("Dạ Company", "0163845621", "dacompany@gmail.com", "ThisoMall, TP.Thủ Đức", "MST2");
                 cusService.addCustomer("Green Company", "0163842621", "greencompany@gmail.com", "Waterfront, Q1", "MST3");
-                cusService.addCustomer("Phiền Company", "0163849621", "phiencompany@gmail.com", "Marina centeral tower, TP.Thủ Đức", "MST4");
-                cusService.addCustomer("Gúp nine Company", "0263849621", "gupninecompany@gmail.com", "The Hall Mark, TP.Thủ Đức", "MST5");
-                cusService.addCustomer("Green Leaf Ltd", "0283940012", "greenleaf@gmail.com", "123 Nguyễn Văn Linh, Q.7, TP.HCM", "MST6");
-                cusService.addCustomer("Blue Ocean Corp", "0243777888", "blueocean@gmail.com", "456 Hai Bà Trưng, Q.1, TP.HCM", "MST7");
+                cusService.addCustomer("Phiền Company", "0163849621", "phantuanvy.tv2019@gmail.com", "Marina centeral tower, TP.Thủ Đức", "MST4");
+                // sample
+                cusService.addCustomer("Gúp nine Company", "0263849621", "ntu318485@gmail.com", "The Hall Mark, TP.Thủ Đức", "MST5");
+
+                cusService.addCustomer("Công ty Cổ phần An Khang", "0283940012", "greenleaf@gmail.com", "123 Nguyễn Văn Linh, Q.7, TP.HCM", "MST6");
+                cusService.addCustomer("Công ty TNHH Thịnh Vượng", "0243777888", "blueocean@gmail.com", "456 Hai Bà Trưng, Q.1, TP.HCM", "MST7");
                 cusService.addCustomer("Red Stone JSC", "0909123456", "redstone@gmail.com", "789 Lê Văn Việt, TP.Thủ Đức", "MST8");
-                cusService.addCustomer("Sunshine Trading", "0988998877", "sunshine@gmail.com", "101 Trần Hưng Đạo, Q.5, TP.HCM", "MST9");
-                cusService.addCustomer("Eco Life Co., Ltd", "0933221122", "ecolife@gmail.com", "23 Phan Xích Long, Q.Phú Nhuận, TP.HCM", "MST10");
-                cusService.addCustomer("Future Tech Inc.", "0911223344", "futuretech@gmail.com", "88 Trường Chinh, Q.Tân Bình, TP.HCM", "MST11");
-                cusService.addCustomer("Golden Star Co", "0908777888", "goldenstar@gmail.com", "12 Hoàng Hoa Thám, Q.Bình Thạnh, TP.HCM", "MST12");
-                cusService.addCustomer("VinaClean Services", "0988123456", "vinaclean@gmail.com", "67 Lê Lợi, TP.Huế", "MST13");
+                cusService.addCustomer("Công ty Cổ phần Đại Nam", "0988998877", "sunshine@gmail.com", "101 Trần Hưng Đạo, Q.5, TP.HCM", "MST9");
+                cusService.addCustomer("Công ty Cổ phần Việt Xanh", "0933221122", "ecolife@gmail.com", "23 Phan Xích Long, Q.Phú Nhuận, TP.HCM", "MST10");
+                cusService.addCustomer("Công ty TNHH Hưng Thịnh", "0911223344", "futuretech@gmail.com", "88 Trường Chinh, Q.Tân Bình, TP.HCM", "MST11");
+                cusService.addCustomer("Công ty Cổ phần Sáng Tạo Việt", "0908777888", "goldenstar@gmail.com", "12 Hoàng Hoa Thám, Q.Bình Thạnh, TP.HCM", "MST12");
+                cusService.addCustomer("Công ty TNHH Tầm Nhìn Mới", "0988123456", "vinaclean@gmail.com", "67 Lê Lợi, TP.Huế", "MST13");
                 cusService.addCustomer("SkyNet JSC", "0939111222", "skynet@gmail.com", "22 Hùng Vương, TP.Đà Nẵng", "MST14");
                 cusService.addCustomer("MountainView Ltd", "0977333111", "mountainview@gmail.com", "99 Nguyễn Tất Thành, TP.Đà Lạt", "MST15");
                 cusService.addCustomer("OceanWave Co.", "0909666777", "oceanwave@gmail.com", "345 Trần Phú, TP.Nha Trang", "MST16");
@@ -183,62 +185,26 @@ namespace DuAnCNPM.Datas
 
 
                 var empService = new EmployeeService();
-                empService.AddEmployee("Nguyễn Thanh Tú", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "ntu318485@gmail.com", true);
-                empService.AddEmployee("Nguyễn Văn C", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "ntu318485@gmail.com", false);
-                empService.AddEmployee("Nguyễn Thanh A", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "ntu318485@gmail.com", false);
-                empService.AddEmployee("Trần Thanh Tun", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "ntu318485@gmail.com", false);
-                empService.AddEmployee("Phạm Thanh H", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "ntu318485@gmail.com", false);
-                empService.AddEmployee("Nguyễn Văn An", "PTN", new DateTime(1996, 4, 10), "123456", "nam", "0909090909", "an.nguyen@example.com", true);
+                empService.AddEmployee("Nguyễn Thanh Tun", "ADMIN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "tu21122005@gmail.com", true);
+                empService.AddEmployee("Phan Tuấn Vỹ", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "tuanvy24905@gmail.com", false);
+                empService.AddEmployee("Trần Cao Phong", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "caophongt60@gmail.com", false);
+                empService.AddEmployee("Dương Nguyễn Minh Hoàng", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "52300025@gmail.com", false);
+                empService.AddEmployee("Hoàng Công Tài Thế", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "52300074@gmail.com", false);
+                empService.AddEmployee("Nguyễn Thanh Tú", "PTN", new DateTime(1996, 4, 10), "123456", "nam", "0909090909", "tu03673@gmail.com", true);
                 empService.AddEmployee("Lê Thị Hồng Gấm", "PKD", new DateTime(1993, 9, 22), "123456", "nữ", "0918181818", "gam.le@example.com", false);
                 empService.AddEmployee("Phạm Hoàng L", "PKH", new DateTime(1990, 2, 5), "123456", "nam", "0927272727", "hoang.pham@example.com", true);
                 empService.AddEmployee("Trần Thị Ngọc T", "PQT", new DateTime(1998, 6, 18), "123456", "nữ", "0936363636", "ngoc.tran@example.com", false);
                 empService.AddEmployee("Vũ Minh H", "PKQ", new DateTime(1995, 12, 30), "123456", "nam", "0945454545", "minh.vu@example.com", true);
 
-                empService.AddEmployee("Phan Tuấn Vỹ", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "boty1402@gmail.com", true);
-                empService.AddEmployee("Phan Thanh N", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "boty1402@gmail.com", false);
-                empService.AddEmployee("Trần Tuấn T", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "boty1402@gmail.com", false);
-                empService.AddEmployee("Nguyễn Văn P", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "boty1402@gmail.com", false);
-                empService.AddEmployee("Phan Thanh K", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "boty1402@gmail.com", false);
+                empService.AddEmployee("Phan Thanh N", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "52300144@gmail.com", false);
+                empService.AddEmployee("Trần Tuấn T", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "52300087@gmail.com", false);
+                empService.AddEmployee("Nguyễn Văn P", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "52300081@gmail.com", false);
+                empService.AddEmployee("Phan Thanh K", "PQT", new DateTime(2005, 09, 24), "123456", "nam", "0123747764", "52300082@gmail.com", false);
                 empService.AddEmployee("Lê Văn Hảo", "PKH", new DateTime(1992, 3, 11), "123456", "nam", "0909091122", "hao.le@example.com", true);
                 empService.AddEmployee("Trần Thị Mỹ L", "PKQ", new DateTime(1995, 8, 24), "123456", "nữ", "0911223344", "my.tran@example.com", false);
                 empService.AddEmployee("Nguyễn Hữu Tài", "PTN", new DateTime(1990, 6, 2), "123456", "nam", "0922334455", "tai.nguyen@example.com", true);
                 empService.AddEmployee("Phạm Thị Minh H", "PKD", new DateTime(1993, 12, 9), "123456", "nữ", "0933445566", "minh.pham@example.com", false);
                 empService.AddEmployee("Đặng Quốc Khang", "PQT", new DateTime(1988, 11, 30), "123456", "nam", "0944556677", "khang.dang@example.com", true);
-
-                empService.AddEmployee("Trần Cao Phong", "PKQ", new DateTime(2005, 06, 20), "123456", "nam", "0123727789", "52300144gmail.com", true);
-                empService.AddEmployee("Trần Thanh K", "PKQ", new DateTime(2005, 06, 20), "123456", "nam", "0123727789", "52300144gmail.com", false);
-                empService.AddEmployee("Nguyễn Văn M", "PKQ", new DateTime(2005, 06, 20), "123456", "nam", "0123727789", "52300144gmail.com", false);
-                empService.AddEmployee("Phan Cao h", "PKQ", new DateTime(2005, 06, 20), "123456", "nam", "0123727789", "52300144gmail.com", false);
-                empService.AddEmployee("Nguyễn Văn Tun", "PKQ", new DateTime(2005, 06, 20), "123456", "nam", "0123727789", "52300144gmail.com", false);
-                empService.AddEmployee("Nguyễn Thị Diễm M", "PKD", new DateTime(1996, 4, 15), "123456", "nữ", "0966111222", "diem.nguyen@example.com", true);
-                empService.AddEmployee("Lâm Văn Hùng", "PQT", new DateTime(1991, 9, 27), "123456", "nam", "0977222333", "hung.lam@example.com", false);
-                empService.AddEmployee("Võ Thị Thu T", "PKH", new DateTime(1998, 2, 8), "123456", "nữ", "0988333444", "thu.vo@example.com", true);
-                empService.AddEmployee("Trần Nhật Minh", "PKQ", new DateTime(1994, 7, 20), "123456", "nam", "0999444555", "minh.tran@example.com", true);
-                empService.AddEmployee("Hoàng Thị Lan", "PTN", new DateTime(1990, 11, 3), "123456", "nữ", "0900555666", "lan.hoang@example.com", false);
-
-                empService.AddEmployee("Dương Nguyễn Minh Hoàng", "PKD", new DateTime(2005, 08, 20), "123456", "nam", "0123747789", "52300025gmail.com", true);
-                empService.AddEmployee("Trần Nguyễn Thanh K", "PKD", new DateTime(2005, 08, 20), "123456", "nam", "0123747789", "52300025gmail.com", false);
-                empService.AddEmployee("Nguyễn Minh F", "PKD", new DateTime(2005, 08, 20), "123456", "nam", "0123747789", "52300025gmail.com", false);
-                empService.AddEmployee("Nguyễn Trần Minh M", "PKD", new DateTime(2005, 08, 20), "123456", "nam", "0123747789", "52300025gmail.com", false);
-                empService.AddEmployee("Nguyễn Thanh T", "PKD", new DateTime(2005, 08, 20), "123456", "nam", "0123747789", "52300025gmail.com", false);
-                empService.AddEmployee("Đinh Văn Tùng", "PKQ", new DateTime(1993, 3, 19), "123456", "nam", "0911002233", "tung.dinh@example.com", true);
-                empService.AddEmployee("Phạm Thị Bích Ng", "PTN", new DateTime(1997, 10, 25), "123456", "nữ", "0922113344", "bich.pham@example.com", false);
-                empService.AddEmployee("Lưu Đức Tài", "PKD", new DateTime(1992, 5, 5), "123456", "nam", "0933224455", "tai.luu@example.com", true);
-                empService.AddEmployee("Nguyễn Thị Ánh M", "PKH", new DateTime(1999, 6, 12), "123456", "nữ", "0944335566", "anh.nguyen@example.com", true);
-                empService.AddEmployee("Trần Quốc Việt", "PQT", new DateTime(1989, 1, 9), "123456", "nam", "0955446677", "viet.tran@example.com", false);
-
-                empService.AddEmployee("Hoàng Công Tài Thế", "PKH", new DateTime(2005, 01, 24), "123456", "nam", "0123747719", "52300065@gmail.com", true);
-                empService.AddEmployee("Nguyễn Văn T", "PKH", new DateTime(2005, 01, 24), "123456", "nam", "0123747719", "52300065@gmail.com", false);
-                empService.AddEmployee("Trần Tài M", "PKH", new DateTime(2005, 01, 24), "123456", "nam", "0123747719", "52300065@gmail.com", false);
-                empService.AddEmployee("Nguyễn Văn K", "PKH", new DateTime(2005, 01, 24), "123456", "nam", "0123747719", "52300065@gmail.com", false);
-                empService.AddEmployee("Nguyễn Văn D", "PKH", new DateTime(2005, 01, 24), "123456", "nam", "0123747719", "52300065@gmail.com", false);
-                empService.AddEmployee("Lê Văn Sơn", "PKH", new DateTime(1990, 8, 14), "123456", "nam", "0966557788", "son.le@example.com", true);
-                empService.AddEmployee("Ngô Thị Kim L", "PKQ", new DateTime(1996, 12, 3), "123456", "nữ", "0977668899", "kim.ngo@example.com", false);
-                empService.AddEmployee("Phan Hoàng Phúc", "PTN", new DateTime(1995, 2, 20), "123456", "nam", "0988779900", "phuc.phan@example.com", true);
-                empService.AddEmployee("Trịnh Thị Ngọc H", "PKD", new DateTime(1993, 7, 7), "123456", "nữ", "0999888001", "ngoc.trinh@example.com", false);
-                empService.AddEmployee("Đoàn Quốc Thịnh", "PQT", new DateTime(1988, 9, 30), "123456", "nam", "0900999112", "thinh.doan@example.com", true);
-
-                empService.AddEmployee("Nguyễn Văn Tú", "ADMIN", new DateTime(2005, 01, 24), "123456", "nam", "0123747719", "52300065@gmail.com", false);
 
                 //, 14, 20, 0
 
@@ -282,31 +248,61 @@ namespace DuAnCNPM.Datas
                 enService.addEnviromentIndex("Carbon dioxit", "KHONGKHI", "CR", "PTN");
 
                 var contractService = new ContractService();
-                contractService.addContract("NVPTN4", "KH1", DateTime.Today, new DateTime(2025, 5, 4), 50000000);
-                contractService.addContract("NVPTN4", "KH2", DateTime.Today, new DateTime(2025, 5, 3), 50000000);
-                contractService.addContract("NVPTN4", "KH3", DateTime.Today, new DateTime(2025, 5, 7), 50000000);
-                contractService.addContract("NVPTN4", "KH4", DateTime.Today, new DateTime(2025, 5, 21), 50000000);
-                contractService.addContract("NVPTN4", "KH5", DateTime.Today, new DateTime(2025, 5, 10), 50000000);
-                contractService.addContract("NVPTN4", "KH1", DateTime.Today, new DateTime(2025, 4, 1), 50000000);
-                contractService.addContract("NVPTN4", "KH2", DateTime.Today, new DateTime(2025, 4, 12), 50000000);
-                contractService.addContract("NVPTN4", "KH3", DateTime.Today, new DateTime(2025, 4, 14), 50000000);
-                contractService.addContract("NVPTN4", "KH4", DateTime.Today, new DateTime(2025, 5, 3), 50000000);
-                contractService.addContract("NVPTN4", "KH5", DateTime.Today, new DateTime(2025, 5, 2), 50000000);
-                contractService.addContract("NVPTN4", "KH6", DateTime.Today, new DateTime(2025, 5, 20), 50000000);
-                contractService.addContract("NVPTN4", "KH7", DateTime.Today, new DateTime(2025, 5, 19), 50000000);
-                contractService.addContract("NVPTN4", "KH8", DateTime.Today, new DateTime(2025, 5, 18), 50000000);
-                contractService.addContract("NVPTN4", "KH9", DateTime.Today, new DateTime(2025, 5, 16), 50000000);
-                contractService.addContract("NVPTN4", "KH10", DateTime.Today, new DateTime(2025, 5, 15), 50000000);
-                contractService.addContract("NVPTN4", "KH11", DateTime.Today, new DateTime(2025, 5, 3), 50000000);
-                contractService.addContract("NVPTN4", "KH12", DateTime.Today, new DateTime(2025, 5, 5), 50000000);
-                contractService.addContract("NVPTN4", "KH13", DateTime.Today, new DateTime(2025, 5, 8), 50000000);
-                contractService.addContract("NVPTN4", "KH14", DateTime.Today, new DateTime(2025, 5, 9), 50000000);
-                contractService.addContract("NVPTN4", "KH15", DateTime.Today, new DateTime(2025, 5, 1), 50000000);
-                contractService.addContract("NVPTN4", "KH16", DateTime.Today, new DateTime(2025, 5, 7), 50000000);
-                contractService.addContract("NVPTN4", "KH17", DateTime.Today, new DateTime(2025, 5, 8), 50000000);
-                contractService.addContract("NVPTN4", "KH18", DateTime.Today, new DateTime(2025, 5, 6), 50000000);
-                contractService.addContract("NVPTN4", "KH19", DateTime.Today, new DateTime(2025, 5, 8), 50000000);
-                contractService.addContract("NVPTN4", "KH20", DateTime.Today, new DateTime(2025, 5, 4), 50000000);
+                contractService.addContract("ADMIN1", "KH1", new DateTime(2025, 4, 1), new DateTime(2025, 4, 27), 50000000);
+                contractService.addContract("ADMIN1", "KH2", new DateTime(2025, 4, 20), new DateTime(2025, 5, 3), 50000000);
+                contractService.addContract("ADMIN1", "KH3", new DateTime(2025, 4, 8), new DateTime(2025, 5, 7), 50000000);
+                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 4, 21), new DateTime(2025, 5, 21), 50000000);
+                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 4, 16), new DateTime(2025, 4, 18), 50000000);
+                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 4, 9), new DateTime(2025, 5, 18), 50000000);
+
+                //sample
+                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 3, 4), new DateTime(2025, 4, 27), 50000000);
+                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 3, 28), new DateTime(2025, 4, 30), 50000000);
+
+
+
+                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 3, 4), new DateTime(2025, 4, 10), 50000000);
+                contractService.addContract("ADMIN1", "KH1", new DateTime(2025, 3, 20), new DateTime(2025, 4, 1), 50000000);
+                contractService.addContract("ADMIN1", "KH2", new DateTime(2025, 3, 18), new DateTime(2025, 4, 12), 50000000);
+
+                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 2, 4), new DateTime(2025, 3, 3), 50000000);
+                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 2, 20), new DateTime(2025, 3, 2), 50000000);
+                contractService.addContract("ADMIN1", "KH6", new DateTime(2025, 2, 19), new DateTime(2025, 3, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH7", new DateTime(2025, 2, 1), new DateTime(2025, 3, 19), 50000000);
+                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 2, 4), new DateTime(2025, 2, 18), 50000000);
+
+                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 1, 4), new DateTime(2025, 2, 18), 50000000);
+                contractService.addContract("ADMIN1", "KH9", new DateTime(2025, 1, 5), new DateTime(2025, 2, 16), 50000000);
+                contractService.addContract("ADMIN1", "KH10", new DateTime(2025, 1, 20), new DateTime(2025, 2, 15), 50000000);
+                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 18), new DateTime(2025, 2, 3), 50000000);
+                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 23), new DateTime(2025, 2, 3), 50000000);
+                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 29), new DateTime(2025, 2, 3), 50000000);
+
+                contractService.addContract("ADMIN1", "KH12", new DateTime(2024, 12, 20), new DateTime(2025, 1, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH14", new DateTime(2024, 12, 24), new DateTime(2025, 1, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH15", new DateTime(2024, 12, 2), new DateTime(2025, 1, 20), 50000000);
+
+                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 11, 19), new DateTime(2024, 12, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 11, 20), new DateTime(2024, 12, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 11, 21), new DateTime(2024, 12, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 11, 4), new DateTime(2024, 12, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 11, 2), new DateTime(2024, 12, 20), 50000000);
+
+                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 10, 19), new DateTime(2024, 11, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 10, 20), new DateTime(2024, 11, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 10, 21), new DateTime(2024, 11, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 10, 4), new DateTime(2024, 11, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 10, 2), new DateTime(2024, 11, 20), 50000000);
+
+                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 9, 19), new DateTime(2024, 10, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 9, 25), new DateTime(2024, 10, 25), 50000000);
+
+                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 8, 19), new DateTime(2024, 9, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 8, 20), new DateTime(2024, 9, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 8, 21), new DateTime(2024, 9, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 8, 4), new DateTime(2024, 9, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 8, 2), new DateTime(2024, 9, 20), 50000000);
+
 
                 NotificationService noti = new NotificationService();
                 noti.addNoti("Thông báo hệ thống", new DateTime(2025, 4, 26), "Hệ thống sẽ bảo trì vào lúc 23:00 hôm nay.");

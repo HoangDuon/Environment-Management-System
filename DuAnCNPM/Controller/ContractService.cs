@@ -571,6 +571,7 @@ namespace DuAnCNPM.Controller
             (main.Parent.Controls["btnXoaHD"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = false;
             (main.Parent.Controls["btnLuuHD"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = false;
             (thongtinchiso.Controls["btnSuaChiSoChiTiet"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = false;
+            thongtinchiso.Visible = true;
             LoadProductDataAdmin(hd.MA_HOP_DONG, thongtinchiso);
         }
 
@@ -731,10 +732,10 @@ namespace DuAnCNPM.Controller
                         grbox.FillColor = System.Drawing.Color.Gainsboro;
                         grbox.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
                         grbox.ForeColor = System.Drawing.Color.Black;
-                        grbox.Location = new System.Drawing.Point(container.Width - 20, yOffset);
+                        grbox.Location = new System.Drawing.Point(5, yOffset);
                         grbox.Name = hd.MA_HOP_DONG;
                         grbox.Visible = true;
-                        grbox.Size = new System.Drawing.Size(275, 50);
+                        grbox.Size = new System.Drawing.Size(container.Width - 20, 53);
                         grbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                         int width = grbox.Width - 20;
 

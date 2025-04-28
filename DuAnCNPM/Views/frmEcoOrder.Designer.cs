@@ -1126,9 +1126,9 @@ namespace DuAnCNPM
             this.panWork.BackColor = System.Drawing.Color.Transparent;
             this.panWork.BackgroundImage = global::DuAnCNPM.Properties.Resources.Design__1_;
             this.panWork.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panWork.Controls.Add(this.panDSDH);
             this.panWork.Controls.Add(this.panAdmin);
             this.panWork.Controls.Add(this.panTB);
-            this.panWork.Controls.Add(this.panDSDH);
             this.panWork.Controls.Add(this.panDSNV);
             this.panWork.Controls.Add(this.lblChucnangQL);
             this.panWork.Controls.Add(this.lblDoimatkhau);
@@ -2308,7 +2308,7 @@ namespace DuAnCNPM
             this.dtpNgaytraKQQLHD.FillColor = System.Drawing.Color.Honeydew;
             this.dtpNgaytraKQQLHD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaytraKQQLHD.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgaytraKQQLHD.Location = new System.Drawing.Point(238, 234);
+            this.dtpNgaytraKQQLHD.Location = new System.Drawing.Point(238, 364);
             this.dtpNgaytraKQQLHD.MaxDate = new System.DateTime(2031, 1, 4, 0, 0, 0, 0);
             this.dtpNgaytraKQQLHD.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgaytraKQQLHD.Name = "dtpNgaytraKQQLHD";
@@ -2328,7 +2328,7 @@ namespace DuAnCNPM
             this.dtpNgaykyQLHD.FillColor = System.Drawing.Color.Honeydew;
             this.dtpNgaykyQLHD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaykyQLHD.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgaykyQLHD.Location = new System.Drawing.Point(238, 181);
+            this.dtpNgaykyQLHD.Location = new System.Drawing.Point(238, 311);
             this.dtpNgaykyQLHD.MaxDate = new System.DateTime(2030, 12, 28, 0, 0, 0, 0);
             this.dtpNgaykyQLHD.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgaykyQLHD.Name = "dtpNgaykyQLHD";
@@ -2359,7 +2359,7 @@ namespace DuAnCNPM
             this.panCSchitiet.Controls.Add(this.label3);
             this.panCSchitiet.Controls.Add(this.lblMathongso);
             this.panCSchitiet.Controls.Add(this.btnXoaChiSoChiTiet);
-            this.panCSchitiet.Location = new System.Drawing.Point(0, 338);
+            this.panCSchitiet.Location = new System.Drawing.Point(0, 468);
             this.panCSchitiet.Name = "panCSchitiet";
             this.panCSchitiet.Size = new System.Drawing.Size(683, 561);
             this.panCSchitiet.TabIndex = 57;
@@ -2696,7 +2696,7 @@ namespace DuAnCNPM
             this.txtSotien.HoverState.FillColor = System.Drawing.Color.Azure;
             this.txtSotien.HoverState.ForeColor = System.Drawing.Color.Black;
             this.txtSotien.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSotien.Location = new System.Drawing.Point(238, 287);
+            this.txtSotien.Location = new System.Drawing.Point(238, 417);
             this.txtSotien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSotien.Name = "txtSotien";
             this.txtSotien.PasswordChar = '\0';
@@ -2725,7 +2725,7 @@ namespace DuAnCNPM
             this.txtMaHDQLHD.HoverState.FillColor = System.Drawing.Color.Azure;
             this.txtMaHDQLHD.HoverState.ForeColor = System.Drawing.Color.Black;
             this.txtMaHDQLHD.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtMaHDQLHD.Location = new System.Drawing.Point(238, 22);
+            this.txtMaHDQLHD.Location = new System.Drawing.Point(238, 152);
             this.txtMaHDQLHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaHDQLHD.Name = "txtMaHDQLHD";
             this.txtMaHDQLHD.PasswordChar = '\0';
@@ -2754,7 +2754,7 @@ namespace DuAnCNPM
             this.txtMaNVQLHD.HoverState.FillColor = System.Drawing.Color.Azure;
             this.txtMaNVQLHD.HoverState.ForeColor = System.Drawing.Color.Black;
             this.txtMaNVQLHD.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtMaNVQLHD.Location = new System.Drawing.Point(238, 128);
+            this.txtMaNVQLHD.Location = new System.Drawing.Point(238, 258);
             this.txtMaNVQLHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaNVQLHD.Name = "txtMaNVQLHD";
             this.txtMaNVQLHD.PasswordChar = '\0';
@@ -2783,7 +2783,7 @@ namespace DuAnCNPM
             this.txtMaCtyQLHD.HoverState.FillColor = System.Drawing.Color.Azure;
             this.txtMaCtyQLHD.HoverState.ForeColor = System.Drawing.Color.Black;
             this.txtMaCtyQLHD.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtMaCtyQLHD.Location = new System.Drawing.Point(238, 75);
+            this.txtMaCtyQLHD.Location = new System.Drawing.Point(238, 205);
             this.txtMaCtyQLHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaCtyQLHD.Name = "txtMaCtyQLHD";
             this.txtMaCtyQLHD.PasswordChar = '\0';
@@ -2796,7 +2796,7 @@ namespace DuAnCNPM
             // lblSomoney
             // 
             this.lblSomoney.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSomoney.Location = new System.Drawing.Point(60, 298);
+            this.lblSomoney.Location = new System.Drawing.Point(60, 428);
             this.lblSomoney.Name = "lblSomoney";
             this.lblSomoney.Size = new System.Drawing.Size(192, 25);
             this.lblSomoney.TabIndex = 29;
@@ -2806,7 +2806,7 @@ namespace DuAnCNPM
             // lblDategiao
             // 
             this.lblDategiao.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDategiao.Location = new System.Drawing.Point(60, 244);
+            this.lblDategiao.Location = new System.Drawing.Point(60, 374);
             this.lblDategiao.Name = "lblDategiao";
             this.lblDategiao.Size = new System.Drawing.Size(192, 25);
             this.lblDategiao.TabIndex = 28;
@@ -2816,7 +2816,7 @@ namespace DuAnCNPM
             // lblDateky
             // 
             this.lblDateky.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateky.Location = new System.Drawing.Point(60, 191);
+            this.lblDateky.Location = new System.Drawing.Point(60, 321);
             this.lblDateky.Name = "lblDateky";
             this.lblDateky.Size = new System.Drawing.Size(192, 25);
             this.lblDateky.TabIndex = 24;
@@ -2826,7 +2826,7 @@ namespace DuAnCNPM
             // lblMasnv
             // 
             this.lblMasnv.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMasnv.Location = new System.Drawing.Point(60, 137);
+            this.lblMasnv.Location = new System.Drawing.Point(60, 267);
             this.lblMasnv.Name = "lblMasnv";
             this.lblMasnv.Size = new System.Drawing.Size(192, 25);
             this.lblMasnv.TabIndex = 23;
@@ -2836,7 +2836,7 @@ namespace DuAnCNPM
             // lblMact
             // 
             this.lblMact.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMact.Location = new System.Drawing.Point(60, 85);
+            this.lblMact.Location = new System.Drawing.Point(60, 215);
             this.lblMact.Name = "lblMact";
             this.lblMact.Size = new System.Drawing.Size(192, 25);
             this.lblMact.TabIndex = 21;
@@ -2846,7 +2846,7 @@ namespace DuAnCNPM
             // lblMahd
             // 
             this.lblMahd.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMahd.Location = new System.Drawing.Point(60, 31);
+            this.lblMahd.Location = new System.Drawing.Point(60, 161);
             this.lblMahd.Name = "lblMahd";
             this.lblMahd.Size = new System.Drawing.Size(192, 25);
             this.lblMahd.TabIndex = 36;
@@ -3938,6 +3938,7 @@ namespace DuAnCNPM
             this.btnFindTB.Size = new System.Drawing.Size(40, 40);
             this.btnFindTB.TabIndex = 24;
             this.btnFindTB.UseTransparentBackground = true;
+            this.btnFindTB.Click += new System.EventHandler(this.btnFindTB_Click);
             // 
             // txtFindTB
             // 
@@ -4420,6 +4421,7 @@ namespace DuAnCNPM
             this.grpDulieuDH.TabIndex = 10;
             this.grpDulieuDH.TabStop = false;
             this.grpDulieuDH.Text = "Dữ liệu đơn hàng";
+            this.grpDulieuDH.Enter += new System.EventHandler(this.grpDulieuDH_Enter);
             // 
             // lvDulieudonhang
             // 
