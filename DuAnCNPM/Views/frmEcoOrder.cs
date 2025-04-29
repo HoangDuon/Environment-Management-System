@@ -841,6 +841,7 @@ namespace DuAnCNPM
             String sodienthoai = txtSDTTTNV.Text; // 10 chữ số, chỉ là số
             String gmail = txtGmail.Text;      // có đuôi là @gmail.com
             Boolean truongphong = checkTruongPhong.Checked;
+            String diachi = "";
 
             Validating validate = new Validating();
             if (!validate.nameValidate(hoten))
@@ -879,7 +880,7 @@ namespace DuAnCNPM
             EmployeeService edit = new EmployeeService();
             if (!btnSuaDSNV.Enabled)
             {
-                if (edit.AddEmployee(hoten, chucvu, DateTime.Parse(ngaysinh /*, new CultureInfo("vi-VN")*/), "123456", gioitinh, sodienthoai, gmail, truongphong))
+                if (edit.AddEmployee(hoten, chucvu, DateTime.Parse(ngaysinh /*, new CultureInfo("vi-VN")*/), "123456", gioitinh, sodienthoai, gmail, truongphong, diachi))
                 {
                     MessageBox.Show("Thêm thành công");
                     foreach (Control ctrl in panTTNVchitiet.Controls)
@@ -910,6 +911,7 @@ namespace DuAnCNPM
                 edit.editPhoneNumber(manhanvien, sodienthoai),
                 edit.editGmail(manhanvien, gmail) };
                 edit.editHeadOfRoom(manhanvien, truongphong);
+                edit.editAddress(manhanvien, diachi);
                 for (int i = 0; i < 6; i++)
                 {
                     if (!flag[i])
@@ -2755,7 +2757,11 @@ namespace DuAnCNPM
 
                     // Cập nhật trực tiếp vào TextBox
                     txtFindma.Text = recognizedText;
+                    txtFindAdmin.Text = recognizedText;
+                    txtFindNV.Text = recognizedText;
+                    txtFindNV.Refresh(); // Refresh lại TextBox để cập nhật UI
                     txtFindma.Refresh(); // Refresh lại TextBox để cập nhật UI
+                    txtFindAdmin.Refresh(); // Refresh lại TextBox để cập nhật UI   
 
 
                     btnMic.FillColor = Color.MintCream;
@@ -2813,32 +2819,121 @@ namespace DuAnCNPM
         private void btnFindTB_Click(object sender, EventArgs e)
         {
             //Tim kiem thong bao
-            ///
-            ///
-            ///
-            ///
-            //
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///            ///
-            ///
-            ///
-            ///
-            ///            ///
-            ///
-            ///
-            ///
-            ///
+
             NotificationService notificationService = new NotificationService();
             AnnouncementService announcementService = new AnnouncementService();
             announcementService.ShowAnnouncementSearch(notificationService.searchNoti(txtFindTB.Text),panDSTB, panNoidungTB);
+        }
+
+        private void lblSodt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaHDQLHD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMahd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMact_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaCtyQLHD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMasnv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaNVQLHD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDateky_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNgaykyQLHD_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDategiao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNgaytraKQQLHD_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSomoney_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSotien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panCSchitiet_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnMicAdmin_Click(object sender, EventArgs e)
+        {
+            if (isRecording)
+            {
+                btnMic.FillColor = Color.MintCream;
+                // Nếu đang thu âm, dừng thu âm
+                voiceSearch.StopVoiceSearch();
+                isRecording = false; // Cập nhật trạng thái
+            }
+            else
+            {
+                btnMic.FillColor = Color.Tomato;
+                // Nếu chưa thu âm, bắt đầu thu âm
+                voiceSearch.StartVoiceSearch();
+                isRecording = true; // Cập nhật trạng thái
+            }
+        }
+
+        private void btnMicFindNV_Click(object sender, EventArgs e)
+        {
+            if (isRecording)
+            {
+                btnMic.FillColor = Color.MintCream;
+                // Nếu đang thu âm, dừng thu âm
+                voiceSearch.StopVoiceSearch();
+                isRecording = false; // Cập nhật trạng thái
+            }
+            else
+            {
+                btnMic.FillColor = Color.Tomato;
+                // Nếu chưa thu âm, bắt đầu thu âm
+                voiceSearch.StartVoiceSearch();
+                isRecording = true; // Cập nhật trạng thái
+            }
         }
 
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)

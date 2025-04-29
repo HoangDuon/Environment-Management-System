@@ -221,7 +221,7 @@ namespace DuAnCNPM.Controlers
         // kiểm tra giới tính
         public Boolean genderValidate(String gioitinh)
         {
-            List<String> list = new List<string> { "nam", "nữ" };
+            List<String> list = new List<string> { "Nam", "Nữ" };
             return list.Contains(gioitinh);
         }
 

@@ -21,5 +21,6 @@ namespace DuAnCNPM
         public bool TRANG_THAI { get; set; }
         public bool TRUONG_PHONG { get; set; }
         public DateTime THOI_GIAN { get; set; }
+        public String DIA_CHI { get; set; }
     }
 }

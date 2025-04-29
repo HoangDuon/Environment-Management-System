@@ -34,6 +34,7 @@ namespace DuAnCNPM.Controller
                     (pan.Controls["grbEmail"].Controls["txtEmailnv"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = nhanvien.GMAIL;
                     (pan.Controls["grbSex"].Controls["cboSexnv"] as Siticone.Desktop.UI.WinForms.SiticoneComboBox).Text = nhanvien.GIOI_TINH;
                     (pan.Controls["grbChucvu"].Controls["txtChucvu"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = nhanvien.CHUC_VU;
+                    (pan.Controls["grbNoioCurrent"].Controls["txtNoioCurrent"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = nhanvien.DIA_CHI;
                 }
             }
         }
@@ -389,6 +390,7 @@ namespace DuAnCNPM.Controller
             (main.Controls["txtSDTTTNV"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = nv.SO_DIEN_THOAI;
             (main.Controls["txtGmail"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = nv.GMAIL;
             (main.Controls["checkTruongPhong"] as Siticone.Desktop.UI.WinForms.SiticoneCustomCheckBox).Checked = nv.TRUONG_PHONG;
+            (main.Controls["txtDiachi"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = nv.DIA_CHI;
             //((((main.Parent.Parent) as System.Windows.Forms.SplitContainer)
             //    .Panel1).Controls["btnBackNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Visible = true;
             //((((main.Parent.Parent) as System.Windows.Forms.SplitContainer)
@@ -439,7 +441,7 @@ namespace DuAnCNPM.Controller
 
         public Boolean AddEmployee(String HoTen, String ChucVu,
                                DateTime NgaySinh, String MatKhau, String GioiTinh,
-                               String SDT, String Gmail, Boolean TruongPhong)
+                               String SDT, String Gmail, Boolean TruongPhong, String DiaChi)
         {
             using (var context = new CTQLMTContext())
             {
@@ -455,7 +457,8 @@ namespace DuAnCNPM.Controller
                     GMAIL = Gmail,
                     TRANG_THAI = true,
                     TRUONG_PHONG = TruongPhong,
-                    THOI_GIAN = DateTime.Today
+                    THOI_GIAN = DateTime.Today,
+                    DIA_CHI = DiaChi
                 };
                 context.NhanViens.Add(nhanvien);
                 context.SaveChanges();
@@ -542,6 +545,19 @@ namespace DuAnCNPM.Controller
                 var nhanvien = context.NhanViens.Find(MaNhanVien);
                 if (nhanvien == null) return false;
                 nhanvien.NGAY_SINH = newDate;
+                context.SaveChanges();
+            }
+            return true;
+        }
+
+        // chinh sua dia chi 
+        public Boolean editAddress(String MaNhanVien, String DiaChi)
+        {
+            using (var context = new CTQLMTContext())
+            {
+                var nhanvien = context.NhanViens.Find(MaNhanVien);
+                if (nhanvien == null) return false;
+                nhanvien.DIA_CHI = DiaChi;
                 context.SaveChanges();
             }
             return true;
