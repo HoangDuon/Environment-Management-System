@@ -65,9 +65,11 @@ namespace DuAnCNPM.Controller
                                                   .Where(nv => (nv.TRANG_THAI == true && nv.CHUC_VU == "PTN") || (nv.TRANG_THAI == true && nv.CHUC_VU == "PQT"))
                                                   .ToList();
                 DateTime today = DateTime.Today;
-                DateTime ngayCanhBao = today.AddDays(14);
+                DateTime tuNgay = today.AddDays(16);
+                DateTime denNgay = today.AddDays(17);
+
                 List<HopDong> hopdongs = context.HopDongs
-                    .Where(hd => hd.NGAY_TRA_KQ >= today && hd.NGAY_TRA_KQ <= ngayCanhBao)
+                    .Where(hd => hd.NGAY_TRA_KQ >= tuNgay && hd.NGAY_TRA_KQ <= denNgay)
                     .ToList();
                 foreach (var hd in hopdongs)
                 {

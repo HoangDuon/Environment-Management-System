@@ -1269,6 +1269,7 @@ namespace DuAnCNPM
             String ngayky = dtpNgaykyQLHD.Text;
             String ngaygiao = dtpNgaytraKQQLHD.Text;
             String sotien = txtSotien.Text;
+            String noilaymau = txtVtrilaymau.Text;
             //String masothue = "..."; // tạo text để nhập mã số thuế của khách hàng
 
 
@@ -1288,17 +1289,22 @@ namespace DuAnCNPM
                 MessageBox.Show("Số tiền chưa hợp lí");
                 return;
             }
-            //else if (validate.listMST().ContainsKey(masothue))
-            //{
-            //    MessageBox.Show("Khách hàng đã tồn tại hãy tìm khách hàng dựa vào mã số thuế");
-            //    return;
-            //}
+            else if (string.IsNullOrWhiteSpace(noilaymau))
+            {
+                MessageBox.Show("Nhập nơi lấy mẫu");
+                return;
+            }
+                //else if (validate.listMST().ContainsKey(masothue))
+                //{
+                //    MessageBox.Show("Khách hàng đã tồn tại hãy tìm khách hàng dựa vào mã số thuế");
+                //    return;
+                //}
 
 
-            ContractService edit = new ContractService();
+                ContractService edit = new ContractService();
             if (!btnSuaHD.Enabled)
             {
-                if (edit.addContract(manhanvien, macongty, DateTime.Parse(ngayky), DateTime.Parse(ngaygiao), long.Parse(sotien)))
+                if (edit.addContract(manhanvien, macongty, DateTime.Parse(ngayky), DateTime.Parse(ngaygiao), long.Parse(sotien), noilaymau))
                 {
                     MessageBox.Show("Thêm hợp đồng mới thành công");
                     edit.ShowContractsAdmin(panDSHD, panTTHDchitiet);
@@ -1318,14 +1324,15 @@ namespace DuAnCNPM
             }
             else
             {
-                bool[] flag = new bool[4]
+                bool[] flag = new bool[5]
                 {
                     edit.editNgayKy(mahopdong, DateTime.Parse(ngayky)),
                     edit.editNgayTra(mahopdong, DateTime.Parse(ngaygiao)),
                     edit.editSoTien(mahopdong, long.Parse(sotien)),
-                    edit.editMacongty(mahopdong, macongty)
+                    edit.editMacongty(mahopdong, macongty),
+                    edit.editNoiLayMau(mahopdong, noilaymau)
                 };
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     if (!flag[i])
                     {
@@ -1341,9 +1348,11 @@ namespace DuAnCNPM
                 txtMaHDQLHD.Clear();
                 txtMaCtyQLHD.Clear();
                 txtSotien.Clear();
+                txtVtrilaymau.Clear();
 
                 txtMaHDQLHD.Enabled = false;
                 txtMaCtyQLHD.Enabled = false;
+                txtVtrilaymau.Enabled = false;
 
                 edit.ShowContractsAdmin(panDSHD, panTTHDchitiet);
                 
@@ -1396,6 +1405,8 @@ namespace DuAnCNPM
             dtpNgaykyQLHD.Enabled = true;
             dtpNgaytraKQQLHD.Enabled = true;
             txtSotien.Enabled = true;
+            txtVtrilaymau.Enabled = true;
+
 
         }
 
@@ -2935,6 +2946,15 @@ namespace DuAnCNPM
             }
         }
 
+        private void btnIn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picClosePdf_Click_1(object sender, EventArgs e)
+        {
+
+        }
 
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)
         {

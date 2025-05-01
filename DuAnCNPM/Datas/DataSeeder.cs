@@ -247,60 +247,60 @@ namespace DuAnCNPM.Datas
                 enService.addEnviromentIndex("Carbon dioxit", "KHONGKHI", "CR", "PTN");
 
                 var contractService = new ContractService();
-                contractService.addContract("ADMIN1", "KH1", new DateTime(2025, 4, 1), new DateTime(2025, 4, 27), 50000000);
-                contractService.addContract("ADMIN1", "KH2", new DateTime(2025, 4, 20), new DateTime(2025, 5, 3), 50000000);
-                contractService.addContract("ADMIN1", "KH3", new DateTime(2025, 4, 8), new DateTime(2025, 5, 7), 50000000);
-                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 4, 21), new DateTime(2025, 5, 21), 50000000);
-                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 4, 16), new DateTime(2025, 4, 18), 50000000);
-                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 4, 9), new DateTime(2025, 5, 18), 50000000);
+                contractService.addContract("ADMIN1", "KH1", new DateTime(2025, 4, 1), new DateTime(2025, 4, 27), 50000000, "q1 ");
+                contractService.addContract("ADMIN1", "KH2", new DateTime(2025, 4, 20), new DateTime(2025, 5, 3), 50000000, "q2 ");
+                contractService.addContract("ADMIN1", "KH3", new DateTime(2025, 4, 8), new DateTime(2025, 5, 7), 50000000, " q3");
+                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 4, 21), new DateTime(2025, 5, 21), 50000000, "q4 ");
+                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 4, 16), new DateTime(2025, 4, 18), 50000000, "q5 ");
+                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 4, 9), new DateTime(2025, 5, 18), 50000000, "q6 ");
 
                 //sample
-                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 3, 4), new DateTime(2025, 4, 27), 50000000);
-                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 3, 28), new DateTime(2025, 4, 30), 50000000);
+                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 3, 4), new DateTime(2025, 4, 27), 50000000, "q7 ");
+                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 3, 28), new DateTime(2025, 4, 30), 50000000, "q8 ");
 
 
 
-                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 3, 4), new DateTime(2025, 4, 10), 50000000);
-                contractService.addContract("ADMIN1", "KH1", new DateTime(2025, 3, 20), new DateTime(2025, 4, 1), 50000000);
-                contractService.addContract("ADMIN1", "KH2", new DateTime(2025, 3, 18), new DateTime(2025, 4, 12), 50000000);
+                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 3, 4), new DateTime(2025, 4, 10), 50000000, " q9");
+                contractService.addContract("ADMIN1", "KH1", new DateTime(2025, 3, 20), new DateTime(2025, 4, 1), 50000000, "q10 ");
+                contractService.addContract("ADMIN1", "KH2", new DateTime(2025, 3, 18), new DateTime(2025, 4, 12), 50000000, " q11");
 
-                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 2, 4), new DateTime(2025, 3, 3), 50000000);
-                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 2, 20), new DateTime(2025, 3, 2), 50000000);
-                contractService.addContract("ADMIN1", "KH6", new DateTime(2025, 2, 19), new DateTime(2025, 3, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH7", new DateTime(2025, 2, 1), new DateTime(2025, 3, 19), 50000000);
-                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 2, 4), new DateTime(2025, 2, 18), 50000000);
+                contractService.addContract("ADMIN1", "KH4", new DateTime(2025, 2, 4), new DateTime(2025, 3, 3), 50000000, "q12 ");
+                contractService.addContract("ADMIN1", "KH5", new DateTime(2025, 2, 20), new DateTime(2025, 3, 2), 50000000, "Bình Thạnh ");
+                contractService.addContract("ADMIN1", "KH6", new DateTime(2025, 2, 19), new DateTime(2025, 3, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH7", new DateTime(2025, 2, 1), new DateTime(2025, 3, 19), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 2, 4), new DateTime(2025, 2, 18), 50000000, " ");
 
-                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 1, 4), new DateTime(2025, 2, 18), 50000000);
-                contractService.addContract("ADMIN1", "KH9", new DateTime(2025, 1, 5), new DateTime(2025, 2, 16), 50000000);
-                contractService.addContract("ADMIN1", "KH10", new DateTime(2025, 1, 20), new DateTime(2025, 2, 15), 50000000);
-                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 18), new DateTime(2025, 2, 3), 50000000);
-                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 23), new DateTime(2025, 2, 3), 50000000);
-                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 29), new DateTime(2025, 2, 3), 50000000);
+                contractService.addContract("ADMIN1", "KH8", new DateTime(2025, 1, 4), new DateTime(2025, 2, 18), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH9", new DateTime(2025, 1, 5), new DateTime(2025, 2, 16), 50000000, " ") ;
+                contractService.addContract("ADMIN1", "KH10", new DateTime(2025, 1, 20), new DateTime(2025, 2, 15), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 18), new DateTime(2025, 2, 3), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 23), new DateTime(2025, 2, 3), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH11", new DateTime(2025, 1, 29), new DateTime(2025, 2, 3), 50000000, " ");
 
-                contractService.addContract("ADMIN1", "KH12", new DateTime(2024, 12, 20), new DateTime(2025, 1, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH14", new DateTime(2024, 12, 24), new DateTime(2025, 1, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH15", new DateTime(2024, 12, 2), new DateTime(2025, 1, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH12", new DateTime(2024, 12, 20), new DateTime(2025, 1, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH14", new DateTime(2024, 12, 24), new DateTime(2025, 1, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH15", new DateTime(2024, 12, 2), new DateTime(2025, 1, 20), 50000000, " ");
 
-                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 11, 19), new DateTime(2024, 12, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 11, 20), new DateTime(2024, 12, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 11, 21), new DateTime(2024, 12, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 11, 4), new DateTime(2024, 12, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 11, 2), new DateTime(2024, 12, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 11, 19), new DateTime(2024, 12, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 11, 20), new DateTime(2024, 12, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 11, 21), new DateTime(2024, 12, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 11, 4), new DateTime(2024, 12, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 11, 2), new DateTime(2024, 12, 20), 50000000, " ");
 
-                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 10, 19), new DateTime(2024, 11, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 10, 20), new DateTime(2024, 11, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 10, 21), new DateTime(2024, 11, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 10, 4), new DateTime(2024, 11, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 10, 2), new DateTime(2024, 11, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 10, 19), new DateTime(2024, 11, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 10, 20), new DateTime(2024, 11, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 10, 21), new DateTime(2024, 11, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 10, 4), new DateTime(2024, 11, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 10, 2), new DateTime(2024, 11, 20), 50000000, " ");
 
-                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 9, 19), new DateTime(2024, 10, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 9, 25), new DateTime(2024, 10, 25), 50000000);
+                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 9, 19), new DateTime(2024, 10, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 9, 25), new DateTime(2024, 10, 25), 50000000, " ");
 
-                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 8, 19), new DateTime(2024, 9, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 8, 20), new DateTime(2024, 9, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 8, 21), new DateTime(2024, 9, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 8, 4), new DateTime(2024, 9, 20), 50000000);
-                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 8, 2), new DateTime(2024, 9, 20), 50000000);
+                contractService.addContract("ADMIN1", "KH16", new DateTime(2024, 8, 19), new DateTime(2024, 9, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH17", new DateTime(2024, 8, 20), new DateTime(2024, 9, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH18", new DateTime(2024, 8, 21), new DateTime(2024, 9, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH19", new DateTime(2024, 8, 4), new DateTime(2024, 9, 20), 50000000, " ");
+                contractService.addContract("ADMIN1", "KH20", new DateTime(2024, 8, 2), new DateTime(2024, 9, 20), 50000000, " ");
 
 
                 NotificationService noti = new NotificationService();

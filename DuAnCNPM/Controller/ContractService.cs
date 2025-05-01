@@ -46,7 +46,7 @@ namespace DuAnCNPM.Controller
         }
 
         //Them mot hop dong
-        public Boolean addContract(String MaNhanVien, String MaCongTy, DateTime NgayKy, DateTime NgayTraKQ, long SoTien)
+        public Boolean addContract(String MaNhanVien, String MaCongTy, DateTime NgayKy, DateTime NgayTraKQ, long SoTien, String NoiLayMau)
         {
             //// kiem tra du lieu thoi gian
             //Validating validate = new Validating();
@@ -75,7 +75,8 @@ namespace DuAnCNPM.Controller
                     SO_TIEN = SoTien,
                     TRANG_THAI = true,
                     HOAN_THANH = false,
-                    QUY = ((NgayKy.Month - 1) / 3 + 1).ToString() + "/" + NgayKy.Year.ToString()
+                    QUY = ((NgayKy.Month - 1) / 3 + 1).ToString() + "/" + NgayKy.Year.ToString(),
+                    NOI_LAY_MAU = NoiLayMau
                 };
                 context.HopDongs.Add(hopdong);
                 context.SaveChanges();
@@ -120,6 +121,19 @@ namespace DuAnCNPM.Controller
                 var hopdong = context.HopDongs.Find(MaHopDong);
                 if (hopdong == null) return false;
                 hopdong.MA_CONG_TY = macongty;
+                context.SaveChanges();
+            }
+            return true;
+        }
+
+        // chinh sua nơi lay mau
+        public Boolean editNoiLayMau(String MaHopDong, String noiLayMau)
+        {
+            using (var context = new CTQLMTContext())
+            {
+                var hopdong = context.HopDongs.Find(MaHopDong);
+                if (hopdong == null) return false;
+                hopdong.NOI_LAY_MAU = noiLayMau;
                 context.SaveChanges();
             }
             return true;
@@ -567,6 +581,7 @@ namespace DuAnCNPM.Controller
             (main.Controls["txtMaHDQLHD"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = hd.MA_HOP_DONG;
             (main.Controls["txtMaNVQLHD"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = hd.MA_NHAN_VIEN;
             (main.Controls["txtMaCtyQLHD"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = hd.MA_CONG_TY;
+            (main.Controls["txtVtrilaymau"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = hd.NOI_LAY_MAU;
             (main.Parent.Controls["btnSuaHD"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = true;
             (main.Parent.Controls["btnXoaHD"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = false;
             (main.Parent.Controls["btnLuuHD"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = false;
@@ -667,7 +682,8 @@ namespace DuAnCNPM.Controller
                                      MA_CONG_TY = hd.MA_CONG_TY,
                                      TEN_CONG_TY = kh.TEN_CONG_TY,
                                      DIA_CHI =kh.DIA_CHI,
-                                     NGAY_TRA_KQ = hd.NGAY_TRA_KQ
+                                     NGAY_TRA_KQ = hd.NGAY_TRA_KQ,
+                                     NOI_LAY_MAU = hd.NOI_LAY_MAU
 
                                  }).ToList();
             }

@@ -154,6 +154,9 @@
     <Compile Include="Controller\ResetPasswordService.cs" />
     <Compile Include="Controller\SignInService.cs" />
     <Compile Include="Controller\Validating.cs" />
+    <Compile Include="Datas\DataCNPM.cs">
+      <DependentUpon>DataCNPM.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datas\DataCNPM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

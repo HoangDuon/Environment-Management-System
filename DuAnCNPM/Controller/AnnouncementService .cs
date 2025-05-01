@@ -432,8 +432,9 @@ namespace DuAnCNPM.Controller
             (main.Controls["dtpNgayphathanh"] as Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker).Value = DateTime.Parse(tb.NGAY_PHAT_HANH.ToString());
             //((((main.Parent.Parent) as System.Windows.Forms.SplitContainer)
             //    .Panel1).Controls["btnBackNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Visible = true;
-            //((((main.Parent.Parent) as System.Windows.Forms.SplitContainer)
-            //    .Panel1).Controls["btnSuaDSNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = true;
+            ((main.Parent).Controls["btnSuaTB"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = true;
+            ((main.Parent).Controls["btnLuuTB"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = false;
+
             main.Visible = true;
         }
     }

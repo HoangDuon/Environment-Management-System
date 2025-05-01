@@ -349,6 +349,8 @@ namespace DuAnCNPM.Datas {
             
             private global::System.Data.DataColumn columnMA_NHAN_VIEN;
             
+            private global::System.Data.DataColumn columnNOI_LAY_MAU;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DataMTDataTable() {
@@ -664,6 +666,14 @@ namespace DuAnCNPM.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NOI_LAY_MAUColumn {
+                get {
+                    return this.columnNOI_LAY_MAU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -734,7 +744,8 @@ namespace DuAnCNPM.Datas {
                         string KET_LUAN_LT, 
                         string NOI_NHAP, 
                         bool FLAG, 
-                        string MA_NHAN_VIEN) {
+                        string MA_NHAN_VIEN, 
+                        string NOI_LAY_MAU) {
                 DataMTRow rowDataMTRow = ((DataMTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         HO_TEN,
@@ -771,7 +782,8 @@ namespace DuAnCNPM.Datas {
                         KET_LUAN_LT,
                         NOI_NHAP,
                         FLAG,
-                        MA_NHAN_VIEN};
+                        MA_NHAN_VIEN,
+                        NOI_LAY_MAU};
                 rowDataMTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataMTRow);
                 return rowDataMTRow;
@@ -829,6 +841,7 @@ namespace DuAnCNPM.Datas {
                 this.columnNOI_NHAP = base.Columns["NOI_NHAP"];
                 this.columnFLAG = base.Columns["FLAG"];
                 this.columnMA_NHAN_VIEN = base.Columns["MA_NHAN_VIEN"];
+                this.columnNOI_LAY_MAU = base.Columns["NOI_LAY_MAU"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -904,6 +917,8 @@ namespace DuAnCNPM.Datas {
                 base.Columns.Add(this.columnFLAG);
                 this.columnMA_NHAN_VIEN = new global::System.Data.DataColumn("MA_NHAN_VIEN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMA_NHAN_VIEN);
+                this.columnNOI_LAY_MAU = new global::System.Data.DataColumn("NOI_LAY_MAU", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOI_LAY_MAU);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
                                 this.columnMA_CONG_TY}, false));
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
@@ -1618,6 +1633,22 @@ namespace DuAnCNPM.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NOI_LAY_MAU {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataMT.NOI_LAY_MAUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NOI_LAY_MAU\' in table \'DataMT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataMT.NOI_LAY_MAUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsHO_TENNull() {
                 return this.IsNull(this.tableDataMT.HO_TENColumn);
             }
@@ -2034,6 +2065,18 @@ namespace DuAnCNPM.Datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetMA_NHAN_VIENNull() {
                 this[this.tableDataMT.MA_NHAN_VIENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNOI_LAY_MAUNull() {
+                return this.IsNull(this.tableDataMT.NOI_LAY_MAUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNOI_LAY_MAUNull() {
+                this[this.tableDataMT.NOI_LAY_MAUColumn] = global::System.Convert.DBNull;
             }
         }
         

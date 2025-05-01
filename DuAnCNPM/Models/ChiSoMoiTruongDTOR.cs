@@ -23,5 +23,6 @@ namespace DuAnCNPM.Models
         public string TEN_CONG_TY { get; set; }
         public string DIA_CHI { get; set; }
         public DateTime? NGAY_TRA_KQ { get; set; }
+        public String NOI_LAY_MAU { get; set; }
     }
 }

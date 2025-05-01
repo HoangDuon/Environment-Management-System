@@ -103,34 +103,6 @@ namespace DuAnCNPM
             this.lvDulieudonhang = new System.Windows.Forms.ListView();
             this.panDSHDnv = new DuAnCNPM.Views.DoubleBufferedPanel();
             this.lblDSDH = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.panTK = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.lblYear = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.cboMoctgian = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.lblTK = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.panChuthich = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.lblDHFinish = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.lblDHQuahan = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.txtQuahan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtInProgress = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.lblChuthich = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.txtFinish = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.lblDHInProgress = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.panDMK = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.No1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.grbChangepass = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
-            this.txtPasscurrent = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.lblPasscurrent = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.txtPassnewagain = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtPassnew = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.btnContinueDMK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.lblPassnewagain = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.lblPassnew = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.btnCancelchange = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.panTrangchu = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.No0 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.panAdmin = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnMicAdmin = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.btnFindAdmin = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
@@ -194,6 +166,8 @@ namespace DuAnCNPM
             this.btnAddHD = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnSortHD = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panTTHDchitiet = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
+            this.txtVtrilaymau = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.lblVtrilaymau = new System.Windows.Forms.Label();
             this.dtpNgaytraKQQLHD = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.dtpNgaykyQLHD = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.panCSchitiet = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
@@ -274,6 +248,34 @@ namespace DuAnCNPM
             this.btnAddTB = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnSortThongbao = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lblDanhsachTB = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.panTK = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblYear = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.cboMoctgian = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.lblTK = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.panChuthich = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblDHFinish = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.lblDHQuahan = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.txtQuahan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtInProgress = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.lblChuthich = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.txtFinish = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.lblDHInProgress = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.panDMK = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.No1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.grbChangepass = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
+            this.txtPasscurrent = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.lblPasscurrent = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.txtPassnewagain = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtPassnew = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.btnContinueDMK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.lblPassnewagain = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.lblPassnew = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.btnCancelchange = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.panTrangchu = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.No0 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.panDSNV = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnMicFindNV = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.panFindNV = new DuAnCNPM.Views.DoubleBufferedPanel();
@@ -359,8 +361,7 @@ namespace DuAnCNPM
             this.btnIn = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.picClosePdf = new System.Windows.Forms.PictureBox();
             this.reportBaocao = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.txtVtrilaymau = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.lblVtrilaymau = new System.Windows.Forms.Label();
+            this.No5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.erpLoidinhdang)).BeginInit();
             this.panHome.SuspendLayout();
             this.panVeUs.SuspendLayout();
@@ -385,13 +386,6 @@ namespace DuAnCNPM
             this.grbThongtinDH.SuspendLayout();
             this.grbChucnang.SuspendLayout();
             this.grpDulieuDH.SuspendLayout();
-            this.panTK.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.panChuthich.SuspendLayout();
-            this.panDMK.SuspendLayout();
-            this.grbChangepass.SuspendLayout();
-            this.panTrangchu.SuspendLayout();
             this.panAdmin.SuspendLayout();
             this.TabcontrolAdmin.SuspendLayout();
             this.tabQLNV.SuspendLayout();
@@ -407,6 +401,13 @@ namespace DuAnCNPM
             this.panTTTSchitiet.SuspendLayout();
             this.tabQLTB.SuspendLayout();
             this.panDSTBchitiet.SuspendLayout();
+            this.panTK.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panChuthich.SuspendLayout();
+            this.panDMK.SuspendLayout();
+            this.grbChangepass.SuspendLayout();
+            this.panTrangchu.SuspendLayout();
             this.panDSNV.SuspendLayout();
             this.panFindNV.SuspendLayout();
             this.grbTimthay.SuspendLayout();
@@ -1116,6 +1117,7 @@ namespace DuAnCNPM
             this.panWork.BackColor = System.Drawing.Color.Transparent;
             this.panWork.BackgroundImage = global::DuAnCNPM.Properties.Resources.Design__1_;
             this.panWork.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panWork.Controls.Add(this.panTTNV);
             this.panWork.Controls.Add(this.panDSDH);
             this.panWork.Controls.Add(this.panAdmin);
             this.panWork.Controls.Add(this.panTK);
@@ -1123,6 +1125,13 @@ namespace DuAnCNPM
             this.panWork.Controls.Add(this.panTrangchu);
             this.panWork.Controls.Add(this.panDSNV);
             this.panWork.Controls.Add(this.panTB);
+            this.panWork.Controls.Add(this.panLogOut);
+            this.panWork.Controls.Add(this.lblLogo);
+            this.panWork.Controls.Add(this.picLogo);
+            this.panWork.Controls.Add(this.lblNameNV);
+            this.panWork.Controls.Add(this.picStaff);
+            this.panWork.Controls.Add(this.lblLogOut);
+            this.panWork.Controls.Add(this.picLogout);
             this.panWork.Controls.Add(this.lblChucnangQL);
             this.panWork.Controls.Add(this.lblDoimatkhau);
             this.panWork.Controls.Add(this.lblThongke);
@@ -1131,14 +1140,6 @@ namespace DuAnCNPM
             this.panWork.Controls.Add(this.lblThongtinNV);
             this.panWork.Controls.Add(this.lblDanhsachDH);
             this.panWork.Controls.Add(this.lblTrangchu);
-            this.panWork.Controls.Add(this.panLogOut);
-            this.panWork.Controls.Add(this.lblLogo);
-            this.panWork.Controls.Add(this.picLogo);
-            this.panWork.Controls.Add(this.lblNameNV);
-            this.panWork.Controls.Add(this.picStaff);
-            this.panWork.Controls.Add(this.lblLogOut);
-            this.panWork.Controls.Add(this.picLogout);
-            this.panWork.Controls.Add(this.panTTNV);
             this.panWork.Location = new System.Drawing.Point(0, 0);
             this.panWork.Margin = new System.Windows.Forms.Padding(2);
             this.panWork.Name = "panWork";
@@ -1645,516 +1646,6 @@ namespace DuAnCNPM
             this.lblDSDH.TabIndex = 78;
             this.lblDSDH.Text = "Danh sách đơn hàng";
             this.lblDSDH.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panTK
-            // 
-            this.panTK.BackColor = System.Drawing.Color.Transparent;
-            this.panTK.Controls.Add(this.lblYear);
-            this.panTK.Controls.Add(this.cboMoctgian);
-            this.panTK.Controls.Add(this.chart2);
-            this.panTK.Controls.Add(this.chart1);
-            this.panTK.Controls.Add(this.siticoneHtmlLabel6);
-            this.panTK.Controls.Add(this.lblTK);
-            this.panTK.Controls.Add(this.panChuthich);
-            this.panTK.FillColor = System.Drawing.Color.White;
-            this.panTK.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panTK.Location = new System.Drawing.Point(220, 65);
-            this.panTK.Margin = new System.Windows.Forms.Padding(2);
-            this.panTK.Name = "panTK";
-            this.panTK.Size = new System.Drawing.Size(980, 585);
-            this.panTK.TabIndex = 120;
-            // 
-            // lblYear
-            // 
-            this.lblYear.AutoSize = false;
-            this.lblYear.BackColor = System.Drawing.Color.Transparent;
-            this.lblYear.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.ForeColor = System.Drawing.Color.Black;
-            this.lblYear.Location = new System.Drawing.Point(38, 77);
-            this.lblYear.Margin = new System.Windows.Forms.Padding(4);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(169, 33);
-            this.lblYear.TabIndex = 48;
-            this.lblYear.Text = "Chọn mốc thời gian";
-            this.lblYear.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cboMoctgian
-            // 
-            this.cboMoctgian.BackColor = System.Drawing.Color.Transparent;
-            this.cboMoctgian.BorderColor = System.Drawing.Color.Lavender;
-            this.cboMoctgian.BorderRadius = 15;
-            this.cboMoctgian.BorderThickness = 0;
-            this.cboMoctgian.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboMoctgian.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMoctgian.FillColor = System.Drawing.Color.Honeydew;
-            this.cboMoctgian.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboMoctgian.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboMoctgian.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.cboMoctgian.ForeColor = System.Drawing.Color.Black;
-            this.cboMoctgian.IntegralHeight = false;
-            this.cboMoctgian.ItemHeight = 30;
-            this.cboMoctgian.Items.AddRange(new object[] {
-            "nam",
-            "nữ"});
-            this.cboMoctgian.Location = new System.Drawing.Point(216, 70);
-            this.cboMoctgian.Name = "cboMoctgian";
-            this.cboMoctgian.Size = new System.Drawing.Size(163, 36);
-            this.cboMoctgian.TabIndex = 63;
-            this.cboMoctgian.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cboMoctgian.SelectedIndexChanged += new System.EventHandler(this.cboMoctgian_SelectedIndexChanged);
-            // 
-            // chart2
-            // 
-            this.chart2.BackColor = System.Drawing.Color.Transparent;
-            this.chart2.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea3.BorderColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            chartArea3.ShadowColor = System.Drawing.Color.Transparent;
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.BackSecondaryColor = System.Drawing.Color.Transparent;
-            legend3.BorderColor = System.Drawing.Color.Transparent;
-            legend3.ItemColumnSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
-            this.chart2.Location = new System.Drawing.Point(569, 257);
-            this.chart2.Margin = new System.Windows.Forms.Padding(2);
-            this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            series3.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(395, 285);
-            this.chart2.TabIndex = 53;
-            this.chart2.Text = "chart2";
-            // 
-            // chart1
-            // 
-            this.chart1.BackColor = System.Drawing.Color.Transparent;
-            this.chart1.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            this.chart1.BackSecondaryColor = System.Drawing.Color.Transparent;
-            this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea4.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea4.BackColor = System.Drawing.Color.Transparent;
-            chartArea4.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.BackColor = System.Drawing.Color.Transparent;
-            legend4.BorderColor = System.Drawing.Color.Transparent;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(15, 168);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(550, 394);
-            this.chart1.TabIndex = 54;
-            this.chart1.Text = "chart1";
-            // 
-            // siticoneHtmlLabel6
-            // 
-            this.siticoneHtmlLabel6.AutoSize = false;
-            this.siticoneHtmlLabel6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.siticoneHtmlLabel6.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.siticoneHtmlLabel6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.siticoneHtmlLabel6.Location = new System.Drawing.Point(15, 55);
-            this.siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
-            this.siticoneHtmlLabel6.Size = new System.Drawing.Size(550, 2);
-            this.siticoneHtmlLabel6.TabIndex = 47;
-            this.siticoneHtmlLabel6.Text = null;
-            this.siticoneHtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTK
-            // 
-            this.lblTK.AutoSize = false;
-            this.lblTK.BackColor = System.Drawing.Color.Transparent;
-            this.lblTK.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTK.ForeColor = System.Drawing.Color.Black;
-            this.lblTK.Location = new System.Drawing.Point(40, 13);
-            this.lblTK.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTK.Name = "lblTK";
-            this.lblTK.Size = new System.Drawing.Size(464, 44);
-            this.lblTK.TabIndex = 46;
-            this.lblTK.Text = "Thông kê";
-            this.lblTK.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panChuthich
-            // 
-            this.panChuthich.Controls.Add(this.lblDHFinish);
-            this.panChuthich.Controls.Add(this.lblDHQuahan);
-            this.panChuthich.Controls.Add(this.txtQuahan);
-            this.panChuthich.Controls.Add(this.txtInProgress);
-            this.panChuthich.Controls.Add(this.lblChuthich);
-            this.panChuthich.Controls.Add(this.txtFinish);
-            this.panChuthich.Controls.Add(this.lblDHInProgress);
-            this.panChuthich.Location = new System.Drawing.Point(598, 55);
-            this.panChuthich.Name = "panChuthich";
-            this.panChuthich.Size = new System.Drawing.Size(350, 175);
-            this.panChuthich.TabIndex = 62;
-            // 
-            // lblDHFinish
-            // 
-            this.lblDHFinish.AutoSize = false;
-            this.lblDHFinish.BackColor = System.Drawing.Color.Transparent;
-            this.lblDHFinish.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDHFinish.ForeColor = System.Drawing.Color.Green;
-            this.lblDHFinish.Location = new System.Drawing.Point(13, 43);
-            this.lblDHFinish.Margin = new System.Windows.Forms.Padding(4);
-            this.lblDHFinish.Name = "lblDHFinish";
-            this.lblDHFinish.Size = new System.Drawing.Size(210, 33);
-            this.lblDHFinish.TabIndex = 58;
-            this.lblDHFinish.Text = "Đơn hàng thành công:";
-            this.lblDHFinish.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDHQuahan
-            // 
-            this.lblDHQuahan.AutoSize = false;
-            this.lblDHQuahan.BackColor = System.Drawing.Color.Transparent;
-            this.lblDHQuahan.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDHQuahan.ForeColor = System.Drawing.Color.Red;
-            this.lblDHQuahan.Location = new System.Drawing.Point(13, 130);
-            this.lblDHQuahan.Margin = new System.Windows.Forms.Padding(4);
-            this.lblDHQuahan.Name = "lblDHQuahan";
-            this.lblDHQuahan.Size = new System.Drawing.Size(210, 33);
-            this.lblDHQuahan.TabIndex = 56;
-            this.lblDHQuahan.Text = "Đơn hàng đã quá hạn:";
-            this.lblDHQuahan.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtQuahan
-            // 
-            this.txtQuahan.BackColor = System.Drawing.Color.Transparent;
-            this.txtQuahan.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtQuahan.BorderRadius = 10;
-            this.txtQuahan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuahan.DefaultText = "";
-            this.txtQuahan.FillColor = System.Drawing.Color.MintCream;
-            this.txtQuahan.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtQuahan.FocusedState.ForeColor = System.Drawing.Color.Black;
-            this.txtQuahan.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtQuahan.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuahan.ForeColor = System.Drawing.Color.Black;
-            this.txtQuahan.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtQuahan.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtQuahan.Location = new System.Drawing.Point(245, 126);
-            this.txtQuahan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtQuahan.Name = "txtQuahan";
-            this.txtQuahan.PasswordChar = '\0';
-            this.txtQuahan.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtQuahan.PlaceholderText = "";
-            this.txtQuahan.SelectedText = "";
-            this.txtQuahan.Size = new System.Drawing.Size(89, 35);
-            this.txtQuahan.TabIndex = 60;
-            // 
-            // txtInProgress
-            // 
-            this.txtInProgress.BackColor = System.Drawing.Color.Transparent;
-            this.txtInProgress.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtInProgress.BorderRadius = 10;
-            this.txtInProgress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtInProgress.DefaultText = "";
-            this.txtInProgress.FillColor = System.Drawing.Color.MintCream;
-            this.txtInProgress.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtInProgress.FocusedState.ForeColor = System.Drawing.Color.Black;
-            this.txtInProgress.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtInProgress.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInProgress.ForeColor = System.Drawing.Color.Black;
-            this.txtInProgress.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtInProgress.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtInProgress.Location = new System.Drawing.Point(245, 83);
-            this.txtInProgress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInProgress.Name = "txtInProgress";
-            this.txtInProgress.PasswordChar = '\0';
-            this.txtInProgress.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtInProgress.PlaceholderText = "";
-            this.txtInProgress.SelectedText = "";
-            this.txtInProgress.Size = new System.Drawing.Size(89, 35);
-            this.txtInProgress.TabIndex = 61;
-            // 
-            // lblChuthich
-            // 
-            this.lblChuthich.AutoSize = false;
-            this.lblChuthich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
-            this.lblChuthich.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblChuthich.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChuthich.ForeColor = System.Drawing.Color.White;
-            this.lblChuthich.Location = new System.Drawing.Point(0, 0);
-            this.lblChuthich.Margin = new System.Windows.Forms.Padding(4);
-            this.lblChuthich.Name = "lblChuthich";
-            this.lblChuthich.Size = new System.Drawing.Size(350, 33);
-            this.lblChuthich.TabIndex = 55;
-            this.lblChuthich.Text = "Bảng chú thích";
-            this.lblChuthich.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtFinish
-            // 
-            this.txtFinish.BackColor = System.Drawing.Color.Transparent;
-            this.txtFinish.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtFinish.BorderRadius = 10;
-            this.txtFinish.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFinish.DefaultText = "";
-            this.txtFinish.FillColor = System.Drawing.Color.MintCream;
-            this.txtFinish.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtFinish.FocusedState.ForeColor = System.Drawing.Color.Black;
-            this.txtFinish.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtFinish.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFinish.ForeColor = System.Drawing.Color.Black;
-            this.txtFinish.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtFinish.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtFinish.Location = new System.Drawing.Point(245, 40);
-            this.txtFinish.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFinish.Name = "txtFinish";
-            this.txtFinish.PasswordChar = '\0';
-            this.txtFinish.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtFinish.PlaceholderText = "";
-            this.txtFinish.SelectedText = "";
-            this.txtFinish.Size = new System.Drawing.Size(89, 35);
-            this.txtFinish.TabIndex = 59;
-            // 
-            // lblDHInProgress
-            // 
-            this.lblDHInProgress.AutoSize = false;
-            this.lblDHInProgress.BackColor = System.Drawing.Color.Transparent;
-            this.lblDHInProgress.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDHInProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblDHInProgress.Location = new System.Drawing.Point(4, 86);
-            this.lblDHInProgress.Margin = new System.Windows.Forms.Padding(4);
-            this.lblDHInProgress.Name = "lblDHInProgress";
-            this.lblDHInProgress.Size = new System.Drawing.Size(240, 33);
-            this.lblDHInProgress.TabIndex = 57;
-            this.lblDHInProgress.Text = "Đơn hàng đang thực hiện:";
-            this.lblDHInProgress.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panDMK
-            // 
-            this.panDMK.BackColor = System.Drawing.Color.Transparent;
-            this.panDMK.Controls.Add(this.No1);
-            this.panDMK.Controls.Add(this.grbChangepass);
-            this.panDMK.FillColor = System.Drawing.Color.Transparent;
-            this.panDMK.Location = new System.Drawing.Point(220, 65);
-            this.panDMK.Margin = new System.Windows.Forms.Padding(2);
-            this.panDMK.Name = "panDMK";
-            this.panDMK.Size = new System.Drawing.Size(980, 585);
-            this.panDMK.TabIndex = 122;
-            // 
-            // No1
-            // 
-            this.No1.AutoSize = false;
-            this.No1.BackColor = System.Drawing.Color.White;
-            this.No1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.No1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.No1.Location = new System.Drawing.Point(0, 0);
-            this.No1.Name = "No1";
-            this.No1.Size = new System.Drawing.Size(2, 585);
-            this.No1.TabIndex = 64;
-            this.No1.Text = null;
-            this.No1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // grbChangepass
-            // 
-            this.grbChangepass.BackColor = System.Drawing.Color.Transparent;
-            this.grbChangepass.BorderColor = System.Drawing.Color.SeaGreen;
-            this.grbChangepass.BorderRadius = 18;
-            this.grbChangepass.Controls.Add(this.txtPasscurrent);
-            this.grbChangepass.Controls.Add(this.lblPasscurrent);
-            this.grbChangepass.Controls.Add(this.txtPassnewagain);
-            this.grbChangepass.Controls.Add(this.txtPassnew);
-            this.grbChangepass.Controls.Add(this.btnContinueDMK);
-            this.grbChangepass.Controls.Add(this.lblPassnewagain);
-            this.grbChangepass.Controls.Add(this.lblPassnew);
-            this.grbChangepass.Controls.Add(this.btnCancelchange);
-            this.grbChangepass.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
-            this.grbChangepass.CustomBorderThickness = new System.Windows.Forms.Padding(0, 50, 0, 0);
-            this.grbChangepass.FillColor = System.Drawing.Color.Transparent;
-            this.grbChangepass.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbChangepass.ForeColor = System.Drawing.Color.White;
-            this.grbChangepass.Location = new System.Drawing.Point(140, 107);
-            this.grbChangepass.Name = "grbChangepass";
-            this.grbChangepass.Size = new System.Drawing.Size(700, 354);
-            this.grbChangepass.TabIndex = 63;
-            this.grbChangepass.Text = "THAY ĐỔI MẬT KHẨU";
-            this.grbChangepass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtPasscurrent
-            // 
-            this.txtPasscurrent.BackColor = System.Drawing.Color.Transparent;
-            this.txtPasscurrent.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtPasscurrent.BorderRadius = 8;
-            this.txtPasscurrent.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPasscurrent.DefaultText = "";
-            this.txtPasscurrent.FillColor = System.Drawing.Color.MintCream;
-            this.txtPasscurrent.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasscurrent.ForeColor = System.Drawing.Color.Black;
-            this.txtPasscurrent.HoverState.BorderColor = System.Drawing.Color.LightCyan;
-            this.txtPasscurrent.HoverState.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtPasscurrent.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtPasscurrent.Location = new System.Drawing.Point(327, 65);
-            this.txtPasscurrent.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPasscurrent.Name = "txtPasscurrent";
-            this.txtPasscurrent.PasswordChar = '\0';
-            this.txtPasscurrent.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtPasscurrent.PlaceholderText = "Nhập mật khẩu hiện tại";
-            this.txtPasscurrent.SelectedText = "";
-            this.txtPasscurrent.Size = new System.Drawing.Size(328, 55);
-            this.txtPasscurrent.TabIndex = 97;
-            // 
-            // lblPasscurrent
-            // 
-            this.lblPasscurrent.AutoSize = false;
-            this.lblPasscurrent.BackColor = System.Drawing.Color.Transparent;
-            this.lblPasscurrent.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasscurrent.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblPasscurrent.Location = new System.Drawing.Point(32, 65);
-            this.lblPasscurrent.Name = "lblPasscurrent";
-            this.lblPasscurrent.Size = new System.Drawing.Size(270, 55);
-            this.lblPasscurrent.TabIndex = 98;
-            this.lblPasscurrent.Text = "Mật khẩu hiện tại:";
-            this.lblPasscurrent.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtPassnewagain
-            // 
-            this.txtPassnewagain.BackColor = System.Drawing.Color.Transparent;
-            this.txtPassnewagain.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtPassnewagain.BorderRadius = 8;
-            this.txtPassnewagain.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassnewagain.DefaultText = "";
-            this.txtPassnewagain.FillColor = System.Drawing.Color.MintCream;
-            this.txtPassnewagain.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassnewagain.ForeColor = System.Drawing.Color.Black;
-            this.txtPassnewagain.HoverState.BorderColor = System.Drawing.Color.LightCyan;
-            this.txtPassnewagain.HoverState.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassnewagain.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtPassnewagain.Location = new System.Drawing.Point(327, 195);
-            this.txtPassnewagain.Margin = new System.Windows.Forms.Padding(5);
-            this.txtPassnewagain.Name = "txtPassnewagain";
-            this.txtPassnewagain.PasswordChar = '\0';
-            this.txtPassnewagain.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtPassnewagain.PlaceholderText = "Nhập lại mật khẩu mới";
-            this.txtPassnewagain.SelectedText = "";
-            this.txtPassnewagain.Size = new System.Drawing.Size(328, 55);
-            this.txtPassnewagain.TabIndex = 93;
-            // 
-            // txtPassnew
-            // 
-            this.txtPassnew.BackColor = System.Drawing.Color.Transparent;
-            this.txtPassnew.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtPassnew.BorderRadius = 8;
-            this.txtPassnew.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassnew.DefaultText = "";
-            this.txtPassnew.FillColor = System.Drawing.Color.MintCream;
-            this.txtPassnew.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassnew.ForeColor = System.Drawing.Color.Black;
-            this.txtPassnew.HoverState.BorderColor = System.Drawing.Color.LightCyan;
-            this.txtPassnew.HoverState.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassnew.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtPassnew.Location = new System.Drawing.Point(327, 130);
-            this.txtPassnew.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPassnew.Name = "txtPassnew";
-            this.txtPassnew.PasswordChar = '\0';
-            this.txtPassnew.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtPassnew.PlaceholderText = "Nhập mật khẩu mới";
-            this.txtPassnew.SelectedText = "";
-            this.txtPassnew.Size = new System.Drawing.Size(328, 55);
-            this.txtPassnew.TabIndex = 92;
-            // 
-            // btnContinueDMK
-            // 
-            this.btnContinueDMK.BackColor = System.Drawing.Color.Transparent;
-            this.btnContinueDMK.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnContinueDMK.BorderRadius = 22;
-            this.btnContinueDMK.BorderThickness = 1;
-            this.btnContinueDMK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnContinueDMK.FillColor = System.Drawing.Color.Green;
-            this.btnContinueDMK.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinueDMK.ForeColor = System.Drawing.Color.White;
-            this.btnContinueDMK.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.btnContinueDMK.HoverState.FillColor = System.Drawing.Color.Lime;
-            this.btnContinueDMK.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnContinueDMK.Location = new System.Drawing.Point(430, 270);
-            this.btnContinueDMK.Name = "btnContinueDMK";
-            this.btnContinueDMK.Size = new System.Drawing.Size(175, 50);
-            this.btnContinueDMK.TabIndex = 96;
-            this.btnContinueDMK.Text = "Tiếp tục";
-            this.btnContinueDMK.Click += new System.EventHandler(this.btnContinueDMK_Click);
-            // 
-            // lblPassnewagain
-            // 
-            this.lblPassnewagain.AutoSize = false;
-            this.lblPassnewagain.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassnewagain.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassnewagain.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblPassnewagain.Location = new System.Drawing.Point(32, 195);
-            this.lblPassnewagain.Name = "lblPassnewagain";
-            this.lblPassnewagain.Size = new System.Drawing.Size(270, 55);
-            this.lblPassnewagain.TabIndex = 95;
-            this.lblPassnewagain.Text = "Nhập lại mật khẩu mới:";
-            this.lblPassnewagain.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPassnew
-            // 
-            this.lblPassnew.AutoSize = false;
-            this.lblPassnew.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassnew.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassnew.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblPassnew.Location = new System.Drawing.Point(32, 130);
-            this.lblPassnew.Name = "lblPassnew";
-            this.lblPassnew.Size = new System.Drawing.Size(270, 55);
-            this.lblPassnew.TabIndex = 94;
-            this.lblPassnew.Text = "Mật khẩu mới:";
-            this.lblPassnew.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnCancelchange
-            // 
-            this.btnCancelchange.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelchange.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnCancelchange.BorderRadius = 22;
-            this.btnCancelchange.BorderThickness = 1;
-            this.btnCancelchange.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelchange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelchange.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelchange.ForeColor = System.Drawing.Color.White;
-            this.btnCancelchange.HoverState.BorderColor = System.Drawing.Color.Lime;
-            this.btnCancelchange.HoverState.FillColor = System.Drawing.Color.Red;
-            this.btnCancelchange.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnCancelchange.Location = new System.Drawing.Point(94, 270);
-            this.btnCancelchange.Name = "btnCancelchange";
-            this.btnCancelchange.Size = new System.Drawing.Size(175, 50);
-            this.btnCancelchange.TabIndex = 89;
-            this.btnCancelchange.Text = "Quay lại";
-            // 
-            // panTrangchu
-            // 
-            this.panTrangchu.BackColor = System.Drawing.Color.Transparent;
-            this.panTrangchu.Controls.Add(this.No0);
-            this.panTrangchu.FillColor = System.Drawing.Color.Transparent;
-            this.panTrangchu.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panTrangchu.Location = new System.Drawing.Point(220, 65);
-            this.panTrangchu.Margin = new System.Windows.Forms.Padding(2);
-            this.panTrangchu.Name = "panTrangchu";
-            this.panTrangchu.Size = new System.Drawing.Size(980, 585);
-            this.panTrangchu.TabIndex = 127;
-            // 
-            // No0
-            // 
-            this.No0.AutoSize = false;
-            this.No0.BackColor = System.Drawing.Color.White;
-            this.No0.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.No0.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.No0.Location = new System.Drawing.Point(0, 0);
-            this.No0.Name = "No0";
-            this.No0.Size = new System.Drawing.Size(2, 585);
-            this.No0.TabIndex = 49;
-            this.No0.Text = null;
-            this.No0.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panAdmin
             // 
@@ -3403,6 +2894,45 @@ namespace DuAnCNPM
             this.panTTHDchitiet.Name = "panTTHDchitiet";
             this.panTTHDchitiet.Size = new System.Drawing.Size(688, 426);
             this.panTTHDchitiet.TabIndex = 57;
+            // 
+            // txtVtrilaymau
+            // 
+            this.txtVtrilaymau.BackColor = System.Drawing.Color.Transparent;
+            this.txtVtrilaymau.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.txtVtrilaymau.BorderRadius = 10;
+            this.txtVtrilaymau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtVtrilaymau.DefaultText = "";
+            this.txtVtrilaymau.Enabled = false;
+            this.txtVtrilaymau.FillColor = System.Drawing.SystemColors.Window;
+            this.txtVtrilaymau.FocusedState.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.txtVtrilaymau.FocusedState.FillColor = System.Drawing.Color.Honeydew;
+            this.txtVtrilaymau.FocusedState.ForeColor = System.Drawing.Color.Black;
+            this.txtVtrilaymau.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtVtrilaymau.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVtrilaymau.ForeColor = System.Drawing.Color.Black;
+            this.txtVtrilaymau.HoverState.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.txtVtrilaymau.HoverState.FillColor = System.Drawing.Color.Azure;
+            this.txtVtrilaymau.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.txtVtrilaymau.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtVtrilaymau.Location = new System.Drawing.Point(243, 327);
+            this.txtVtrilaymau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVtrilaymau.Name = "txtVtrilaymau";
+            this.txtVtrilaymau.PasswordChar = '\0';
+            this.txtVtrilaymau.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtVtrilaymau.PlaceholderText = "Vị trí lấy mẫu";
+            this.txtVtrilaymau.SelectedText = "";
+            this.txtVtrilaymau.Size = new System.Drawing.Size(407, 45);
+            this.txtVtrilaymau.TabIndex = 61;
+            // 
+            // lblVtrilaymau
+            // 
+            this.lblVtrilaymau.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVtrilaymau.Location = new System.Drawing.Point(65, 338);
+            this.lblVtrilaymau.Name = "lblVtrilaymau";
+            this.lblVtrilaymau.Size = new System.Drawing.Size(192, 25);
+            this.lblVtrilaymau.TabIndex = 60;
+            this.lblVtrilaymau.Text = "Vị trí lấy mẫu:";
+            this.lblVtrilaymau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpNgaytraKQQLHD
             // 
@@ -4930,6 +4460,516 @@ namespace DuAnCNPM
             this.lblDanhsachTB.Text = "Danh sách thông báo";
             this.lblDanhsachTB.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panTK
+            // 
+            this.panTK.BackColor = System.Drawing.Color.Transparent;
+            this.panTK.Controls.Add(this.lblYear);
+            this.panTK.Controls.Add(this.cboMoctgian);
+            this.panTK.Controls.Add(this.chart2);
+            this.panTK.Controls.Add(this.chart1);
+            this.panTK.Controls.Add(this.siticoneHtmlLabel6);
+            this.panTK.Controls.Add(this.lblTK);
+            this.panTK.Controls.Add(this.panChuthich);
+            this.panTK.FillColor = System.Drawing.Color.White;
+            this.panTK.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panTK.Location = new System.Drawing.Point(220, 65);
+            this.panTK.Margin = new System.Windows.Forms.Padding(2);
+            this.panTK.Name = "panTK";
+            this.panTK.Size = new System.Drawing.Size(980, 585);
+            this.panTK.TabIndex = 120;
+            // 
+            // lblYear
+            // 
+            this.lblYear.AutoSize = false;
+            this.lblYear.BackColor = System.Drawing.Color.Transparent;
+            this.lblYear.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.ForeColor = System.Drawing.Color.Black;
+            this.lblYear.Location = new System.Drawing.Point(38, 77);
+            this.lblYear.Margin = new System.Windows.Forms.Padding(4);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(169, 33);
+            this.lblYear.TabIndex = 48;
+            this.lblYear.Text = "Chọn mốc thời gian";
+            this.lblYear.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cboMoctgian
+            // 
+            this.cboMoctgian.BackColor = System.Drawing.Color.Transparent;
+            this.cboMoctgian.BorderColor = System.Drawing.Color.Lavender;
+            this.cboMoctgian.BorderRadius = 15;
+            this.cboMoctgian.BorderThickness = 0;
+            this.cboMoctgian.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboMoctgian.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMoctgian.FillColor = System.Drawing.Color.Honeydew;
+            this.cboMoctgian.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboMoctgian.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboMoctgian.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.cboMoctgian.ForeColor = System.Drawing.Color.Black;
+            this.cboMoctgian.IntegralHeight = false;
+            this.cboMoctgian.ItemHeight = 30;
+            this.cboMoctgian.Items.AddRange(new object[] {
+            "nam",
+            "nữ"});
+            this.cboMoctgian.Location = new System.Drawing.Point(216, 70);
+            this.cboMoctgian.Name = "cboMoctgian";
+            this.cboMoctgian.Size = new System.Drawing.Size(163, 36);
+            this.cboMoctgian.TabIndex = 63;
+            this.cboMoctgian.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboMoctgian.SelectedIndexChanged += new System.EventHandler(this.cboMoctgian_SelectedIndexChanged);
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.Color.Transparent;
+            this.chart2.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea3.BackColor = System.Drawing.Color.Transparent;
+            chartArea3.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea3.BorderColor = System.Drawing.Color.Transparent;
+            chartArea3.Name = "ChartArea1";
+            chartArea3.ShadowColor = System.Drawing.Color.Transparent;
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.BackSecondaryColor = System.Drawing.Color.Transparent;
+            legend3.BorderColor = System.Drawing.Color.Transparent;
+            legend3.ItemColumnSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
+            this.chart2.Location = new System.Drawing.Point(569, 257);
+            this.chart2.Margin = new System.Windows.Forms.Padding(2);
+            this.chart2.Name = "chart2";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series3.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            this.chart2.Series.Add(series3);
+            this.chart2.Size = new System.Drawing.Size(395, 285);
+            this.chart2.TabIndex = 53;
+            this.chart2.Text = "chart2";
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            this.chart1.BackSecondaryColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea4.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea4.BackColor = System.Drawing.Color.Transparent;
+            chartArea4.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.Transparent;
+            legend4.BorderColor = System.Drawing.Color.Transparent;
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
+            this.chart1.Location = new System.Drawing.Point(15, 168);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(550, 394);
+            this.chart1.TabIndex = 54;
+            this.chart1.Text = "chart1";
+            // 
+            // siticoneHtmlLabel6
+            // 
+            this.siticoneHtmlLabel6.AutoSize = false;
+            this.siticoneHtmlLabel6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.siticoneHtmlLabel6.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.siticoneHtmlLabel6.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.siticoneHtmlLabel6.Location = new System.Drawing.Point(15, 55);
+            this.siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
+            this.siticoneHtmlLabel6.Size = new System.Drawing.Size(550, 2);
+            this.siticoneHtmlLabel6.TabIndex = 47;
+            this.siticoneHtmlLabel6.Text = null;
+            this.siticoneHtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTK
+            // 
+            this.lblTK.AutoSize = false;
+            this.lblTK.BackColor = System.Drawing.Color.Transparent;
+            this.lblTK.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTK.ForeColor = System.Drawing.Color.Black;
+            this.lblTK.Location = new System.Drawing.Point(40, 13);
+            this.lblTK.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTK.Name = "lblTK";
+            this.lblTK.Size = new System.Drawing.Size(464, 44);
+            this.lblTK.TabIndex = 46;
+            this.lblTK.Text = "Thông kê";
+            this.lblTK.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panChuthich
+            // 
+            this.panChuthich.Controls.Add(this.lblDHFinish);
+            this.panChuthich.Controls.Add(this.lblDHQuahan);
+            this.panChuthich.Controls.Add(this.txtQuahan);
+            this.panChuthich.Controls.Add(this.txtInProgress);
+            this.panChuthich.Controls.Add(this.lblChuthich);
+            this.panChuthich.Controls.Add(this.txtFinish);
+            this.panChuthich.Controls.Add(this.lblDHInProgress);
+            this.panChuthich.Location = new System.Drawing.Point(598, 55);
+            this.panChuthich.Name = "panChuthich";
+            this.panChuthich.Size = new System.Drawing.Size(350, 175);
+            this.panChuthich.TabIndex = 62;
+            // 
+            // lblDHFinish
+            // 
+            this.lblDHFinish.AutoSize = false;
+            this.lblDHFinish.BackColor = System.Drawing.Color.Transparent;
+            this.lblDHFinish.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDHFinish.ForeColor = System.Drawing.Color.Green;
+            this.lblDHFinish.Location = new System.Drawing.Point(13, 43);
+            this.lblDHFinish.Margin = new System.Windows.Forms.Padding(4);
+            this.lblDHFinish.Name = "lblDHFinish";
+            this.lblDHFinish.Size = new System.Drawing.Size(210, 33);
+            this.lblDHFinish.TabIndex = 58;
+            this.lblDHFinish.Text = "Đơn hàng thành công:";
+            this.lblDHFinish.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDHQuahan
+            // 
+            this.lblDHQuahan.AutoSize = false;
+            this.lblDHQuahan.BackColor = System.Drawing.Color.Transparent;
+            this.lblDHQuahan.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDHQuahan.ForeColor = System.Drawing.Color.Red;
+            this.lblDHQuahan.Location = new System.Drawing.Point(13, 130);
+            this.lblDHQuahan.Margin = new System.Windows.Forms.Padding(4);
+            this.lblDHQuahan.Name = "lblDHQuahan";
+            this.lblDHQuahan.Size = new System.Drawing.Size(210, 33);
+            this.lblDHQuahan.TabIndex = 56;
+            this.lblDHQuahan.Text = "Đơn hàng đã quá hạn:";
+            this.lblDHQuahan.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtQuahan
+            // 
+            this.txtQuahan.BackColor = System.Drawing.Color.Transparent;
+            this.txtQuahan.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtQuahan.BorderRadius = 10;
+            this.txtQuahan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuahan.DefaultText = "";
+            this.txtQuahan.FillColor = System.Drawing.Color.MintCream;
+            this.txtQuahan.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtQuahan.FocusedState.ForeColor = System.Drawing.Color.Black;
+            this.txtQuahan.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtQuahan.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuahan.ForeColor = System.Drawing.Color.Black;
+            this.txtQuahan.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtQuahan.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.txtQuahan.Location = new System.Drawing.Point(245, 126);
+            this.txtQuahan.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuahan.Name = "txtQuahan";
+            this.txtQuahan.PasswordChar = '\0';
+            this.txtQuahan.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtQuahan.PlaceholderText = "";
+            this.txtQuahan.SelectedText = "";
+            this.txtQuahan.Size = new System.Drawing.Size(89, 35);
+            this.txtQuahan.TabIndex = 60;
+            // 
+            // txtInProgress
+            // 
+            this.txtInProgress.BackColor = System.Drawing.Color.Transparent;
+            this.txtInProgress.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtInProgress.BorderRadius = 10;
+            this.txtInProgress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtInProgress.DefaultText = "";
+            this.txtInProgress.FillColor = System.Drawing.Color.MintCream;
+            this.txtInProgress.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtInProgress.FocusedState.ForeColor = System.Drawing.Color.Black;
+            this.txtInProgress.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtInProgress.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInProgress.ForeColor = System.Drawing.Color.Black;
+            this.txtInProgress.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtInProgress.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.txtInProgress.Location = new System.Drawing.Point(245, 83);
+            this.txtInProgress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInProgress.Name = "txtInProgress";
+            this.txtInProgress.PasswordChar = '\0';
+            this.txtInProgress.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtInProgress.PlaceholderText = "";
+            this.txtInProgress.SelectedText = "";
+            this.txtInProgress.Size = new System.Drawing.Size(89, 35);
+            this.txtInProgress.TabIndex = 61;
+            // 
+            // lblChuthich
+            // 
+            this.lblChuthich.AutoSize = false;
+            this.lblChuthich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
+            this.lblChuthich.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblChuthich.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChuthich.ForeColor = System.Drawing.Color.White;
+            this.lblChuthich.Location = new System.Drawing.Point(0, 0);
+            this.lblChuthich.Margin = new System.Windows.Forms.Padding(4);
+            this.lblChuthich.Name = "lblChuthich";
+            this.lblChuthich.Size = new System.Drawing.Size(350, 33);
+            this.lblChuthich.TabIndex = 55;
+            this.lblChuthich.Text = "Bảng chú thích";
+            this.lblChuthich.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtFinish
+            // 
+            this.txtFinish.BackColor = System.Drawing.Color.Transparent;
+            this.txtFinish.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtFinish.BorderRadius = 10;
+            this.txtFinish.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFinish.DefaultText = "";
+            this.txtFinish.FillColor = System.Drawing.Color.MintCream;
+            this.txtFinish.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtFinish.FocusedState.ForeColor = System.Drawing.Color.Black;
+            this.txtFinish.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtFinish.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFinish.ForeColor = System.Drawing.Color.Black;
+            this.txtFinish.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtFinish.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.txtFinish.Location = new System.Drawing.Point(245, 40);
+            this.txtFinish.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFinish.Name = "txtFinish";
+            this.txtFinish.PasswordChar = '\0';
+            this.txtFinish.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtFinish.PlaceholderText = "";
+            this.txtFinish.SelectedText = "";
+            this.txtFinish.Size = new System.Drawing.Size(89, 35);
+            this.txtFinish.TabIndex = 59;
+            // 
+            // lblDHInProgress
+            // 
+            this.lblDHInProgress.AutoSize = false;
+            this.lblDHInProgress.BackColor = System.Drawing.Color.Transparent;
+            this.lblDHInProgress.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDHInProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblDHInProgress.Location = new System.Drawing.Point(4, 86);
+            this.lblDHInProgress.Margin = new System.Windows.Forms.Padding(4);
+            this.lblDHInProgress.Name = "lblDHInProgress";
+            this.lblDHInProgress.Size = new System.Drawing.Size(240, 33);
+            this.lblDHInProgress.TabIndex = 57;
+            this.lblDHInProgress.Text = "Đơn hàng đang thực hiện:";
+            this.lblDHInProgress.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panDMK
+            // 
+            this.panDMK.BackColor = System.Drawing.Color.Transparent;
+            this.panDMK.Controls.Add(this.No1);
+            this.panDMK.Controls.Add(this.grbChangepass);
+            this.panDMK.FillColor = System.Drawing.Color.Transparent;
+            this.panDMK.Location = new System.Drawing.Point(220, 65);
+            this.panDMK.Margin = new System.Windows.Forms.Padding(2);
+            this.panDMK.Name = "panDMK";
+            this.panDMK.Size = new System.Drawing.Size(980, 585);
+            this.panDMK.TabIndex = 122;
+            // 
+            // No1
+            // 
+            this.No1.AutoSize = false;
+            this.No1.BackColor = System.Drawing.Color.White;
+            this.No1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.No1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.No1.Location = new System.Drawing.Point(0, 0);
+            this.No1.Name = "No1";
+            this.No1.Size = new System.Drawing.Size(2, 585);
+            this.No1.TabIndex = 64;
+            this.No1.Text = null;
+            this.No1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // grbChangepass
+            // 
+            this.grbChangepass.BackColor = System.Drawing.Color.Transparent;
+            this.grbChangepass.BorderColor = System.Drawing.Color.SeaGreen;
+            this.grbChangepass.BorderRadius = 18;
+            this.grbChangepass.Controls.Add(this.txtPasscurrent);
+            this.grbChangepass.Controls.Add(this.lblPasscurrent);
+            this.grbChangepass.Controls.Add(this.txtPassnewagain);
+            this.grbChangepass.Controls.Add(this.txtPassnew);
+            this.grbChangepass.Controls.Add(this.btnContinueDMK);
+            this.grbChangepass.Controls.Add(this.lblPassnewagain);
+            this.grbChangepass.Controls.Add(this.lblPassnew);
+            this.grbChangepass.Controls.Add(this.btnCancelchange);
+            this.grbChangepass.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
+            this.grbChangepass.CustomBorderThickness = new System.Windows.Forms.Padding(0, 50, 0, 0);
+            this.grbChangepass.FillColor = System.Drawing.Color.Transparent;
+            this.grbChangepass.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbChangepass.ForeColor = System.Drawing.Color.White;
+            this.grbChangepass.Location = new System.Drawing.Point(140, 107);
+            this.grbChangepass.Name = "grbChangepass";
+            this.grbChangepass.Size = new System.Drawing.Size(700, 354);
+            this.grbChangepass.TabIndex = 63;
+            this.grbChangepass.Text = "THAY ĐỔI MẬT KHẨU";
+            this.grbChangepass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtPasscurrent
+            // 
+            this.txtPasscurrent.BackColor = System.Drawing.Color.Transparent;
+            this.txtPasscurrent.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtPasscurrent.BorderRadius = 8;
+            this.txtPasscurrent.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPasscurrent.DefaultText = "";
+            this.txtPasscurrent.FillColor = System.Drawing.Color.MintCream;
+            this.txtPasscurrent.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasscurrent.ForeColor = System.Drawing.Color.Black;
+            this.txtPasscurrent.HoverState.BorderColor = System.Drawing.Color.LightCyan;
+            this.txtPasscurrent.HoverState.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtPasscurrent.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtPasscurrent.Location = new System.Drawing.Point(327, 65);
+            this.txtPasscurrent.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPasscurrent.Name = "txtPasscurrent";
+            this.txtPasscurrent.PasswordChar = '\0';
+            this.txtPasscurrent.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtPasscurrent.PlaceholderText = "Nhập mật khẩu hiện tại";
+            this.txtPasscurrent.SelectedText = "";
+            this.txtPasscurrent.Size = new System.Drawing.Size(328, 55);
+            this.txtPasscurrent.TabIndex = 97;
+            // 
+            // lblPasscurrent
+            // 
+            this.lblPasscurrent.AutoSize = false;
+            this.lblPasscurrent.BackColor = System.Drawing.Color.Transparent;
+            this.lblPasscurrent.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasscurrent.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblPasscurrent.Location = new System.Drawing.Point(32, 65);
+            this.lblPasscurrent.Name = "lblPasscurrent";
+            this.lblPasscurrent.Size = new System.Drawing.Size(270, 55);
+            this.lblPasscurrent.TabIndex = 98;
+            this.lblPasscurrent.Text = "Mật khẩu hiện tại:";
+            this.lblPasscurrent.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtPassnewagain
+            // 
+            this.txtPassnewagain.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassnewagain.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtPassnewagain.BorderRadius = 8;
+            this.txtPassnewagain.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassnewagain.DefaultText = "";
+            this.txtPassnewagain.FillColor = System.Drawing.Color.MintCream;
+            this.txtPassnewagain.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassnewagain.ForeColor = System.Drawing.Color.Black;
+            this.txtPassnewagain.HoverState.BorderColor = System.Drawing.Color.LightCyan;
+            this.txtPassnewagain.HoverState.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtPassnewagain.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtPassnewagain.Location = new System.Drawing.Point(327, 195);
+            this.txtPassnewagain.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPassnewagain.Name = "txtPassnewagain";
+            this.txtPassnewagain.PasswordChar = '\0';
+            this.txtPassnewagain.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtPassnewagain.PlaceholderText = "Nhập lại mật khẩu mới";
+            this.txtPassnewagain.SelectedText = "";
+            this.txtPassnewagain.Size = new System.Drawing.Size(328, 55);
+            this.txtPassnewagain.TabIndex = 93;
+            // 
+            // txtPassnew
+            // 
+            this.txtPassnew.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassnew.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtPassnew.BorderRadius = 8;
+            this.txtPassnew.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassnew.DefaultText = "";
+            this.txtPassnew.FillColor = System.Drawing.Color.MintCream;
+            this.txtPassnew.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassnew.ForeColor = System.Drawing.Color.Black;
+            this.txtPassnew.HoverState.BorderColor = System.Drawing.Color.LightCyan;
+            this.txtPassnew.HoverState.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtPassnew.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtPassnew.Location = new System.Drawing.Point(327, 130);
+            this.txtPassnew.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassnew.Name = "txtPassnew";
+            this.txtPassnew.PasswordChar = '\0';
+            this.txtPassnew.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtPassnew.PlaceholderText = "Nhập mật khẩu mới";
+            this.txtPassnew.SelectedText = "";
+            this.txtPassnew.Size = new System.Drawing.Size(328, 55);
+            this.txtPassnew.TabIndex = 92;
+            // 
+            // btnContinueDMK
+            // 
+            this.btnContinueDMK.BackColor = System.Drawing.Color.Transparent;
+            this.btnContinueDMK.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btnContinueDMK.BorderRadius = 22;
+            this.btnContinueDMK.BorderThickness = 1;
+            this.btnContinueDMK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContinueDMK.FillColor = System.Drawing.Color.Green;
+            this.btnContinueDMK.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinueDMK.ForeColor = System.Drawing.Color.White;
+            this.btnContinueDMK.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.btnContinueDMK.HoverState.FillColor = System.Drawing.Color.Lime;
+            this.btnContinueDMK.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnContinueDMK.Location = new System.Drawing.Point(430, 270);
+            this.btnContinueDMK.Name = "btnContinueDMK";
+            this.btnContinueDMK.Size = new System.Drawing.Size(175, 50);
+            this.btnContinueDMK.TabIndex = 96;
+            this.btnContinueDMK.Text = "Tiếp tục";
+            this.btnContinueDMK.Click += new System.EventHandler(this.btnContinueDMK_Click);
+            // 
+            // lblPassnewagain
+            // 
+            this.lblPassnewagain.AutoSize = false;
+            this.lblPassnewagain.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassnewagain.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassnewagain.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblPassnewagain.Location = new System.Drawing.Point(32, 195);
+            this.lblPassnewagain.Name = "lblPassnewagain";
+            this.lblPassnewagain.Size = new System.Drawing.Size(270, 55);
+            this.lblPassnewagain.TabIndex = 95;
+            this.lblPassnewagain.Text = "Nhập lại mật khẩu mới:";
+            this.lblPassnewagain.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPassnew
+            // 
+            this.lblPassnew.AutoSize = false;
+            this.lblPassnew.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassnew.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassnew.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblPassnew.Location = new System.Drawing.Point(32, 130);
+            this.lblPassnew.Name = "lblPassnew";
+            this.lblPassnew.Size = new System.Drawing.Size(270, 55);
+            this.lblPassnew.TabIndex = 94;
+            this.lblPassnew.Text = "Mật khẩu mới:";
+            this.lblPassnew.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCancelchange
+            // 
+            this.btnCancelchange.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelchange.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btnCancelchange.BorderRadius = 22;
+            this.btnCancelchange.BorderThickness = 1;
+            this.btnCancelchange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelchange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelchange.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelchange.ForeColor = System.Drawing.Color.White;
+            this.btnCancelchange.HoverState.BorderColor = System.Drawing.Color.Lime;
+            this.btnCancelchange.HoverState.FillColor = System.Drawing.Color.Red;
+            this.btnCancelchange.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnCancelchange.Location = new System.Drawing.Point(94, 270);
+            this.btnCancelchange.Name = "btnCancelchange";
+            this.btnCancelchange.Size = new System.Drawing.Size(175, 50);
+            this.btnCancelchange.TabIndex = 89;
+            this.btnCancelchange.Text = "Quay lại";
+            // 
+            // panTrangchu
+            // 
+            this.panTrangchu.BackColor = System.Drawing.Color.Transparent;
+            this.panTrangchu.Controls.Add(this.No0);
+            this.panTrangchu.FillColor = System.Drawing.Color.Transparent;
+            this.panTrangchu.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panTrangchu.Location = new System.Drawing.Point(220, 65);
+            this.panTrangchu.Margin = new System.Windows.Forms.Padding(2);
+            this.panTrangchu.Name = "panTrangchu";
+            this.panTrangchu.Size = new System.Drawing.Size(980, 585);
+            this.panTrangchu.TabIndex = 127;
+            // 
+            // No0
+            // 
+            this.No0.AutoSize = false;
+            this.No0.BackColor = System.Drawing.Color.White;
+            this.No0.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.No0.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.No0.Location = new System.Drawing.Point(0, 0);
+            this.No0.Name = "No0";
+            this.No0.Size = new System.Drawing.Size(2, 585);
+            this.No0.TabIndex = 49;
+            this.No0.Text = null;
+            this.No0.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panDSNV
             // 
             this.panDSNV.BackColor = System.Drawing.Color.Transparent;
@@ -5655,6 +5695,7 @@ namespace DuAnCNPM
             // 
             this.panTTNV.AutoScroll = true;
             this.panTTNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panTTNV.Controls.Add(this.No5);
             this.panTTNV.Controls.Add(this.No);
             this.panTTNV.Controls.Add(this.grbNoioCurrent);
             this.panTTNV.Controls.Add(this.lblNoioCurrent);
@@ -6255,11 +6296,11 @@ namespace DuAnCNPM
             this.panReport.Controls.Add(this.btnIn);
             this.panReport.Controls.Add(this.picClosePdf);
             this.panReport.Controls.Add(this.reportBaocao);
-            this.panReport.Location = new System.Drawing.Point(279, 0);
+            this.panReport.Location = new System.Drawing.Point(235, 0);
             this.panReport.Margin = new System.Windows.Forms.Padding(2);
             this.panReport.Name = "panReport";
-            this.panReport.Size = new System.Drawing.Size(668, 650);
-            this.panReport.TabIndex = 74;
+            this.panReport.Size = new System.Drawing.Size(725, 650);
+            this.panReport.TabIndex = 75;
             // 
             // btnIn
             // 
@@ -6284,7 +6325,7 @@ namespace DuAnCNPM
             this.picClosePdf.BackColor = System.Drawing.Color.White;
             this.picClosePdf.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClosePdf.Image = ((System.Drawing.Image)(resources.GetObject("picClosePdf.Image")));
-            this.picClosePdf.Location = new System.Drawing.Point(633, 0);
+            this.picClosePdf.Location = new System.Drawing.Point(690, 0);
             this.picClosePdf.Name = "picClosePdf";
             this.picClosePdf.Size = new System.Drawing.Size(35, 35);
             this.picClosePdf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6298,47 +6339,21 @@ namespace DuAnCNPM
             this.reportBaocao.Location = new System.Drawing.Point(0, 0);
             this.reportBaocao.Name = "reportBaocao";
             this.reportBaocao.ServerReport.BearerToken = null;
-            this.reportBaocao.Size = new System.Drawing.Size(668, 650);
+            this.reportBaocao.Size = new System.Drawing.Size(725, 650);
             this.reportBaocao.TabIndex = 27;
             // 
-            // txtVtrilaymau
+            // No5
             // 
-            this.txtVtrilaymau.BackColor = System.Drawing.Color.Transparent;
-            this.txtVtrilaymau.BorderColor = System.Drawing.Color.PaleTurquoise;
-            this.txtVtrilaymau.BorderRadius = 10;
-            this.txtVtrilaymau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtVtrilaymau.DefaultText = "";
-            this.txtVtrilaymau.Enabled = false;
-            this.txtVtrilaymau.FillColor = System.Drawing.SystemColors.Window;
-            this.txtVtrilaymau.FocusedState.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.txtVtrilaymau.FocusedState.FillColor = System.Drawing.Color.Honeydew;
-            this.txtVtrilaymau.FocusedState.ForeColor = System.Drawing.Color.Black;
-            this.txtVtrilaymau.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtVtrilaymau.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVtrilaymau.ForeColor = System.Drawing.Color.Black;
-            this.txtVtrilaymau.HoverState.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.txtVtrilaymau.HoverState.FillColor = System.Drawing.Color.Azure;
-            this.txtVtrilaymau.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtVtrilaymau.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtVtrilaymau.Location = new System.Drawing.Point(243, 327);
-            this.txtVtrilaymau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtVtrilaymau.Name = "txtVtrilaymau";
-            this.txtVtrilaymau.PasswordChar = '\0';
-            this.txtVtrilaymau.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtVtrilaymau.PlaceholderText = "Vị trí lấy mẫu";
-            this.txtVtrilaymau.SelectedText = "";
-            this.txtVtrilaymau.Size = new System.Drawing.Size(407, 45);
-            this.txtVtrilaymau.TabIndex = 61;
-            // 
-            // lblVtrilaymau
-            // 
-            this.lblVtrilaymau.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVtrilaymau.Location = new System.Drawing.Point(65, 338);
-            this.lblVtrilaymau.Name = "lblVtrilaymau";
-            this.lblVtrilaymau.Size = new System.Drawing.Size(192, 25);
-            this.lblVtrilaymau.TabIndex = 60;
-            this.lblVtrilaymau.Text = "Vị trí lấy mẫu:";
-            this.lblVtrilaymau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.No5.AutoSize = false;
+            this.No5.BackColor = System.Drawing.Color.White;
+            this.No5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.No5.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.No5.Location = new System.Drawing.Point(0, 0);
+            this.No5.Name = "No5";
+            this.No5.Size = new System.Drawing.Size(2, 585);
+            this.No5.TabIndex = 49;
+            this.No5.Text = null;
+            this.No5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmEcoOrder
             // 
@@ -6347,8 +6362,8 @@ namespace DuAnCNPM
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1198, 650);
-            this.Controls.Add(this.panWork);
             this.Controls.Add(this.panReport);
+            this.Controls.Add(this.panWork);
             this.Controls.Add(this.panHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -6380,13 +6395,6 @@ namespace DuAnCNPM
             this.grbThongtinDH.ResumeLayout(false);
             this.grbChucnang.ResumeLayout(false);
             this.grpDulieuDH.ResumeLayout(false);
-            this.panTK.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.panChuthich.ResumeLayout(false);
-            this.panDMK.ResumeLayout(false);
-            this.grbChangepass.ResumeLayout(false);
-            this.panTrangchu.ResumeLayout(false);
             this.panAdmin.ResumeLayout(false);
             this.TabcontrolAdmin.ResumeLayout(false);
             this.tabQLNV.ResumeLayout(false);
@@ -6404,6 +6412,13 @@ namespace DuAnCNPM
             this.panTTTSchitiet.ResumeLayout(false);
             this.tabQLTB.ResumeLayout(false);
             this.panDSTBchitiet.ResumeLayout(false);
+            this.panTK.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panChuthich.ResumeLayout(false);
+            this.panDMK.ResumeLayout(false);
+            this.grbChangepass.ResumeLayout(false);
+            this.panTrangchu.ResumeLayout(false);
             this.panDSNV.ResumeLayout(false);
             this.panFindNV.ResumeLayout(false);
             this.grbTimthay.ResumeLayout(false);
@@ -6754,11 +6769,12 @@ namespace DuAnCNPM
         private SiticoneHtmlLabel No;
         private SiticoneHtmlLabel No1;
         private SiticoneHtmlLabel No0;
+        private SiticoneTextBox txtVtrilaymau;
+        private Label lblVtrilaymau;
         private DoubleBufferedPanel panReport;
         private SiticoneButton btnIn;
         private PictureBox picClosePdf;
         private Microsoft.Reporting.WinForms.ReportViewer reportBaocao;
-        private SiticoneTextBox txtVtrilaymau;
-        private Label lblVtrilaymau;
+        private SiticoneHtmlLabel No5;
     }
 }
