@@ -8,10 +8,9 @@
             <Source>Embedded</Source>
             <Value>z6496195602079_9a637841c93dda52e316ce97749409d8</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.00001cm</Top>
             <Left>0.03531cm</Left>
-            <Height>3.68722cm</Height>
-            <Width>3.24625cm</Width>
+            <Height>3.04757cm</Height>
+            <Width>2.8392cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -29,7 +28,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>18pt</FontSize>
+                      <FontSize>15pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -41,10 +40,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.00001cm</Top>
-            <Left>3.35211cm</Left>
+            <Top>0.03527cm</Top>
+            <Left>2.87451cm</Left>
             <Height>0.83495cm</Height>
-            <Width>20.42514cm</Width>
+            <Width>16.11192cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -67,7 +66,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>15pt</FontSize>
+                      <FontSize>13pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -79,10 +78,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.83496cm</Top>
-            <Left>3.35211cm</Left>
+            <Top>0.87022cm</Top>
+            <Left>2.87451cm</Left>
             <Height>0.7571cm</Height>
-            <Width>20.42514cm</Width>
+            <Width>16.11192cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -105,7 +104,7 @@
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -117,10 +116,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.66262cm</Top>
-            <Left>3.35211cm</Left>
+            <Top>1.73315cm</Top>
+            <Left>2.87451cm</Left>
             <Height>0.62481cm</Height>
-            <Width>20.42514cm</Width>
+            <Width>16.11192cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -143,7 +142,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -155,10 +154,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>2.62257cm</Top>
-            <Left>6.77371cm</Left>
+            <Top>2.62256cm</Top>
+            <Left>3.59458cm</Left>
             <Height>0.74829cm</Height>
-            <Width>4.40903cm</Width>
+            <Width>4.37996cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -181,7 +180,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -193,10 +192,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>2.62257cm</Top>
-            <Left>13.95308cm</Left>
+            <Top>2.62256cm</Top>
+            <Left>10.74051cm</Left>
             <Height>0.74829cm</Height>
-            <Width>8.91576cm</Width>
+            <Width>7.41858cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -219,7 +218,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>22pt</FontSize>
+                      <FontSize>19pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -231,10 +230,9 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>3.72251cm</Top>
-            <Left>0.00003cm</Left>
-            <Height>1.05696cm</Height>
-            <Width>23.77722cm</Width>
+            <Top>3.73491cm</Top>
+            <Height>1.04455cm</Height>
+            <Width>18.98642cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -257,7 +255,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -267,8 +265,8 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>5.83808cm</Top>
-            <Left>1.21065cm</Left>
+            <Top>5.83807cm</Top>
+            <Left>0.8384cm</Left>
             <Height>0.70583cm</Height>
             <Width>5.9925cm</Width>
             <ZIndex>7</ZIndex>
@@ -293,7 +291,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -303,8 +301,8 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>6.68502cm</Top>
-            <Left>1.21065cm</Left>
+            <Top>6.68501cm</Top>
+            <Left>0.8384cm</Left>
             <Height>0.70583cm</Height>
             <Width>5.9925cm</Width>
             <ZIndex>8</ZIndex>
@@ -329,7 +327,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -339,83 +337,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.95586cm</Top>
-            <Left>1.21065cm</Left>
+            <Top>4.95585cm</Top>
+            <Left>0.8384cm</Left>
             <Height>0.70583cm</Height>
             <Width>5.9925cm</Width>
             <ZIndex>9</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txtTenmau">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Tên mẫu</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>7.56724cm</Top>
-            <Left>1.21065cm</Left>
-            <Height>0.70583cm</Height>
-            <Width>5.9925cm</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txtMamau">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Mã mẫu</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>8.44945cm</Top>
-            <Left>1.21065cm</Left>
-            <Height>0.70583cm</Height>
-            <Width>5.9925cm</Width>
-            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -437,7 +363,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -447,11 +373,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>9.33167cm</Top>
-            <Left>1.21065cm</Left>
+            <Top>7.56722cm</Top>
+            <Left>0.8384cm</Left>
             <Height>0.70583cm</Height>
             <Width>5.9925cm</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -473,7 +399,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -483,11 +409,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>10.21389cm</Top>
-            <Left>1.21065cm</Left>
+            <Top>8.44944cm</Top>
+            <Left>0.8384cm</Left>
             <Height>0.70583cm</Height>
             <Width>5.9925cm</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -519,11 +445,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.95586cm</Top>
-            <Left>7.37954cm</Left>
+            <Top>4.95585cm</Top>
+            <Left>7.00729cm</Left>
             <Height>0.70583cm</Height>
             <Width>0.595cm</Width>
-            <ZIndex>14</ZIndex>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -555,11 +481,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>10.21389cm</Top>
-            <Left>7.37954cm</Left>
+            <Top>8.44944cm</Top>
+            <Left>7.00729cm</Left>
             <Height>0.70583cm</Height>
             <Width>0.595cm</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -591,83 +517,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>9.33167cm</Top>
-            <Left>7.37954cm</Left>
+            <Top>7.56722cm</Top>
+            <Left>7.00729cm</Left>
             <Height>0.70583cm</Height>
             <Width>0.595cm</Width>
-            <ZIndex>16</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txtTenKH6">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>:</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>8.44945cm</Top>
-            <Left>7.37954cm</Left>
-            <Height>0.70583cm</Height>
-            <Width>0.595cm</Width>
-            <ZIndex>17</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txtTenKH7">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>:</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>7.56724cm</Top>
-            <Left>7.37954cm</Left>
-            <Height>0.70583cm</Height>
-            <Width>0.595cm</Width>
-            <ZIndex>18</ZIndex>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -699,11 +553,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>6.68502cm</Top>
-            <Left>7.37954cm</Left>
+            <Top>6.68501cm</Top>
+            <Left>7.00729cm</Left>
             <Height>0.70583cm</Height>
             <Width>0.595cm</Width>
-            <ZIndex>19</ZIndex>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -735,11 +589,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>5.83808cm</Top>
-            <Left>7.37954cm</Left>
+            <Top>5.83807cm</Top>
+            <Left>7.00729cm</Left>
             <Height>0.70583cm</Height>
             <Width>0.595cm</Width>
-            <ZIndex>20</ZIndex>
+            <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -757,11 +611,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=First(Fields!TEN_CONG_TY.Value)</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -773,11 +627,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>4.95586cm</Top>
-            <Left>8.15093cm</Left>
+            <Top>4.95585cm</Top>
+            <Left>7.77868cm</Left>
             <Height>0.70583cm</Height>
-            <Width>14.03cm</Width>
-            <ZIndex>21</ZIndex>
+            <Width>10.38041cm</Width>
+            <ZIndex>17</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -795,11 +649,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=First(Fields!DIA_CHI.Value)</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -811,11 +665,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>5.83808cm</Top>
-            <Left>8.15093cm</Left>
+            <Top>5.83807cm</Top>
+            <Left>7.77868cm</Left>
             <Height>0.70583cm</Height>
-            <Width>14.03cm</Width>
-            <ZIndex>22</ZIndex>
+            <Width>10.38041cm</Width>
+            <ZIndex>18</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -837,7 +691,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -849,87 +703,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>6.7247cm</Top>
-            <Left>8.15093cm</Left>
+            <Top>6.68501cm</Top>
+            <Left>7.77868cm</Left>
             <Height>0.70583cm</Height>
-            <Width>14.03cm</Width>
-            <ZIndex>23</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txtNamemau">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>7.63779cm</Top>
-            <Left>8.15093cm</Left>
-            <Height>0.70583cm</Height>
-            <Width>14.03cm</Width>
-            <ZIndex>24</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txtIDmau">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>8.44945cm</Top>
-            <Left>8.15093cm</Left>
-            <Height>0.70583cm</Height>
-            <Width>14.03cm</Width>
-            <ZIndex>25</ZIndex>
+            <Width>10.38041cm</Width>
+            <ZIndex>19</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -947,11 +725,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=DateAdd("d", -14, First(Fields!NGAY_TRA_KQ.Value))</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -963,11 +741,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>9.33167cm</Top>
-            <Left>8.15093cm</Left>
+            <Top>7.56722cm</Top>
+            <Left>7.77868cm</Left>
             <Height>0.70583cm</Height>
-            <Width>14.03cm</Width>
-            <ZIndex>26</ZIndex>
+            <Width>10.38041cm</Width>
+            <ZIndex>20</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -985,11 +763,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=First(Fields!NGAY_TRA_KQ.Value)</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1001,11 +779,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>10.21389cm</Top>
-            <Left>8.15093cm</Left>
+            <Top>8.44944cm</Top>
+            <Left>7.77868cm</Left>
             <Height>0.70583cm</Height>
-            <Width>14.03cm</Width>
-            <ZIndex>27</ZIndex>
+            <Width>10.38041cm</Width>
+            <ZIndex>21</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1020,28 +798,31 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.46058cm</Width>
+                  <Width>0.94941cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.07998cm</Width>
+                  <Width>2.11494cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.00182cm</Width>
+                  <Width>2.80037cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.87536cm</Width>
+                  <Width>1.53359cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.8175cm</Width>
+                  <Width>2.0074cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.90503cm</Width>
+                  <Width>1.38279cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.00927cm</Width>
+                  <Width>1.81952cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.52646cm</Width>
+                  <Width>2.92332cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.46725cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1059,7 +840,8 @@
                                 <TextRun>
                                   <Value>STT</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1091,9 +873,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Chỉ tiêu</Value>
+                                  <Value>Tên chỉ số</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1125,9 +908,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Kết quả 1</Value>
+                                  <Value>Loại môi trường</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1159,9 +943,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Kết quả 2</Value>
+                                  <Value>Chỉ số</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1193,9 +978,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Kết quả 3</Value>
+                                  <Value>Tiêu chuẩn</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1220,16 +1006,17 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox62">
+                        <Textbox Name="Textbox2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>QCVN</Value>
+                                  <Value>Vị trí</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1238,7 +1025,42 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox62</rd:DefaultName>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Ghi chú</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1261,9 +1083,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Kết luận SV TC</Value>
+                                  <Value>Kết Luận SVTC</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1297,7 +1120,8 @@
                                 <TextRun>
                                   <Value>Kết luận LT </Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1336,7 +1160,8 @@
                                 <TextRun>
                                   <Value>=RowNumber(nothing)</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1370,7 +1195,8 @@
                                 <TextRun>
                                   <Value>=Fields!TEN_CHI_SO.Value</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1395,6 +1221,111 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="LOAI_MOI_TRUONG">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!LOAI_MOI_TRUONG.Value</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>LOAI_MOI_TRUONG</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CHI_SO">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!CHI_SO.Value</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>CHI_SO</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TIEU_CHUAN1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!TIEU_CHUAN.Value</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>TIEU_CHUAN1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="VI_TRI2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -1404,7 +1335,8 @@
                                 <TextRun>
                                   <Value>=Fields!VI_TRI.Value</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1429,16 +1361,17 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="VI_TRI1">
+                        <Textbox Name="GHI_CHU">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!VI_TRI.Value</Value>
+                                  <Value>=Fields!GHI_CHU.Value</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1447,75 +1380,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>VI_TRI1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="VI_TRI">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!VI_TRI.Value</Value>
-                                  <Style>
-                                    <FontSize>13pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>VI_TRI</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="TIEU_CHUAN">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!TIEU_CHUAN.Value</Value>
-                                  <Style>
-                                    <FontSize>13pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>TIEU_CHUAN</rd:DefaultName>
+                          <rd:DefaultName>GHI_CHU</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1540,7 +1405,8 @@
                                 <TextRun>
                                   <Value>=Fields!KET_LUAN_SV_TC.Value</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1574,7 +1440,8 @@
                                 <TextRun>
                                   <Value>=Fields!KET_LUAN_LT.Value</Value>
                                   <Style>
-                                    <FontSize>13pt</FontSize>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1611,6 +1478,7 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1624,16 +1492,17 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet</DataSetName>
-            <Top>11.25859cm</Top>
+            <Top>9.49414cm</Top>
             <Left>0.53275cm</Left>
             <Height>1.2cm</Height>
-            <Width>22.676cm</Width>
-            <ZIndex>28</ZIndex>
+            <Width>17.99859cm</Width>
+            <ZIndex>22</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <FontSize>13pt</FontSize>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>11pt</FontSize>
               <TextAlign>Center</TextAlign>
             </Style>
           </Tablix>
@@ -1648,7 +1517,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1658,11 +1527,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>12.5997cm</Top>
-            <Left>0.60331cm</Left>
+            <Top>10.83525cm</Top>
+            <Left>0.7576cm</Left>
             <Height>0.70583cm</Height>
             <Width>1.94438cm</Width>
-            <ZIndex>29</ZIndex>
+            <ZIndex>23</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1684,7 +1553,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1696,11 +1565,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>12.5997cm</Top>
-            <Left>2.65352cm</Left>
+            <Top>10.83525cm</Top>
+            <Left>2.80781cm</Left>
             <Height>0.70583cm</Height>
-            <Width>19.45945cm</Width>
-            <ZIndex>30</ZIndex>
+            <Width>15.35128cm</Width>
+            <ZIndex>24</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1722,7 +1591,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1732,11 +1601,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>13.51719cm</Top>
-            <Left>2.19046cm</Left>
+            <Top>11.75274cm</Top>
+            <Left>1.48216cm</Left>
             <Height>0.70583cm</Height>
             <Width>3.12875cm</Width>
-            <ZIndex>31</ZIndex>
+            <ZIndex>25</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1758,7 +1627,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1770,11 +1639,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>13.51719cm</Top>
-            <Left>5.42504cm</Left>
+            <Top>11.75274cm</Top>
+            <Left>4.71674cm</Left>
             <Height>0.70583cm</Height>
-            <Width>16.29542cm</Width>
-            <ZIndex>32</ZIndex>
+            <Width>13.44235cm</Width>
+            <ZIndex>26</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1796,7 +1665,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1806,11 +1675,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>14.39941cm</Top>
-            <Left>3.16504cm</Left>
+            <Top>12.63496cm</Top>
+            <Left>2.45674cm</Left>
             <Height>0.70583cm</Height>
             <Width>2.54667cm</Width>
-            <ZIndex>33</ZIndex>
+            <ZIndex>27</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1832,7 +1701,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1842,11 +1711,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>15.28163cm</Top>
-            <Left>3.16504cm</Left>
+            <Top>13.51718cm</Top>
+            <Left>2.45674cm</Left>
             <Height>0.70583cm</Height>
             <Width>2.54667cm</Width>
-            <ZIndex>34</ZIndex>
+            <ZIndex>28</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1868,7 +1737,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1880,11 +1749,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>14.39941cm</Top>
-            <Left>5.78226cm</Left>
+            <Top>12.63496cm</Top>
+            <Left>5.07396cm</Left>
             <Height>0.70583cm</Height>
-            <Width>15.93819cm</Width>
-            <ZIndex>35</ZIndex>
+            <Width>13.08513cm</Width>
+            <ZIndex>29</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1906,7 +1775,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1918,11 +1787,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>15.28163cm</Top>
-            <Left>5.85282cm</Left>
+            <Top>13.51718cm</Top>
+            <Left>5.07397cm</Left>
             <Height>0.70583cm</Height>
-            <Width>15.93819cm</Width>
-            <ZIndex>36</ZIndex>
+            <Width>13.08512cm</Width>
+            <ZIndex>30</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1940,11 +1809,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>- Quy chuẩn so sánh : QCVN 03:2023/BTNMT Quy chuẩn kỹ thuật quốc gia về chất lượng đất.</Value>
+                    <Value>- Quy chuẩn so sánh : Chất lượng môi trường.</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1954,11 +1823,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>17.04607cm</Top>
-            <Left>2.19046cm</Left>
+            <Top>15.28162cm</Top>
+            <Left>1.48216cm</Left>
             <Height>0.70583cm</Height>
-            <Width>19.53cm</Width>
-            <ZIndex>37</ZIndex>
+            <Width>16.67693cm</Width>
+            <ZIndex>31</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1980,7 +1849,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -1990,11 +1859,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>16.16385cm</Top>
-            <Left>3.12977cm</Left>
+            <Top>14.3994cm</Top>
+            <Left>2.42147cm</Left>
             <Height>0.70583cm</Height>
             <Width>2.54667cm</Width>
-            <ZIndex>38</ZIndex>
+            <ZIndex>32</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2016,7 +1885,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2028,11 +1897,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>16.16385cm</Top>
-            <Left>5.78227cm</Left>
+            <Top>14.3994cm</Top>
+            <Left>5.07397cm</Left>
             <Height>0.70583cm</Height>
-            <Width>15.93819cm</Width>
-            <ZIndex>39</ZIndex>
+            <Width>13.08512cm</Width>
+            <ZIndex>33</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2054,7 +1923,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2066,11 +1935,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>22.15921cm</Top>
-            <Left>1.15229cm</Left>
+            <Top>20.07493cm</Top>
+            <Left>1.48216cm</Left>
             <Height>0.66009cm</Height>
-            <Width>19.53cm</Width>
-            <ZIndex>40</ZIndex>
+            <Width>16.02338cm</Width>
+            <ZIndex>34</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2082,11 +1951,11 @@
             </Style>
           </Textbox>
           <Line Name="Line3">
-            <Top>22.08865cm</Top>
-            <Left>0.14025cm</Left>
+            <Top>20.00437cm</Top>
+            <Left>0.53275cm</Left>
             <Height>0cm</Height>
-            <Width>22.19756cm</Width>
-            <ZIndex>41</ZIndex>
+            <Width>17.99859cm</Width>
+            <ZIndex>35</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -2104,7 +1973,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2116,11 +1985,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>22.88985cm</Top>
-            <Left>1.15229cm</Left>
-            <Height>0.69536cm</Height>
-            <Width>19.53cm</Width>
-            <ZIndex>42</ZIndex>
+            <Top>20.80557cm</Top>
+            <Left>1.48216cm</Left>
+            <Height>0.66009cm</Height>
+            <Width>16.02338cm</Width>
+            <ZIndex>36</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2142,7 +2011,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2154,11 +2023,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>23.65577cm</Top>
-            <Left>1.15229cm</Left>
-            <Height>0.6614cm</Height>
-            <Width>19.53cm</Width>
-            <ZIndex>43</ZIndex>
+            <Top>21.57149cm</Top>
+            <Left>1.48216cm</Left>
+            <Height>0.66009cm</Height>
+            <Width>16.02338cm</Width>
+            <ZIndex>37</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2170,11 +2039,11 @@
             </Style>
           </Textbox>
           <Line Name="Line4">
-            <Top>24.423cm</Top>
-            <Left>0.14025cm</Left>
+            <Top>22.30345cm</Top>
+            <Left>0.53275cm</Left>
             <Height>0cm</Height>
-            <Width>22.19756cm</Width>
-            <ZIndex>44</ZIndex>
+            <Width>17.99859cm</Width>
+            <ZIndex>38</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -2191,7 +2060,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2201,11 +2070,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>17.99705cm</Top>
-            <Left>10.29032cm</Left>
+            <Top>16.26787cm</Top>
+            <Left>7.0193cm</Left>
             <Height>0.70583cm</Height>
-            <Width>11.69cm</Width>
-            <ZIndex>45</ZIndex>
+            <Width>11.13979cm</Width>
+            <ZIndex>39</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2226,7 +2095,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2236,11 +2105,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>17.99705cm</Top>
-            <Left>15.84199cm</Left>
+            <Top>16.26787cm</Top>
+            <Left>11.98115cm</Left>
             <Height>0.70583cm</Height>
             <Width>0.75375cm</Width>
-            <ZIndex>46</ZIndex>
+            <ZIndex>40</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2261,7 +2130,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2271,11 +2140,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>17.99705cm</Top>
-            <Left>18.04337cm</Left>
+            <Top>16.26787cm</Top>
+            <Left>14.04547cm</Left>
             <Height>0.70583cm</Height>
             <Width>0.75376cm</Width>
-            <ZIndex>47</ZIndex>
+            <ZIndex>41</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2296,7 +2165,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2306,11 +2175,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>17.99705cm</Top>
-            <Left>20.0224cm</Left>
+            <Top>16.26787cm</Top>
+            <Left>16.06409cm</Left>
             <Height>0.70583cm</Height>
             <Width>1.69805cm</Width>
-            <ZIndex>48</ZIndex>
+            <ZIndex>42</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2331,7 +2200,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>15pt</FontSize>
+                      <FontSize>13pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2343,11 +2212,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>18.87926cm</Top>
-            <Left>17.95646cm</Left>
+            <Top>17.11481cm</Top>
+            <Left>15.18766cm</Left>
             <Height>0.79334cm</Height>
-            <Width>4.38135cm</Width>
-            <ZIndex>49</ZIndex>
+            <Width>2.97143cm</Width>
+            <ZIndex>43</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2368,7 +2237,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>15pt</FontSize>
+                      <FontSize>13pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2380,11 +2249,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>18.87926cm</Top>
-            <Left>9.24785cm</Left>
+            <Top>17.11481cm</Top>
+            <Left>7.4845cm</Left>
             <Height>0.79334cm</Height>
-            <Width>7.03397cm</Width>
-            <ZIndex>50</ZIndex>
+            <Width>6.25586cm</Width>
+            <ZIndex>44</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2405,7 +2274,7 @@
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>15pt</FontSize>
+                      <FontSize>13pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -2417,11 +2286,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>18.87926cm</Top>
-            <Left>0.7576cm</Left>
+            <Top>17.11481cm</Top>
+            <Left>0.8384cm</Left>
             <Height>0.79334cm</Height>
-            <Width>6.83044cm</Width>
-            <ZIndex>51</ZIndex>
+            <Width>5.57009cm</Width>
+            <ZIndex>45</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2434,8 +2303,9 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Height>24.59939cm</Height>
-        <Width>23.77725cm</Width>
+        <Top>0.00001cm</Top>
+        <Height>22.39316cm</Height>
+        <Width>18.98642cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2443,13 +2313,13 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>9.6848in</Height>
+    <Height>8.85055in</Height>
     <Style />
   </Body>
-  <Width>9.36112in</Width>
+  <Width>7.47497in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>1.58052cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <Style>
@@ -2459,7 +2329,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>1.6096cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2473,7 +2343,8 @@
                   <Value>QCVN 03:2024/BTMNT</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontSize>12pt</FontSize>
+                    <FontFamily>Times New Roman</FontFamily>
+                    <FontSize>11pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2483,10 +2354,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.97cm</Top>
-          <Left>1.63984cm</Left>
+          <Top>0.70832cm</Top>
+          <Left>0.8384cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.29122cm</Width>
+          <Width>5.55907cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -2507,7 +2378,8 @@
                   <Value>Ban hành lần: 1</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontSize>12pt</FontSize>
+                    <FontFamily>Times New Roman</FontFamily>
+                    <FontSize>11pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2517,8 +2389,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.97cm</Top>
-          <Left>10.12993cm</Left>
+          <Top>0.70832cm</Top>
+          <Left>7.93106cm</Left>
           <Height>0.6cm</Height>
           <Width>5.24267cm</Width>
           <ZIndex>1</ZIndex>
@@ -2541,7 +2413,8 @@
                 <TextRun>
                   <Value>=Globals!PageNumber</Value>
                   <Style>
-                    <FontSize>12pt</FontSize>
+                    <FontFamily>Times New Roman</FontFamily>
+                    <FontSize>11pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2551,8 +2424,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.97cm</Top>
-          <Left>19.21729cm</Left>
+          <Top>0.70832cm</Top>
+          <Left>15.23894cm</Left>
           <Height>0.6cm</Height>
           <Width>2.92015cm</Width>
           <ZIndex>2</ZIndex>
@@ -2575,10 +2448,12 @@
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <InteractiveHeight>0cm</InteractiveHeight>
+    <InteractiveWidth>0cm</InteractiveWidth>
+    <LeftMargin>1cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
+    <TopMargin>1cm</TopMargin>
+    <BottomMargin>1cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

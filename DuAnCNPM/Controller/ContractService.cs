@@ -649,6 +649,7 @@ namespace DuAnCNPM.Controller
                                  join ctcs in context.ChiTietChiSos on hd.MA_HOP_DONG equals ctcs.MA_HOP_DONG
                                  join csmt in context.ChiSoMoiTruongs on ctcs.MA_CHI_SO equals csmt.MA_CHI_SO
                                  join nv in context.NhanViens on ctcs.MA_NHAN_VIEN equals nv.MA_NHAN_VIEN
+                                 join kh in context.KhachHangs on hd.MA_CONG_TY equals kh.MA_CONG_TY
                                  where hd.MA_HOP_DONG == MAHD
                                  select new ChiSoMoiTruongDTOR
                                  {
@@ -662,7 +663,12 @@ namespace DuAnCNPM.Controller
                                      NGAY_NHAP = ctcs.NGAY_NHAP,
                                      GHI_CHU = ctcs.GHI_CHU,
                                      KET_LUAN_SV_TC = ctcs.KET_LUAN_SV_TC,
-                                     KET_LUAN_LT = ctcs.KET_LUAN_LT
+                                     KET_LUAN_LT = ctcs.KET_LUAN_LT,
+                                     MA_CONG_TY = hd.MA_CONG_TY,
+                                     TEN_CONG_TY = kh.TEN_CONG_TY,
+                                     DIA_CHI =kh.DIA_CHI,
+                                     NGAY_TRA_KQ = hd.NGAY_TRA_KQ
+
                                  }).ToList();
             }
             return danhSachChiSo;

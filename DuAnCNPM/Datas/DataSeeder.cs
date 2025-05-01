@@ -188,7 +188,7 @@ namespace DuAnCNPM.Datas
                 empService.AddEmployee("Nguyễn Thanh Tun", "ADMIN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "tu21122005@gmail.com", true, "Q7");
                 empService.AddEmployee("Phan Tuấn Vỹ", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "tuanvy24905@gmail.com", false, "Q1");
                 empService.AddEmployee("Trần Cao Phong", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "caophongt60@gmail.com", false, "Q3");
-                empService.AddEmployee("Dương Nguyễn Minh Hoàng", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "52300025@gmail.com", false, "Q4");
+                empService.AddEmployee("Dương Nguyễn Minh Hoàng", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "boty1402@gmail.com", false, "Q4");
                 empService.AddEmployee("Hoàng Công Tài Thế", "PTN", new DateTime(2005, 12, 21), "123456", "nam", "0123747789", "52300074@gmail.com", false, "Q5");
                 empService.AddEmployee("Nguyễn Thanh Tú", "PTN", new DateTime(1996, 4, 10), "123456", "nam", "0909090909", "tu03673@gmail.com", true, "Q6");
                 empService.AddEmployee("Lê Thị Hồng Gấm", "PKD", new DateTime(1993, 9, 22), "123456", "nữ", "0918181818", "gam.le@example.com", false, "Q5");

@@ -19,5 +19,9 @@ namespace DuAnCNPM.Models
         public string GHI_CHU { get; set; }
         public string KET_LUAN_SV_TC { get; set; }
         public string KET_LUAN_LT { get; set; }
+        public string MA_CONG_TY { get; set; }
+        public string TEN_CONG_TY { get; set; }
+        public string DIA_CHI { get; set; }
+        public DateTime? NGAY_TRA_KQ { get; set; }
     }
 }

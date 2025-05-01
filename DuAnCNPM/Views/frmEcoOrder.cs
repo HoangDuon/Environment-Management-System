@@ -356,6 +356,7 @@ namespace DuAnCNPM
             CheckPanel(panWork, panReport, panVeUs, panForget, panForgetChange, panForgetOTP);
             ShowPanel(panSignIn,panHome);
             this.AcceptButton = btnSignIn;
+            this.reportBaocao.RefreshReport();
         }
         //thu nhỏ
         private void picMinisize_Click(object sender, EventArgs e)
@@ -533,6 +534,7 @@ namespace DuAnCNPM
                     this.reportBaocao.Width = this.Width - 20;
                     this.reportBaocao.Height = this.Height - 100;
                     this.reportBaocao.RefreshReport();
+
                 }
             }
             catch (Exception ex)
@@ -546,15 +548,16 @@ namespace DuAnCNPM
         {
             ContractService contract = new ContractService();
             String maDonHang = txtMadonhang.Text;
-            if (!contract.checkPrintCondition(maDonHang))
-            {
-                MessageBox.Show("Hãy nhập tất cả các chỉ số trong đơn hàng");
-                return;
-            }
+            //if (!contract.checkPrintCondition(maDonHang))
+            //{
+            //    MessageBox.Show("Hãy nhập tất cả các chỉ số trong đơn hàng");
+            //    return;
+            //}
             LoadData(contract.GetDanhSachChiSoReport(txtMadonhang.Text));
             ShowPanel(panReport);
         }
         // Click tiếp tục panForgetChange
+        OTPService OTP = new OTPService();
         private void btnContinueChange_Click(object sender, EventArgs e)
         {
             try
@@ -590,7 +593,6 @@ namespace DuAnCNPM
                         }
                         else
                         {
-                            OTPService OTP = new OTPService();
                             ResetPasswordService re = new ResetPasswordService();
                             if (re.ResetPasswordServices(OTP.email, txtPasswordNewAgain.Text))
                             {
@@ -611,7 +613,6 @@ namespace DuAnCNPM
         // gửi lại otp
         private void lblSentAgainOTP_Click(object sender, EventArgs e)
         {
-            OTPService OTP = new OTPService();
             if (OTP.sentOTP(txtInputEmail.Text))
             {
                 MessageBox.Show(isVN ? "OTP đã gửi đến Email của bạn vui lòng nhập OTP để đổi mật khẩu" : "OTP has been sent to your Email, please enter OTP to change password", isVN ? "Thông báo" : "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -631,7 +632,6 @@ namespace DuAnCNPM
         //panForgetOTP nút tiếp tục
         private void btnContinueOTP_Click(object sender, EventArgs e)
         {
-            OTPService OTP = new OTPService();
             if (OTP.OTPChecking(txtInputOTP.Text))
             {
                 CheckPanel(panForgetOTP);
@@ -648,7 +648,6 @@ namespace DuAnCNPM
         {
             try
             {
-                OTPService OTP = new OTPService();
                 Validating Vali = new Validating();
                 erpLoidinhdang.Clear();
 
@@ -2904,14 +2903,14 @@ namespace DuAnCNPM
         {
             if (isRecording)
             {
-                btnMic.FillColor = Color.MintCream;
+                btnMicAdmin.FillColor = Color.MintCream;
                 // Nếu đang thu âm, dừng thu âm
                 voiceSearch.StopVoiceSearch();
                 isRecording = false; // Cập nhật trạng thái
             }
             else
             {
-                btnMic.FillColor = Color.Tomato;
+                btnMicAdmin.FillColor = Color.Tomato;
                 // Nếu chưa thu âm, bắt đầu thu âm
                 voiceSearch.StartVoiceSearch();
                 isRecording = true; // Cập nhật trạng thái
@@ -2922,19 +2921,20 @@ namespace DuAnCNPM
         {
             if (isRecording)
             {
-                btnMic.FillColor = Color.MintCream;
+                btnMicFindNV.FillColor = Color.MintCream;
                 // Nếu đang thu âm, dừng thu âm
                 voiceSearch.StopVoiceSearch();
                 isRecording = false; // Cập nhật trạng thái
             }
             else
             {
-                btnMic.FillColor = Color.Tomato;
+                btnMicFindNV.FillColor = Color.Tomato;
                 // Nếu chưa thu âm, bắt đầu thu âm
                 voiceSearch.StartVoiceSearch();
                 isRecording = true; // Cập nhật trạng thái
             }
         }
+
 
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)
         {
