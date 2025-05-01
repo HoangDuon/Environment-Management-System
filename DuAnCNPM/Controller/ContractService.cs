@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace DuAnCNPM.Controller
@@ -703,29 +704,30 @@ namespace DuAnCNPM.Controller
             lvDulieuTS.View = View.Details;
             lvDulieuTS.Columns.Clear();
             lvDulieuTS.Columns.Add("Tên chỉ số", 150);
+            lvDulieuTS.Columns.Add("Vị trí", 100);
             lvDulieuTS.Columns.Add("Loại môi trường", 100);
             lvDulieuTS.Columns.Add("Chỉ số", 100);
-            lvDulieuTS.Columns.Add("Tiêu chuẩn", 100);
-            lvDulieuTS.Columns.Add("Vị trí", 100);
-            lvDulieuTS.Columns.Add("Ngày nhập", 150);
-            lvDulieuTS.Columns.Add("Ghi chú", 150);
             lvDulieuTS.Columns.Add("Kết luận SVTC", 150);
             lvDulieuTS.Columns.Add("Kết luận LT", 150);
+            lvDulieuTS.Columns.Add("Tiêu chuẩn", 100);
+            lvDulieuTS.Columns.Add("Ngày nhập", 150);
+            lvDulieuTS.Columns.Add("Ghi chú", 150);
             lvDulieuTS.Columns.Add("Mã thông số", 0);
             lvDulieuTS.Items.Clear();
             List<ChiSoMoiTruongDTO> danhSachChiSo = Contract.GetDanhSachChiSo(MADH);
             foreach (var chiso in danhSachChiSo)
             {
                 var item = new System.Windows.Forms.ListViewItem(chiso.TEN_CHI_SO);
+                item.SubItems.Add(chiso.VI_TRI);
                 item.SubItems.Add(chiso.LOAI_MOI_TRUONG);
                 item.SubItems.Add(chiso.CHI_SO.ToString());
-                item.SubItems.Add(chiso.TIEU_CHUAN);
-                item.SubItems.Add(chiso.VI_TRI);
-                item.SubItems.Add(chiso.NGAY_NHAP.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(chiso.GHI_CHU);
                 item.SubItems.Add(chiso.KET_LUAN_SV_TC);
                 item.SubItems.Add(chiso.KET_LUAN_LT);
+                item.SubItems.Add(chiso.TIEU_CHUAN);
+                item.SubItems.Add(chiso.NGAY_NHAP.ToString("dd/MM/yyyy"));
+                item.SubItems.Add(chiso.GHI_CHU);
                 item.SubItems.Add(chiso.MA_CHI_SO);
+                item.Font = new Font(lvDulieuTS.Font, FontStyle.Regular);
                 lvDulieuTS.Items.Add(item);
             }
         }
