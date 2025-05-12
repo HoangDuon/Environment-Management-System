@@ -237,6 +237,20 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.Click += (s, e) => ShowEmployeeDetail(nv, chitiet);
                     lblNgayHetHan.Click += (s, e) => ShowEmployeeDetail(nv, chitiet);
 
+                    lblTieuDe.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    lblNgayHetHan.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
                     panel.MouseEnter += (s, e) =>
                     {
                         panel.FillColor = Color.DarkGray;
@@ -252,6 +266,20 @@ namespace DuAnCNPM.Controller
                         lblTieuDe.FillColor = Color.Gainsboro;
                         lblNgayHetHan.FillColor = Color.Gainsboro;
 
+                    };
+
+                    lblTieuDe.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                    };
+
+                    lblNgayHetHan.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
                     };
 
                     yOffset += panel.Height + 10;
@@ -359,25 +387,53 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.Click += (s, e) => ShowEmployeeDetail(nv, chitiet);
                     lblNgayHetHan.Click += (s, e) => ShowEmployeeDetail(nv, chitiet);
 
-                    panel.MouseEnter += (s, e) =>
-                    {
-                        panel.FillColor = Color.DarkGray;
+                lblTieuDe.MouseEnter += (s, e) =>
+                {
+                    panel.FillColor = Color.DarkGray;
+                    lblTieuDe.FillColor = Color.DarkGray;
+                    lblNgayHetHan.FillColor = Color.DarkGray;
+                };
 
-                        lblTieuDe.FillColor = Color.DarkGray;
-                        lblNgayHetHan.FillColor = Color.DarkGray;
-                    };
+                lblNgayHetHan.MouseEnter += (s, e) =>
+                {
+                    panel.FillColor = Color.DarkGray;
+                    lblTieuDe.FillColor = Color.DarkGray;
+                    lblNgayHetHan.FillColor = Color.DarkGray;
+                };
 
-                    panel.MouseLeave += (s, e) =>
-                    {
-                        panel.FillColor = Color.Gainsboro;
+                panel.MouseEnter += (s, e) =>
+                {
+                    panel.FillColor = Color.DarkGray;
 
-                        lblTieuDe.FillColor = Color.Gainsboro;
-                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                    lblTieuDe.FillColor = Color.DarkGray;
+                    lblNgayHetHan.FillColor = Color.DarkGray;
+                };
 
-                    };
+                panel.MouseLeave += (s, e) =>
+                {
+                    panel.FillColor = Color.Gainsboro;
 
-                    yOffset += panel.Height + 10;
-                }
+                    lblTieuDe.FillColor = Color.Gainsboro;
+                    lblNgayHetHan.FillColor = Color.Gainsboro;
+
+                };
+
+                lblTieuDe.MouseLeave += (s, e) =>
+                {
+                    panel.FillColor = Color.Gainsboro;
+                    lblTieuDe.FillColor = Color.Gainsboro;
+                    lblNgayHetHan.FillColor = Color.Gainsboro;
+                };
+
+                lblNgayHetHan.MouseLeave += (s, e) =>
+                {
+                    panel.FillColor = Color.Gainsboro;
+                    lblTieuDe.FillColor = Color.Gainsboro;
+                    lblNgayHetHan.FillColor = Color.Gainsboro;
+                };
+
+                yOffset += panel.Height + 10;
+                } 
         }
 
         private void ShowEmployeeDetail(NhanVien nv, Panel main)
@@ -391,10 +447,9 @@ namespace DuAnCNPM.Controller
             (main.Controls["txtGmail"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = nv.GMAIL;
             (main.Controls["checkTruongPhong"] as Siticone.Desktop.UI.WinForms.SiticoneCustomCheckBox).Checked = nv.TRUONG_PHONG;
             (main.Controls["txtDiachi"] as Siticone.Desktop.UI.WinForms.SiticoneTextBox).Text = nv.DIA_CHI;
-            //((((main.Parent.Parent) as System.Windows.Forms.SplitContainer)
-            //    .Panel1).Controls["btnBackNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Visible = true;
-            //((((main.Parent.Parent) as System.Windows.Forms.SplitContainer)
-            //    .Panel1).Controls["btnSuaDSNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = true;
+            ((main.Parent).Controls["btnSuaDSNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = true;
+            ((main.Parent).Controls["btnXoaDSNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = false;
+            ((main.Parent).Controls["btnTaiDSNV"] as Siticone.Desktop.UI.WinForms.SiticoneButton).Enabled = false;
             main.Visible=true;
         }
 

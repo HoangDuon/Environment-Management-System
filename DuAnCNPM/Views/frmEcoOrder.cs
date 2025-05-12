@@ -2773,10 +2773,13 @@ namespace DuAnCNPM
                     txtFindma.Refresh(); // Refresh lại TextBox để cập nhật UI
                     txtFindAdmin.Refresh(); // Refresh lại TextBox để cập nhật UI   
 
-
+                    btnMicAdmin.FillColor = Color.MintCream;
+                    btnMicFindNV.FillColor = Color.MintCream;
                     btnMic.FillColor = Color.MintCream;
                     voiceSearch.StopVoiceSearch();
                     isRecording = false; // Cập nhật trạng thái
+                    isRecordingMicAdmin = false;
+                    isRecordingMicFindNV = false;
                 };
 
                 if (this.InvokeRequired)
@@ -2910,39 +2913,42 @@ namespace DuAnCNPM
 
         }
 
+        private bool isRecordingMicAdmin = false;
+        private bool isRecordingMicFindNV = false;
+
         private void btnMicAdmin_Click(object sender, EventArgs e)
         {
-            if (isRecording)
+            if (isRecordingMicAdmin)
             {
                 btnMicAdmin.FillColor = Color.MintCream;
                 // Nếu đang thu âm, dừng thu âm
                 voiceSearch.StopVoiceSearch();
-                isRecording = false; // Cập nhật trạng thái
+                isRecordingMicAdmin = false; // Cập nhật trạng thái
             }
             else
             {
                 btnMicAdmin.FillColor = Color.Tomato;
                 // Nếu chưa thu âm, bắt đầu thu âm
                 voiceSearch.StartVoiceSearch();
-                isRecording = true; // Cập nhật trạng thái
+                isRecordingMicAdmin = true; // Cập nhật trạng thái
             }
         }
 
         private void btnMicFindNV_Click(object sender, EventArgs e)
         {
-            if (isRecording)
+            if (isRecordingMicFindNV)
             {
                 btnMicFindNV.FillColor = Color.MintCream;
+                isRecordingMicFindNV = false; // Cập nhật trạng thái
                 // Nếu đang thu âm, dừng thu âm
                 voiceSearch.StopVoiceSearch();
-                isRecording = false; // Cập nhật trạng thái
             }
             else
             {
                 btnMicFindNV.FillColor = Color.Tomato;
+                isRecordingMicFindNV = true; // Cập nhật trạng thái
                 // Nếu chưa thu âm, bắt đầu thu âm
                 voiceSearch.StartVoiceSearch();
-                isRecording = true; // Cập nhật trạng thái
             }
         }
 

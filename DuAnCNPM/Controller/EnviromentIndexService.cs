@@ -313,6 +313,35 @@ namespace DuAnCNPM.Controller
                 lblTieuDe.Click += (s, e) => ShowStatsDetail(cs, chitiet);
                 lblNgayHetHan.Click += (s, e) => ShowStatsDetail(cs, chitiet);
 
+                lblTieuDe.MouseEnter += (s, e) =>
+                {
+                    panel.FillColor = Color.DarkGray;
+
+                    lblTieuDe.FillColor = Color.DarkGray;
+                    lblNgayHetHan.FillColor = Color.DarkGray;
+                };
+
+                lblTieuDe.MouseLeave += (s, e) =>
+                {
+                    panel.FillColor = Color.Gainsboro;
+                    lblTieuDe.FillColor = Color.Gainsboro;
+                    lblNgayHetHan.FillColor = Color.Gainsboro;
+                };
+
+                lblNgayHetHan.MouseEnter += (s, e) =>
+                {
+                    panel.FillColor = Color.DarkGray;
+                    lblTieuDe.FillColor = Color.DarkGray;
+                    lblNgayHetHan.FillColor = Color.DarkGray;
+                };
+
+                lblNgayHetHan.MouseLeave += (s, e) =>
+                {
+                    panel.FillColor = Color.Gainsboro;
+                    lblTieuDe.FillColor = Color.Gainsboro;
+                    lblNgayHetHan.FillColor = Color.Gainsboro;
+                };
+
                 panel.MouseEnter += (s, e) =>
                 {
                     panel.FillColor = Color.DarkGray;
@@ -436,6 +465,35 @@ namespace DuAnCNPM.Controller
                     panel.Click += (s, e) => ShowStatsDetail(cs, chitiet);
                     lblTieuDe.Click += (s, e) => ShowStatsDetail(cs, chitiet);
                     lblNgayHetHan.Click += (s, e) => ShowStatsDetail(cs, chitiet);
+
+                    lblTieuDe.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    lblTieuDe.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                    };
+
+                    lblNgayHetHan.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    lblNgayHetHan.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                    };
 
                     panel.MouseEnter += (s, e) =>
                     {

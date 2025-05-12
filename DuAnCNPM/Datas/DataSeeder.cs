@@ -69,7 +69,7 @@ namespace DuAnCNPM.Datas
 
                     //ContractService cs = new ContractService();
                     //for (int i = 0; i < testCase.Length; i++)
-                    //{
+                    //{ 
                     //    Console.WriteLine("Test case: " + testCase[i] + "----------------------------------");
                     //    List<HopDong> listnv = cs.searchContract(testCase[i]);
                     //    foreach (HopDong nv in listnv)

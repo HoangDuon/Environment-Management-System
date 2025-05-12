@@ -65,6 +65,7 @@ namespace DuAnCNPM.Controller
                     txtNgayHetHan.Location = new System.Drawing.Point(11, 28);
                     txtNgayHetHan.Name = "txtNgayhethan-";
                     txtNgayHetHan.ReadOnly = true;
+                    txtNgayHetHan.Cursor = default;
                     txtNgayHetHan.Visible = true;
                     txtNgayHetHan.Size = new System.Drawing.Size(width, 18);
                     txtNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -84,6 +85,7 @@ namespace DuAnCNPM.Controller
                     txtTieuDe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
                     txtTieuDe.Name = tb.MA_THONG_BAO;
                     txtTieuDe.ReadOnly = true;
+                    txtTieuDe.Cursor = default;
                     txtTieuDe.Visible = true;
                     txtTieuDe.Size = new System.Drawing.Size(width, 18);
                     txtTieuDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -93,19 +95,57 @@ namespace DuAnCNPM.Controller
                     txtTieuDe.Click += (s, e) => ShowAnnouncementDetailEm(tb, chitiet);
                     txtNgayHetHan.Click += (s, e) => ShowAnnouncementDetailEm(tb, chitiet);
 
-                    container.MouseEnter += (s, e) =>
+                    grbox.MouseEnter += (s, e) =>
                     {
-                        container.FillColor = Color.DarkGray;
-                        container.BorderColor = Color.DeepSkyBlue;
+                        grbox.FillColor = Color.DarkGray;
+                        grbox.BorderColor = Color.DeepSkyBlue;
 
                         txtTieuDe.FillColor = Color.DarkGray;
                         txtNgayHetHan.FillColor = Color.DarkGray;
                     };
 
-                    container.MouseLeave += (s, e) =>
+                    txtTieuDe.MouseEnter += (s, e) =>
                     {
-                        container.FillColor = Color.Gainsboro;
-                        container.BorderColor = Color.LightGray;
+                        grbox.FillColor = Color.DarkGray;
+                        grbox.BorderColor = Color.DeepSkyBlue;
+
+                        txtTieuDe.FillColor = Color.DarkGray;
+                        txtNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    txtNgayHetHan.MouseEnter += (s, e) =>
+                    {
+                        grbox.FillColor = Color.DarkGray;
+                        grbox.BorderColor = Color.DeepSkyBlue;
+
+                        txtTieuDe.FillColor = Color.DarkGray;
+                        txtNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    grbox.MouseLeave += (s, e) =>
+                    {
+                        grbox.FillColor = Color.Gainsboro;
+                        grbox.BorderColor = Color.LightGray;
+
+                        txtTieuDe.FillColor = Color.Gainsboro;
+                        txtNgayHetHan.FillColor = Color.Gainsboro;
+
+                    };
+
+                    txtTieuDe.MouseLeave += (s, e) =>
+                    {
+                        grbox.FillColor = Color.Gainsboro;
+                        grbox.BorderColor = Color.LightGray;
+
+                        txtTieuDe.FillColor = Color.Gainsboro;
+                        txtNgayHetHan.FillColor = Color.Gainsboro;
+
+                    };
+
+                    txtNgayHetHan.MouseLeave += (s, e) =>
+                    {
+                        grbox.FillColor = Color.Gainsboro;
+                        grbox.BorderColor = Color.LightGray;
 
                         txtTieuDe.FillColor = Color.Gainsboro;
                         txtNgayHetHan.FillColor = Color.Gainsboro;
@@ -157,6 +197,7 @@ namespace DuAnCNPM.Controller
                     txtNgayHetHan.Location = new System.Drawing.Point(11, 28);
                     txtNgayHetHan.Name = "txtNgayhethan-";
                     txtNgayHetHan.ReadOnly = true;
+                    txtNgayHetHan.Cursor = default;
                     txtNgayHetHan.Visible = true;
                     txtNgayHetHan.Size = new System.Drawing.Size(width, 18);
                     txtNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -176,6 +217,7 @@ namespace DuAnCNPM.Controller
                     txtTieuDe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
                     txtTieuDe.Name = tb.MA_THONG_BAO;
                     txtTieuDe.ReadOnly = true;
+                    txtTieuDe.Cursor = default;
                     txtTieuDe.Visible = true;
                     txtTieuDe.Size = new System.Drawing.Size(width, 18);
                     txtTieuDe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -185,19 +227,57 @@ namespace DuAnCNPM.Controller
                     txtTieuDe.Click += (s, e) => ShowAnnouncementDetailEm(tb, chitiet);
                     txtNgayHetHan.Click += (s, e) => ShowAnnouncementDetailEm(tb, chitiet);
 
-                    container.MouseEnter += (s, e) =>
+                    grbox.MouseEnter += (s, e) =>
                     {
-                        container.FillColor = Color.DarkGray;
-                        container.BorderColor = Color.DeepSkyBlue;
+                        grbox.FillColor = Color.DarkGray;
+                        grbox.BorderColor = Color.DeepSkyBlue;
 
                         txtTieuDe.FillColor = Color.DarkGray;
                         txtNgayHetHan.FillColor = Color.DarkGray;
                     };
 
-                    container.MouseLeave += (s, e) =>
+                    txtTieuDe.MouseEnter += (s, e) =>
                     {
-                        container.FillColor = Color.Gainsboro;
-                        container.BorderColor = Color.LightGray;
+                        grbox.FillColor = Color.DarkGray;
+                        grbox.BorderColor = Color.DeepSkyBlue;
+
+                        txtTieuDe.FillColor = Color.DarkGray;
+                        txtNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    txtNgayHetHan.MouseEnter += (s, e) =>
+                    {
+                        grbox.FillColor = Color.DarkGray;
+                        grbox.BorderColor = Color.DeepSkyBlue;
+
+                        txtTieuDe.FillColor = Color.DarkGray;
+                        txtNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    grbox.MouseLeave += (s, e) =>
+                        {
+                        grbox.FillColor = Color.Gainsboro;
+                        grbox.BorderColor = Color.LightGray;
+
+                        txtTieuDe.FillColor = Color.Gainsboro;
+                        txtNgayHetHan.FillColor = Color.Gainsboro;
+
+                    };
+
+                    txtTieuDe.MouseLeave += (s, e) =>
+                    {
+                        grbox.FillColor = Color.Gainsboro;
+                        grbox.BorderColor = Color.LightGray;
+
+                        txtTieuDe.FillColor = Color.Gainsboro;
+                        txtNgayHetHan.FillColor = Color.Gainsboro;
+
+                    };
+
+                    txtNgayHetHan.MouseLeave += (s, e) =>
+                    {
+                        grbox.FillColor = Color.Gainsboro;
+                        grbox.BorderColor = Color.LightGray;
 
                         txtTieuDe.FillColor = Color.Gainsboro;
                         txtNgayHetHan.FillColor = Color.Gainsboro;
@@ -299,6 +379,20 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.Click += (s, e) => ShowAnnouncementDetail(tb, chitiet);
                     lblNgayHetHan.Click += (s, e) => ShowAnnouncementDetail(tb, chitiet);
 
+                    lblTieuDe.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    lblNgayHetHan.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
                     panel.MouseEnter += (s, e) =>
                     {
                         panel.FillColor = Color.DarkGray;
@@ -315,6 +409,22 @@ namespace DuAnCNPM.Controller
                         lblNgayHetHan.FillColor = Color.Gainsboro;
 
                     };
+
+                    lblTieuDe.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                    };
+
+                    lblNgayHetHan.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                    };
+
+
 
                     yOffset += panel.Height + 10;
                 }
@@ -403,6 +513,21 @@ namespace DuAnCNPM.Controller
                 lblTieuDe.Click += (s, e) => ShowAnnouncementDetail(tb, chitiet);
                 lblNgayHetHan.Click += (s, e) => ShowAnnouncementDetail(tb, chitiet);
 
+
+                lblTieuDe.MouseEnter += (s, e) =>
+                {
+                    panel.FillColor = Color.DarkGray;
+                    lblTieuDe.FillColor = Color.DarkGray;
+                    lblNgayHetHan.FillColor = Color.DarkGray;
+                };
+
+                lblNgayHetHan.MouseEnter += (s, e) =>
+                {
+                    panel.FillColor = Color.DarkGray;
+                    lblTieuDe.FillColor = Color.DarkGray;
+                    lblNgayHetHan.FillColor = Color.DarkGray;
+                };
+
                 panel.MouseEnter += (s, e) =>
                 {
                     panel.FillColor = Color.DarkGray;
@@ -418,6 +543,20 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.FillColor = Color.Gainsboro;
                     lblNgayHetHan.FillColor = Color.Gainsboro;
 
+                };
+
+                lblTieuDe.MouseLeave += (s, e) =>
+                {
+                    panel.FillColor = Color.Gainsboro;
+                    lblTieuDe.FillColor = Color.Gainsboro;
+                    lblNgayHetHan.FillColor = Color.Gainsboro;
+                };
+
+                lblNgayHetHan.MouseLeave += (s, e) =>
+                {
+                    panel.FillColor = Color.Gainsboro;
+                    lblTieuDe.FillColor = Color.Gainsboro;
+                    lblNgayHetHan.FillColor = Color.Gainsboro;
                 };
 
                 yOffset += panel.Height + 10;

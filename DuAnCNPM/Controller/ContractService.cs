@@ -108,8 +108,12 @@ namespace DuAnCNPM.Controller
                 var hopdong = context.HopDongs.Find(MaHopDong);
                 if (hopdong == null) return false;
 
+                var listIndex = context.ChiTietChiSos.Where(index => index.MA_HOP_DONG == MaHopDong);
+                context.ChiTietChiSos.RemoveRange(listIndex);
+
                 //xoa hop dong 
-                hopdong.TRANG_THAI = false;  // update
+                //hopdong.TRANG_THAI = false;  // update
+                context.HopDongs.Remove(hopdong);
                 context.SaveChanges();
             }
             return true;
@@ -427,6 +431,21 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.Click += (s, e) => ShowContractDetailAdmin(hd, chitiet);
                     lblNgayHetHan.Click += (s, e) => ShowContractDetailAdmin(hd, chitiet);
 
+                    lblTieuDe.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    lblNgayHetHan.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
                     panel.MouseEnter += (s, e) =>
                     {
                         panel.FillColor = Color.DarkGray;
@@ -444,7 +463,25 @@ namespace DuAnCNPM.Controller
 
                     };
 
-                    yOffset += panel.Height + 10;
+                    lblTieuDe.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+
+                    };
+
+                    lblNgayHetHan.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+
+                    };
+
+                yOffset += panel.Height + 10;
 
                 }
         }
@@ -550,6 +587,21 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.Click += (s, e) => ShowContractDetailAdmin(hd, chitiet);
                     lblNgayHetHan.Click += (s, e) => ShowContractDetailAdmin(hd, chitiet);
 
+                    lblTieuDe.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
+                    lblNgayHetHan.MouseEnter += (s, e) =>
+                    {
+                        panel.FillColor = Color.DarkGray;
+                        lblTieuDe.FillColor = Color.DarkGray;
+                        lblNgayHetHan.FillColor = Color.DarkGray;
+                    };
+
                     panel.MouseEnter += (s, e) =>
                     {
                         panel.FillColor = Color.DarkGray;
@@ -559,6 +611,24 @@ namespace DuAnCNPM.Controller
                     };
 
                     panel.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+
+                    };
+
+                    lblTieuDe.MouseLeave += (s, e) =>
+                    {
+                        panel.FillColor = Color.Gainsboro;
+
+                        lblTieuDe.FillColor = Color.Gainsboro;
+                        lblNgayHetHan.FillColor = Color.Gainsboro;
+
+                    };
+
+                    lblNgayHetHan.MouseLeave += (s, e) =>
                     {
                         panel.FillColor = Color.Gainsboro;
 
@@ -805,25 +875,63 @@ namespace DuAnCNPM.Controller
                         txtTieuDe.Click += (s, e) => ShowContractDetail(hd, chitiet);
                         txtNgayHetHan.Click += (s, e) => ShowContractDetail(hd, chitiet);
 
-                        container.MouseEnter += (s, e) =>
+                        txtTieuDe.MouseEnter += (s, e) =>
                         {
-                            container.FillColor = Color.DarkGray;
-                            container.BorderColor = Color.DeepSkyBlue;
+                            grbox.FillColor = Color.DarkGray;
+                            grbox.BorderColor = Color.DeepSkyBlue;
 
                             txtTieuDe.FillColor = Color.DarkGray;
                             txtNgayHetHan.FillColor = Color.DarkGray;
                         };
 
-                        container.MouseLeave += (s, e) =>
+                        txtNgayHetHan.MouseEnter += (s, e) =>
                         {
-                            container.FillColor = Color.Gainsboro;
-                            container.BorderColor = Color.LightGray;
+                            grbox.FillColor = Color.DarkGray;
+                            grbox.BorderColor = Color.DeepSkyBlue;
+
+                            txtTieuDe.FillColor = Color.DarkGray;
+                            txtNgayHetHan.FillColor = Color.DarkGray;
+                        };
+
+                        grbox.MouseEnter += (s, e) =>
+                        {
+                            grbox.FillColor = Color.DarkGray;
+                            grbox.BorderColor = Color.DeepSkyBlue;
+
+                            txtTieuDe.FillColor = Color.DarkGray;
+                            txtNgayHetHan.FillColor = Color.DarkGray;
+                        };
+
+                        grbox.MouseLeave += (s, e) =>
+                        {
+                            grbox.FillColor = Color.Gainsboro;
+                            grbox.BorderColor = Color.LightGray;
 
                             txtTieuDe.FillColor = Color.Gainsboro;
                             txtNgayHetHan.FillColor = Color.Gainsboro;
 
                         };
-                    }
+
+                        txtTieuDe.MouseLeave += (s, e) =>
+                        {
+                            grbox.FillColor = Color.Gainsboro;
+                            grbox.BorderColor = Color.LightGray;
+
+                            txtTieuDe.FillColor = Color.Gainsboro;
+                            txtNgayHetHan.FillColor = Color.Gainsboro;
+
+                        };
+
+                        txtNgayHetHan.MouseLeave += (s, e) =>
+                        {
+                            grbox.FillColor = Color.Gainsboro;
+                            grbox.BorderColor = Color.LightGray;
+
+                            txtTieuDe.FillColor = Color.Gainsboro;
+                            txtNgayHetHan.FillColor = Color.Gainsboro;
+
+                        };
+                }
                 }
         }
 
@@ -902,20 +1010,57 @@ namespace DuAnCNPM.Controller
                         grbox.Click += (s, e) => ShowContractDetail(hd, chitiet);
                         txtTieuDe.Click += (s, e) => ShowContractDetail(hd, chitiet);
                         txtNgayHetHan.Click += (s, e) => ShowContractDetail(hd, chitiet);
-
-                        container.MouseEnter += (s, e) =>
+                        txtTieuDe.MouseEnter += (s, e) =>
                         {
-                            container.FillColor = Color.DarkGray;
-                            container.BorderColor = Color.DeepSkyBlue;
+                            grbox.FillColor = Color.DarkGray;
+                            grbox.BorderColor = Color.DeepSkyBlue;
 
                             txtTieuDe.FillColor = Color.DarkGray;
                             txtNgayHetHan.FillColor = Color.DarkGray;
                         };
 
-                        container.MouseLeave += (s, e) =>
+                        txtNgayHetHan.MouseEnter += (s, e) =>
                         {
-                            container.FillColor = Color.Gainsboro;
-                            container.BorderColor = Color.LightGray;
+                            grbox.FillColor = Color.DarkGray;
+                            grbox.BorderColor = Color.DeepSkyBlue;
+
+                            txtTieuDe.FillColor = Color.DarkGray;
+                            txtNgayHetHan.FillColor = Color.DarkGray;
+                        };
+
+                        grbox.MouseEnter += (s, e) =>
+                        {
+                            grbox.FillColor = Color.DarkGray;
+                            grbox.BorderColor = Color.DeepSkyBlue;
+
+                            txtTieuDe.FillColor = Color.DarkGray;
+                            txtNgayHetHan.FillColor = Color.DarkGray;
+                        };
+
+                        grbox.MouseLeave += (s, e) =>
+                        {
+                            grbox.FillColor = Color.Gainsboro;
+                            grbox.BorderColor = Color.LightGray;
+
+                            txtTieuDe.FillColor = Color.Gainsboro;
+                            txtNgayHetHan.FillColor = Color.Gainsboro;
+
+                        };
+
+                        txtTieuDe.MouseLeave += (s, e) =>
+                        {
+                            grbox.FillColor = Color.Gainsboro;
+                            grbox.BorderColor = Color.LightGray;
+
+                            txtTieuDe.FillColor = Color.Gainsboro;
+                            txtNgayHetHan.FillColor = Color.Gainsboro;
+
+                        };
+
+                        txtNgayHetHan.MouseLeave += (s, e) =>
+                        {
+                            grbox.FillColor = Color.Gainsboro;
+                            grbox.BorderColor = Color.LightGray;
 
                             txtTieuDe.FillColor = Color.Gainsboro;
                             txtNgayHetHan.FillColor = Color.Gainsboro;
