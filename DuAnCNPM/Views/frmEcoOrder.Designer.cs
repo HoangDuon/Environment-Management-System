@@ -222,6 +222,18 @@ namespace DuAnCNPM
             this.btnAddTB = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnSortThongbao = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lblDanhsachTB = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.panTB = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnSortTB = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.lblDSTB = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.panDSTB = new DuAnCNPM.Views.DoubleBufferedPanel();
+            this.lblGachngang = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.panNoidungTB = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblDateTB = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.ricNDungTB = new System.Windows.Forms.RichTextBox();
+            this.lblTitleTB = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.btnFindTB = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
+            this.txtFindTB = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.panDSDH = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnSortDH = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panDSHDnvchitiet = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
@@ -327,18 +339,6 @@ namespace DuAnCNPM
             this.lblMaNV = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.btnFindNV = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.txtFindNV = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.panTB = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.btnSortTB = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.lblDSTB = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.panDSTB = new DuAnCNPM.Views.DoubleBufferedPanel();
-            this.lblGachngang = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.panNoidungTB = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.lblDateTB = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.ricNDungTB = new System.Windows.Forms.RichTextBox();
-            this.lblTitleTB = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.btnFindTB = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
-            this.txtFindTB = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.panLogOut = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.grbLogout = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
             this.btnContinueLogout = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -392,6 +392,8 @@ namespace DuAnCNPM
             this.panTTTSchitiet.SuspendLayout();
             this.tabQLTB.SuspendLayout();
             this.panDSTBchitiet.SuspendLayout();
+            this.panTB.SuspendLayout();
+            this.panNoidungTB.SuspendLayout();
             this.panDSDH.SuspendLayout();
             this.panDSHDnvchitiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitDSHDnvchitiet)).BeginInit();
@@ -423,8 +425,6 @@ namespace DuAnCNPM
             this.panFindNV.SuspendLayout();
             this.grbTimthay.SuspendLayout();
             this.grbAllTTNV.SuspendLayout();
-            this.panTB.SuspendLayout();
-            this.panNoidungTB.SuspendLayout();
             this.panLogOut.SuspendLayout();
             this.grbLogout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -3961,6 +3961,200 @@ namespace DuAnCNPM
             this.lblDanhsachTB.Text = "Danh sách thông báo";
             this.lblDanhsachTB.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panTB
+            // 
+            this.panTB.BackColor = System.Drawing.Color.Transparent;
+            this.panTB.Controls.Add(this.btnSortTB);
+            this.panTB.Controls.Add(this.lblDSTB);
+            this.panTB.Controls.Add(this.panDSTB);
+            this.panTB.Controls.Add(this.lblGachngang);
+            this.panTB.Controls.Add(this.siticoneHtmlLabel5);
+            this.panTB.Controls.Add(this.panNoidungTB);
+            this.panTB.Controls.Add(this.btnFindTB);
+            this.panTB.Controls.Add(this.txtFindTB);
+            this.panTB.FillColor = System.Drawing.Color.MintCream;
+            this.panTB.Location = new System.Drawing.Point(220, 65);
+            this.panTB.Margin = new System.Windows.Forms.Padding(2);
+            this.panTB.Name = "panTB";
+            this.panTB.Size = new System.Drawing.Size(980, 585);
+            this.panTB.TabIndex = 119;
+            // 
+            // btnSortTB
+            // 
+            this.btnSortTB.BackColor = System.Drawing.Color.MintCream;
+            this.btnSortTB.BorderColor = System.Drawing.Color.MintCream;
+            this.btnSortTB.BorderRadius = 5;
+            this.btnSortTB.BorderThickness = 1;
+            this.btnSortTB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSortTB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSortTB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSortTB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSortTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSortTB.FillColor = System.Drawing.Color.MintCream;
+            this.btnSortTB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSortTB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSortTB.ForeColor = System.Drawing.Color.White;
+            this.btnSortTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSortTB.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSortTB.Image = global::DuAnCNPM.Properties.Resources.sortGiam;
+            this.btnSortTB.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnSortTB.Location = new System.Drawing.Point(936, 10);
+            this.btnSortTB.Name = "btnSortTB";
+            this.btnSortTB.Size = new System.Drawing.Size(41, 41);
+            this.btnSortTB.TabIndex = 83;
+            this.btnSortTB.Click += new System.EventHandler(this.btnSortTB_Click);
+            // 
+            // lblDSTB
+            // 
+            this.lblDSTB.AutoSize = false;
+            this.lblDSTB.BackColor = System.Drawing.Color.MintCream;
+            this.lblDSTB.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSTB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDSTB.Location = new System.Drawing.Point(721, 3);
+            this.lblDSTB.Name = "lblDSTB";
+            this.lblDSTB.Size = new System.Drawing.Size(259, 57);
+            this.lblDSTB.TabIndex = 81;
+            this.lblDSTB.Text = "Danh sách thông báo\r\n";
+            this.lblDSTB.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panDSTB
+            // 
+            this.panDSTB.AutoScroll = true;
+            this.panDSTB.BackColor = System.Drawing.Color.Transparent;
+            this.panDSTB.BorderColor = System.Drawing.Color.Honeydew;
+            this.panDSTB.FillColor = System.Drawing.Color.MintCream;
+            this.panDSTB.Location = new System.Drawing.Point(721, 60);
+            this.panDSTB.Name = "panDSTB";
+            this.panDSTB.Size = new System.Drawing.Size(259, 525);
+            this.panDSTB.TabIndex = 82;
+            // 
+            // lblGachngang
+            // 
+            this.lblGachngang.AutoSize = false;
+            this.lblGachngang.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.lblGachngang.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.lblGachngang.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblGachngang.Location = new System.Drawing.Point(15, 100);
+            this.lblGachngang.Name = "lblGachngang";
+            this.lblGachngang.Size = new System.Drawing.Size(700, 2);
+            this.lblGachngang.TabIndex = 47;
+            this.lblGachngang.Text = null;
+            this.lblGachngang.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // siticoneHtmlLabel5
+            // 
+            this.siticoneHtmlLabel5.AutoSize = false;
+            this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.Black;
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(62, 58);
+            this.siticoneHtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
+            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(464, 44);
+            this.siticoneHtmlLabel5.TabIndex = 46;
+            this.siticoneHtmlLabel5.Text = "Thông báo";
+            this.siticoneHtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panNoidungTB
+            // 
+            this.panNoidungTB.Controls.Add(this.lblDateTB);
+            this.panNoidungTB.Controls.Add(this.ricNDungTB);
+            this.panNoidungTB.Controls.Add(this.lblTitleTB);
+            this.panNoidungTB.FillColor = System.Drawing.Color.Honeydew;
+            this.panNoidungTB.Location = new System.Drawing.Point(15, 108);
+            this.panNoidungTB.Name = "panNoidungTB";
+            this.panNoidungTB.Size = new System.Drawing.Size(700, 464);
+            this.panNoidungTB.TabIndex = 26;
+            // 
+            // lblDateTB
+            // 
+            this.lblDateTB.AutoSize = false;
+            this.lblDateTB.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDateTB.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblDateTB.Location = new System.Drawing.Point(252, 89);
+            this.lblDateTB.Margin = new System.Windows.Forms.Padding(4);
+            this.lblDateTB.Name = "lblDateTB";
+            this.lblDateTB.Size = new System.Drawing.Size(438, 25);
+            this.lblDateTB.TabIndex = 49;
+            this.lblDateTB.Text = "Ngày";
+            this.lblDateTB.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ricNDungTB
+            // 
+            this.ricNDungTB.BackColor = System.Drawing.Color.Honeydew;
+            this.ricNDungTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ricNDungTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.ricNDungTB.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.ricNDungTB.Location = new System.Drawing.Point(14, 125);
+            this.ricNDungTB.Name = "ricNDungTB";
+            this.ricNDungTB.ReadOnly = true;
+            this.ricNDungTB.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.ricNDungTB.Size = new System.Drawing.Size(656, 329);
+            this.ricNDungTB.TabIndex = 50;
+            this.ricNDungTB.Text = "Nội dung thông báo";
+            // 
+            // lblTitleTB
+            // 
+            this.lblTitleTB.AutoSize = false;
+            this.lblTitleTB.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleTB.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleTB.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblTitleTB.Location = new System.Drawing.Point(3, 19);
+            this.lblTitleTB.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTitleTB.Name = "lblTitleTB";
+            this.lblTitleTB.Size = new System.Drawing.Size(696, 39);
+            this.lblTitleTB.TabIndex = 48;
+            this.lblTitleTB.Text = "Tiêu đề thông báo";
+            this.lblTitleTB.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnFindTB
+            // 
+            this.btnFindTB.BackColor = System.Drawing.Color.Transparent;
+            this.btnFindTB.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btnFindTB.BorderThickness = 1;
+            this.btnFindTB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFindTB.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnFindTB.FillColor = System.Drawing.Color.MintCream;
+            this.btnFindTB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnFindTB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFindTB.ForeColor = System.Drawing.Color.White;
+            this.btnFindTB.HoverState.BorderColor = System.Drawing.Color.Cyan;
+            this.btnFindTB.HoverState.FillColor = System.Drawing.Color.Honeydew;
+            this.btnFindTB.Image = global::DuAnCNPM.Properties.Resources.magnifying_glass_search;
+            this.btnFindTB.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnFindTB.Location = new System.Drawing.Point(15, 13);
+            this.btnFindTB.Name = "btnFindTB";
+            this.btnFindTB.Size = new System.Drawing.Size(40, 40);
+            this.btnFindTB.TabIndex = 24;
+            this.btnFindTB.UseTransparentBackground = true;
+            this.btnFindTB.Click += new System.EventHandler(this.btnFindTB_Click);
+            // 
+            // txtFindTB
+            // 
+            this.txtFindTB.BackColor = System.Drawing.Color.Transparent;
+            this.txtFindTB.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtFindTB.BorderRadius = 21;
+            this.txtFindTB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFindTB.DefaultText = "";
+            this.txtFindTB.FillColor = System.Drawing.Color.MintCream;
+            this.txtFindTB.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtFindTB.FocusedState.ForeColor = System.Drawing.Color.Black;
+            this.txtFindTB.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtFindTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFindTB.ForeColor = System.Drawing.Color.Black;
+            this.txtFindTB.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtFindTB.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.txtFindTB.Location = new System.Drawing.Point(62, 10);
+            this.txtFindTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFindTB.Name = "txtFindTB";
+            this.txtFindTB.PasswordChar = '\0';
+            this.txtFindTB.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtFindTB.PlaceholderText = "Tìm kiếm thông báo";
+            this.txtFindTB.SelectedText = "";
+            this.txtFindTB.Size = new System.Drawing.Size(653, 45);
+            this.txtFindTB.TabIndex = 23;
+            // 
             // panDSDH
             // 
             this.panDSDH.Controls.Add(this.btnSortDH);
@@ -5845,199 +6039,6 @@ namespace DuAnCNPM
             this.txtFindNV.Size = new System.Drawing.Size(848, 45);
             this.txtFindNV.TabIndex = 23;
             // 
-            // panTB
-            // 
-            this.panTB.BackColor = System.Drawing.Color.Transparent;
-            this.panTB.Controls.Add(this.btnSortTB);
-            this.panTB.Controls.Add(this.lblDSTB);
-            this.panTB.Controls.Add(this.panDSTB);
-            this.panTB.Controls.Add(this.lblGachngang);
-            this.panTB.Controls.Add(this.siticoneHtmlLabel5);
-            this.panTB.Controls.Add(this.panNoidungTB);
-            this.panTB.Controls.Add(this.btnFindTB);
-            this.panTB.Controls.Add(this.txtFindTB);
-            this.panTB.FillColor = System.Drawing.Color.MintCream;
-            this.panTB.Location = new System.Drawing.Point(220, 65);
-            this.panTB.Margin = new System.Windows.Forms.Padding(2);
-            this.panTB.Name = "panTB";
-            this.panTB.Size = new System.Drawing.Size(980, 585);
-            this.panTB.TabIndex = 119;
-            // 
-            // btnSortTB
-            // 
-            this.btnSortTB.BackColor = System.Drawing.Color.MintCream;
-            this.btnSortTB.BorderColor = System.Drawing.Color.MintCream;
-            this.btnSortTB.BorderRadius = 5;
-            this.btnSortTB.BorderThickness = 1;
-            this.btnSortTB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSortTB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSortTB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSortTB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSortTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSortTB.FillColor = System.Drawing.Color.MintCream;
-            this.btnSortTB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSortTB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSortTB.ForeColor = System.Drawing.Color.White;
-            this.btnSortTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSortTB.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSortTB.Image = global::DuAnCNPM.Properties.Resources.sortGiam;
-            this.btnSortTB.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnSortTB.Location = new System.Drawing.Point(936, 10);
-            this.btnSortTB.Name = "btnSortTB";
-            this.btnSortTB.Size = new System.Drawing.Size(41, 41);
-            this.btnSortTB.TabIndex = 83;
-            // 
-            // lblDSTB
-            // 
-            this.lblDSTB.AutoSize = false;
-            this.lblDSTB.BackColor = System.Drawing.Color.MintCream;
-            this.lblDSTB.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDSTB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDSTB.Location = new System.Drawing.Point(721, 3);
-            this.lblDSTB.Name = "lblDSTB";
-            this.lblDSTB.Size = new System.Drawing.Size(259, 57);
-            this.lblDSTB.TabIndex = 81;
-            this.lblDSTB.Text = "Danh sách thông báo\r\n";
-            this.lblDSTB.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panDSTB
-            // 
-            this.panDSTB.AutoScroll = true;
-            this.panDSTB.BackColor = System.Drawing.Color.Transparent;
-            this.panDSTB.BorderColor = System.Drawing.Color.Honeydew;
-            this.panDSTB.FillColor = System.Drawing.Color.MintCream;
-            this.panDSTB.Location = new System.Drawing.Point(721, 60);
-            this.panDSTB.Name = "panDSTB";
-            this.panDSTB.Size = new System.Drawing.Size(259, 525);
-            this.panDSTB.TabIndex = 82;
-            // 
-            // lblGachngang
-            // 
-            this.lblGachngang.AutoSize = false;
-            this.lblGachngang.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lblGachngang.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.lblGachngang.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblGachngang.Location = new System.Drawing.Point(15, 100);
-            this.lblGachngang.Name = "lblGachngang";
-            this.lblGachngang.Size = new System.Drawing.Size(700, 2);
-            this.lblGachngang.TabIndex = 47;
-            this.lblGachngang.Text = null;
-            this.lblGachngang.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // siticoneHtmlLabel5
-            // 
-            this.siticoneHtmlLabel5.AutoSize = false;
-            this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(62, 58);
-            this.siticoneHtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
-            this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
-            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(464, 44);
-            this.siticoneHtmlLabel5.TabIndex = 46;
-            this.siticoneHtmlLabel5.Text = "Thông báo";
-            this.siticoneHtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panNoidungTB
-            // 
-            this.panNoidungTB.Controls.Add(this.lblDateTB);
-            this.panNoidungTB.Controls.Add(this.ricNDungTB);
-            this.panNoidungTB.Controls.Add(this.lblTitleTB);
-            this.panNoidungTB.FillColor = System.Drawing.Color.Honeydew;
-            this.panNoidungTB.Location = new System.Drawing.Point(15, 108);
-            this.panNoidungTB.Name = "panNoidungTB";
-            this.panNoidungTB.Size = new System.Drawing.Size(700, 464);
-            this.panNoidungTB.TabIndex = 26;
-            // 
-            // lblDateTB
-            // 
-            this.lblDateTB.AutoSize = false;
-            this.lblDateTB.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDateTB.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblDateTB.Location = new System.Drawing.Point(252, 89);
-            this.lblDateTB.Margin = new System.Windows.Forms.Padding(4);
-            this.lblDateTB.Name = "lblDateTB";
-            this.lblDateTB.Size = new System.Drawing.Size(438, 25);
-            this.lblDateTB.TabIndex = 49;
-            this.lblDateTB.Text = "Ngày";
-            this.lblDateTB.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ricNDungTB
-            // 
-            this.ricNDungTB.BackColor = System.Drawing.Color.Honeydew;
-            this.ricNDungTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ricNDungTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.ricNDungTB.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.ricNDungTB.Location = new System.Drawing.Point(14, 125);
-            this.ricNDungTB.Name = "ricNDungTB";
-            this.ricNDungTB.ReadOnly = true;
-            this.ricNDungTB.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.ricNDungTB.Size = new System.Drawing.Size(656, 329);
-            this.ricNDungTB.TabIndex = 50;
-            this.ricNDungTB.Text = "Nội dung thông báo";
-            // 
-            // lblTitleTB
-            // 
-            this.lblTitleTB.AutoSize = false;
-            this.lblTitleTB.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitleTB.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleTB.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTitleTB.Location = new System.Drawing.Point(3, 19);
-            this.lblTitleTB.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTitleTB.Name = "lblTitleTB";
-            this.lblTitleTB.Size = new System.Drawing.Size(696, 39);
-            this.lblTitleTB.TabIndex = 48;
-            this.lblTitleTB.Text = "Tiêu đề thông báo";
-            this.lblTitleTB.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnFindTB
-            // 
-            this.btnFindTB.BackColor = System.Drawing.Color.Transparent;
-            this.btnFindTB.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnFindTB.BorderThickness = 1;
-            this.btnFindTB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFindTB.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnFindTB.FillColor = System.Drawing.Color.MintCream;
-            this.btnFindTB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnFindTB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnFindTB.ForeColor = System.Drawing.Color.White;
-            this.btnFindTB.HoverState.BorderColor = System.Drawing.Color.Cyan;
-            this.btnFindTB.HoverState.FillColor = System.Drawing.Color.Honeydew;
-            this.btnFindTB.Image = global::DuAnCNPM.Properties.Resources.magnifying_glass_search;
-            this.btnFindTB.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnFindTB.Location = new System.Drawing.Point(15, 13);
-            this.btnFindTB.Name = "btnFindTB";
-            this.btnFindTB.Size = new System.Drawing.Size(40, 40);
-            this.btnFindTB.TabIndex = 24;
-            this.btnFindTB.UseTransparentBackground = true;
-            this.btnFindTB.Click += new System.EventHandler(this.btnFindTB_Click);
-            // 
-            // txtFindTB
-            // 
-            this.txtFindTB.BackColor = System.Drawing.Color.Transparent;
-            this.txtFindTB.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtFindTB.BorderRadius = 21;
-            this.txtFindTB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFindTB.DefaultText = "";
-            this.txtFindTB.FillColor = System.Drawing.Color.MintCream;
-            this.txtFindTB.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtFindTB.FocusedState.ForeColor = System.Drawing.Color.Black;
-            this.txtFindTB.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtFindTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFindTB.ForeColor = System.Drawing.Color.Black;
-            this.txtFindTB.HoverState.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtFindTB.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtFindTB.Location = new System.Drawing.Point(62, 10);
-            this.txtFindTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFindTB.Name = "txtFindTB";
-            this.txtFindTB.PasswordChar = '\0';
-            this.txtFindTB.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtFindTB.PlaceholderText = "Tìm kiếm thông báo";
-            this.txtFindTB.SelectedText = "";
-            this.txtFindTB.Size = new System.Drawing.Size(653, 45);
-            this.txtFindTB.TabIndex = 23;
-            // 
             // panLogOut
             // 
             this.panLogOut.BackColor = System.Drawing.Color.Transparent;
@@ -6405,6 +6406,8 @@ namespace DuAnCNPM
             this.panTTTSchitiet.ResumeLayout(false);
             this.tabQLTB.ResumeLayout(false);
             this.panDSTBchitiet.ResumeLayout(false);
+            this.panTB.ResumeLayout(false);
+            this.panNoidungTB.ResumeLayout(false);
             this.panDSDH.ResumeLayout(false);
             this.panDSHDnvchitiet.ResumeLayout(false);
             this.splitDSHDnvchitiet.Panel1.ResumeLayout(false);
@@ -6436,8 +6439,6 @@ namespace DuAnCNPM
             this.panFindNV.ResumeLayout(false);
             this.grbTimthay.ResumeLayout(false);
             this.grbAllTTNV.ResumeLayout(false);
-            this.panTB.ResumeLayout(false);
-            this.panNoidungTB.ResumeLayout(false);
             this.panLogOut.ResumeLayout(false);
             this.grbLogout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

@@ -1197,15 +1197,9 @@ namespace DuAnCNPM
         //Sort KH
         private void btnSortKH_Click(object sender, EventArgs e)
         {
-
+            CustomerService customerService = new CustomerService();
+            customerService.ShowCustomers(panDSKH, panTTKHchitiet);
         }
-        //        //chọn HD
-        //        public void Work_OnselectDSHDClicked()
-        //        {
-        //            lblTTHD.Visible = true;
-        //            ShowPanel(panTTHDchitiet, panCSchitiet);
-        //        }
-        //        
 
         //Add HD trong admin
         private void btnAddHD_Click(object sender, EventArgs e)
@@ -1258,7 +1252,8 @@ namespace DuAnCNPM
 
         private void btnSortHD_Click(object sender, EventArgs e)
         {
-
+            ContractService contractService = new ContractService();
+            contractService.ShowContractsAdmin(panDSHD, panTTHDchitiet);
         }
 
         private void btnLuuHD_Click(object sender, EventArgs e)
@@ -1712,7 +1707,8 @@ namespace DuAnCNPM
 
         private void btnSortThongbao_Click(object sender, EventArgs e)
         {
-
+            AnnouncementService announcementService = new AnnouncementService();
+            announcementService.ShowAnnouncementAdmin(panDSTBAdmin, panDSTBchitiet);
         }
 
         private void btnAddTB_Click(object sender, EventArgs e)
@@ -2960,6 +2956,12 @@ namespace DuAnCNPM
         private void picClosePdf_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSortTB_Click(object sender, EventArgs e)
+        {
+            AnnouncementService announcementService = new AnnouncementService();
+            announcementService.ShowAnnouncement(panDSTB, panNoidungTB);
         }
 
         private void cboMoctgian_SelectedIndexChanged(object sender, EventArgs e)
