@@ -1,4 +1,4 @@
-# Environment Monitoring & Management System
+# Environment Management System
 
 This is a desktop-based application developed using C# and Windows Forms in Visual Studio. The software is designed to assist businesses and environmental service providers in managing, monitoring, and calculating key environmental metrics related to **soil, water, air, and emissions**.
 
