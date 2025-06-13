@@ -1003,6 +1003,7 @@ namespace DuAnCNPM
         {
             panTTKHchitiet.Enabled = true;
             btnLuuDSKH.Enabled = true;
+            btnXoaDSKH.Enabled = false;
             btnSuaDSKH.Enabled = false;
             foreach (Control ctrl in panTTKHchitiet.Controls)
             {

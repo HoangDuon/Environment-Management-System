@@ -167,7 +167,7 @@ namespace DuAnCNPM.Controller
         // Kiểm tra chuỗi nhập có phải là id không
         private bool checkTextIsNotiID(String text)
         {
-            if (string.IsNullOrWhiteSpace(text) || text.Length <= 5) return false;
+            if (string.IsNullOrWhiteSpace(text) || text.Length <= 2) return false;
             List<String> sample = new List<String>() { "TB" };
             String first = text.Substring(2);      // lấy stt
             String final = text.Substring(0, 2);   // lấy 5 kí tự đầu

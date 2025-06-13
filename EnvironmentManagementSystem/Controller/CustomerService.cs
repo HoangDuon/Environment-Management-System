@@ -317,12 +317,12 @@ namespace DuAnCNPM.Controller
                     var panel = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
                     if (kh.TRANG_THAI == false)
                     {
-                        panel.BorderColor = System.Drawing.Color.Salmon;
+                        panel.BorderColor = System.Drawing.Color.Red;
                         panel.BorderRadius = 18;
                         panel.BorderThickness = 4;
-                        panel.CustomBorderColor = System.Drawing.Color.AliceBlue;
+                        panel.CustomBorderColor = System.Drawing.Color.Red;
                         panel.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-                        panel.FillColor = System.Drawing.Color.Gainsboro;
+                        panel.FillColor = System.Drawing.Color.White;
                         panel.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
@@ -333,12 +333,12 @@ namespace DuAnCNPM.Controller
                     }
                     else
                     {
-                        panel.BorderColor = System.Drawing.Color.LightGray;
+                        panel.BorderColor = System.Drawing.Color.Green;
                         panel.BorderRadius = 18;
                         panel.BorderThickness = 2;
-                        panel.CustomBorderColor = System.Drawing.Color.AliceBlue;
+                        panel.CustomBorderColor = System.Drawing.Color.Green;
                         panel.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-                        panel.FillColor = System.Drawing.Color.Gainsboro;
+                        panel.FillColor = System.Drawing.Color.White;
                         panel.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
                         panel.ForeColor = System.Drawing.Color.Black;
                         panel.Location = new System.Drawing.Point(5, yOffset);
@@ -350,8 +350,8 @@ namespace DuAnCNPM.Controller
                 int width = panel.Width - 20;
 
                 var lblNgayHetHan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-                    lblNgayHetHan.BackColor = System.Drawing.Color.Gainsboro;
-                    lblNgayHetHan.BorderColor = System.Drawing.Color.Empty;
+                    lblNgayHetHan.BackColor = System.Drawing.Color.White;
+                    lblNgayHetHan.BorderColor = System.Drawing.Color.White;
                     lblNgayHetHan.BorderThickness = 0;
                     lblNgayHetHan.Cursor = System.Windows.Forms.Cursors.IBeam;
                     lblNgayHetHan.DefaultText = "Mã Khách Hàng: " + kh.MA_CONG_TY;
@@ -359,7 +359,7 @@ namespace DuAnCNPM.Controller
                     lblNgayHetHan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
                     lblNgayHetHan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
                     lblNgayHetHan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-                    lblNgayHetHan.FillColor = System.Drawing.Color.Gainsboro;
+                    lblNgayHetHan.FillColor = System.Drawing.Color.White;
                     lblNgayHetHan.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
                     lblNgayHetHan.ForeColor = System.Drawing.Color.Black;
                     lblNgayHetHan.Location = new System.Drawing.Point(11, 30);
@@ -374,8 +374,8 @@ namespace DuAnCNPM.Controller
                     lblNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
                     var lblTieuDe = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-                    lblTieuDe.BackColor = System.Drawing.Color.Gainsboro;
-                    lblTieuDe.BorderColor = System.Drawing.Color.Empty;
+                    lblTieuDe.BackColor = System.Drawing.Color.White;
+                    lblTieuDe.BorderColor = System.Drawing.Color.White;
                     lblTieuDe.BorderThickness = 0;
                     lblTieuDe.Cursor = System.Windows.Forms.Cursors.IBeam;
                     lblTieuDe.DefaultText = kh.TEN_CONG_TY;
@@ -383,7 +383,7 @@ namespace DuAnCNPM.Controller
                     lblTieuDe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
                     lblTieuDe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
                     lblTieuDe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-                    lblTieuDe.FillColor = System.Drawing.Color.Gainsboro;
+                    lblTieuDe.FillColor = System.Drawing.Color.White;
                     lblTieuDe.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
                     lblTieuDe.ForeColor = System.Drawing.Color.Black;
                     lblTieuDe.Location = new System.Drawing.Point(11, 8);
@@ -408,47 +408,78 @@ namespace DuAnCNPM.Controller
 
                 lblTieuDe.MouseEnter += (s, e) =>
                 {
-                    panel.FillColor = Color.DarkGray;
-                    lblTieuDe.FillColor = Color.DarkGray;
-                    lblNgayHetHan.FillColor = Color.DarkGray;
+                    panel.FillColor = Color.White;
+                    panel.BorderColor = System.Drawing.Color.Green;
+
+                    lblTieuDe.FillColor = Color.White;
+                    lblNgayHetHan.FillColor = Color.White;
                 };
 
                 lblNgayHetHan.MouseEnter += (s, e) =>
                 {
-                    panel.FillColor = Color.DarkGray;
-                    lblTieuDe.FillColor = Color.DarkGray;
-                    lblNgayHetHan.FillColor = Color.DarkGray;
+                    panel.FillColor = Color.White;
+                    panel.BorderColor = System.Drawing.Color.Green;
+
+                    lblTieuDe.FillColor = Color.White;
+                    lblNgayHetHan.FillColor = Color.White;
                 };
 
                 panel.MouseEnter += (s, e) =>
                 {
-                    panel.FillColor = Color.DarkGray;
+                    panel.FillColor = Color.White;
+                    panel.BorderColor = System.Drawing.Color.Green;
 
-                    lblTieuDe.FillColor = Color.DarkGray;
-                    lblNgayHetHan.FillColor = Color.DarkGray;
+                    lblTieuDe.FillColor = Color.White;
+                    lblNgayHetHan.FillColor = Color.White;
                 };
 
                 panel.MouseLeave += (s, e) =>
                 {
-                    panel.FillColor = Color.Gainsboro;
+                    panel.FillColor = Color.White;
+                    if (kh.TRANG_THAI == true)
+                    {
+                        panel.BorderColor = System.Drawing.Color.Green;
+                    }
+                    else
+                    {
+                        panel.BorderColor = System.Drawing.Color.Red;
+                    }
 
-                    lblTieuDe.FillColor = Color.Gainsboro;
-                    lblNgayHetHan.FillColor = Color.Gainsboro;
+                    lblTieuDe.FillColor = Color.White;
+                    lblNgayHetHan.FillColor = Color.White;
 
                 };
 
                 lblTieuDe.MouseLeave += (s, e) =>
                 {
-                    panel.FillColor = Color.Gainsboro;
-                    lblTieuDe.FillColor = Color.Gainsboro;
-                    lblNgayHetHan.FillColor = Color.Gainsboro;
+                    panel.FillColor = Color.White;
+                    if (kh.TRANG_THAI == true)
+                    {
+                        panel.BorderColor = System.Drawing.Color.Green;
+                    }
+                    else
+                    {
+                        panel.BorderColor = System.Drawing.Color.Red;
+                    }
+
+                    lblTieuDe.FillColor = Color.White;
+                    lblNgayHetHan.FillColor = Color.White;
                 };
 
                 lblNgayHetHan.MouseLeave += (s, e) =>
                 {
-                    panel.FillColor = Color.Gainsboro;
-                    lblTieuDe.FillColor = Color.Gainsboro;
-                    lblNgayHetHan.FillColor = Color.Gainsboro;
+                    panel.FillColor = Color.White;
+                    if (kh.TRANG_THAI == true)
+                    {
+                        panel.BorderColor = System.Drawing.Color.Green;
+                    }
+                    else
+                    {
+                        panel.BorderColor = System.Drawing.Color.Red;
+                    }
+
+                    lblTieuDe.FillColor = Color.White;
+                    lblNgayHetHan.FillColor = Color.White;
                 };
 
                 yOffset += panel.Height + 10;
@@ -471,12 +502,12 @@ namespace DuAnCNPM.Controller
                         var panel = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
                         if (kh.TRANG_THAI == false)
                         {
-                            panel.BorderColor = System.Drawing.Color.Salmon;
+                            panel.BorderColor = System.Drawing.Color.Red;
                             panel.BorderRadius = 18;
                             panel.BorderThickness = 4;
-                            panel.CustomBorderColor = System.Drawing.Color.AliceBlue;
+                            panel.CustomBorderColor = System.Drawing.Color.Red;
                             panel.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-                            panel.FillColor = System.Drawing.Color.Gainsboro;
+                            panel.FillColor = System.Drawing.Color.White;
                             panel.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
                             panel.ForeColor = System.Drawing.Color.Black;
                             panel.Location = new System.Drawing.Point(5, yOffset);
@@ -487,12 +518,12 @@ namespace DuAnCNPM.Controller
                         }
                         else
                         {
-                            panel.BorderColor = System.Drawing.Color.LightGray;
+                            panel.BorderColor = System.Drawing.Color.Green;
                             panel.BorderRadius = 18;
                             panel.BorderThickness = 2;
-                            panel.CustomBorderColor = System.Drawing.Color.AliceBlue;
+                            panel.CustomBorderColor = System.Drawing.Color.Green;
                             panel.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-                            panel.FillColor = System.Drawing.Color.Gainsboro;
+                            panel.FillColor = System.Drawing.Color.White;
                             panel.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
                             panel.ForeColor = System.Drawing.Color.Black;
                             panel.Location = new System.Drawing.Point(5, yOffset);
@@ -503,8 +534,8 @@ namespace DuAnCNPM.Controller
                         }
                         int width = panel.Width - 20;
                         var lblNgayHetHan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-                        lblNgayHetHan.BackColor = System.Drawing.Color.Gainsboro;
-                        lblNgayHetHan.BorderColor = System.Drawing.Color.Empty;
+                        lblNgayHetHan.BackColor = System.Drawing.Color.White;
+                        lblNgayHetHan.BorderColor = System.Drawing.Color.White;
                         lblNgayHetHan.BorderThickness = 0;
                         lblNgayHetHan.Cursor = System.Windows.Forms.Cursors.IBeam;
                         lblNgayHetHan.DefaultText = "Mã Khách Hàng: " + kh.MA_CONG_TY;
@@ -512,7 +543,7 @@ namespace DuAnCNPM.Controller
                         lblNgayHetHan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
                         lblNgayHetHan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
                         lblNgayHetHan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-                        lblNgayHetHan.FillColor = System.Drawing.Color.Gainsboro;
+                        lblNgayHetHan.FillColor = System.Drawing.Color.White;
                         lblNgayHetHan.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
                         lblNgayHetHan.ForeColor = System.Drawing.Color.Black;
                         lblNgayHetHan.Location = new System.Drawing.Point(11, 30);
@@ -527,8 +558,8 @@ namespace DuAnCNPM.Controller
                         lblNgayHetHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 
                         var lblTieuDe = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-                        lblTieuDe.BackColor = System.Drawing.Color.Gainsboro;
-                        lblTieuDe.BorderColor = System.Drawing.Color.Empty;
+                        lblTieuDe.BackColor = System.Drawing.Color.White;
+                        lblTieuDe.BorderColor = System.Drawing.Color.White;
                         lblTieuDe.BorderThickness = 0;
                         lblTieuDe.Cursor = System.Windows.Forms.Cursors.IBeam;
                         lblTieuDe.DefaultText = kh.TEN_CONG_TY;
@@ -536,7 +567,7 @@ namespace DuAnCNPM.Controller
                         lblTieuDe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
                         lblTieuDe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
                         lblTieuDe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-                        lblTieuDe.FillColor = System.Drawing.Color.Gainsboro;
+                        lblTieuDe.FillColor = System.Drawing.Color.White;
                         lblTieuDe.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
                         lblTieuDe.ForeColor = System.Drawing.Color.Black;
                         lblTieuDe.Location = new System.Drawing.Point(11, 8);
@@ -561,47 +592,84 @@ namespace DuAnCNPM.Controller
 
                     lblTieuDe.MouseEnter += (s, e) =>
                     {
-                        panel.FillColor = Color.DarkGray;
-                        lblTieuDe.FillColor = Color.DarkGray;
-                        lblNgayHetHan.FillColor = Color.DarkGray;
+                        panel.FillColor = Color.White;
+                        panel.BorderColor = System.Drawing.Color.DeepSkyBlue;
+
+                        lblTieuDe.FillColor = Color.White;
+                        lblNgayHetHan.FillColor = Color.White;
                     };
 
                     lblNgayHetHan.MouseEnter += (s, e) =>
                     {
-                        panel.FillColor = Color.DarkGray;
-                        lblTieuDe.FillColor = Color.DarkGray;
-                        lblNgayHetHan.FillColor = Color.DarkGray;
+                        panel.FillColor = Color.White;
+                        panel.BorderColor = System.Drawing.Color.DeepSkyBlue;
+
+                        lblTieuDe.FillColor = Color.White;
+                        lblNgayHetHan.FillColor = Color.White;
                     };
 
                     panel.MouseEnter += (s, e) =>
                     {
-                        panel.FillColor = Color.DarkGray;
+                        panel.FillColor = Color.White;
+                        panel.BorderColor = System.Drawing.Color.DeepSkyBlue;
 
-                        lblTieuDe.FillColor = Color.DarkGray;
-                        lblNgayHetHan.FillColor = Color.DarkGray;
+                        lblTieuDe.FillColor = Color.White;
+                        lblNgayHetHan.FillColor = Color.White;
                     };
 
                     panel.MouseLeave += (s, e) =>
                     {
-                        panel.FillColor = Color.Gainsboro;
+                        panel.FillColor = Color.White;
+                        if (kh.TRANG_THAI == true)
+                        {
+                            panel.BorderColor = System.Drawing.Color.Green;
 
-                        lblTieuDe.FillColor = Color.Gainsboro;
-                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                        }
+                        else
+                        {
+                            panel.BorderColor = System.Drawing.Color.Red;
+
+                        }
+
+                        lblTieuDe.FillColor = Color.White;
+                        lblNgayHetHan.FillColor = Color.White;
 
                     };
 
                     lblTieuDe.MouseLeave += (s, e) =>
                     {
-                        panel.FillColor = Color.Gainsboro;
-                        lblTieuDe.FillColor = Color.Gainsboro;
-                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                        panel.FillColor = Color.White;
+                        if (kh.TRANG_THAI == true)
+                        {
+                            panel.BorderColor = System.Drawing.Color.Green;
+
+                        }
+                        else
+                        {
+                            panel.BorderColor = System.Drawing.Color.Red;
+
+                        }
+
+                        lblTieuDe.FillColor = Color.White;
+                        lblNgayHetHan.FillColor = Color.White;
                     };
 
                     lblNgayHetHan.MouseLeave += (s, e) =>
                     {
-                        panel.FillColor = Color.Gainsboro;
-                        lblTieuDe.FillColor = Color.Gainsboro;
-                        lblNgayHetHan.FillColor = Color.Gainsboro;
+                        panel.FillColor = Color.White;
+                        if (kh.TRANG_THAI == true)
+                        {
+                            panel.BorderColor = System.Drawing.Color.Green;
+
+                        }
+                        else
+                        {
+                            panel.BorderColor = System.Drawing.Color.Red;
+
+                        }
+
+                        lblTieuDe.FillColor = Color.White;
+                        lblNgayHetHan.FillColor = Color.White;
                     };
 
                     yOffset += panel.Height + 10;
